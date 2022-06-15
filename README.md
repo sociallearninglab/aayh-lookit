@@ -1,5 +1,5 @@
-# lookit-stimuli for Alexa Embodiment
+# lookit
 
-A repository for Lookit study materials
+A repository to host stimuli materials for Lookit aayh study
 
 
