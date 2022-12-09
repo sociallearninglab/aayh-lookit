@@ -5,7 +5,7 @@ from pathlib import Path
 
 data = open("data.csv", "w")
 data.truncate()
-title = "child__hashed_id,attn1,attn2,test,diverse_desires,implicit_false_belief,diverse_beliefs,diana_false_belief_location,diana_false_belief_control,allie_false_belief_location\n"
+title = "child__hashed_id,condition,counterbalance,attn1,attn2,test,diverse_desires,implicit_false_belief,diverse_beliefs,diana_false_belief_location,diana_false_belief_control,allie_false_belief_location\n"
 data.write(title)
 path = os.path.expanduser("~/Downloads/Guess-What-Happens-Next_framedata_per_session")
 for file in os.listdir(path):
@@ -13,6 +13,8 @@ for file in os.listdir(path):
 		with open(path + "/" + file) as csvfile:
 			reader = csv.DictReader(csvfile)
 			id = ""
+			condition = ""
+			counterbalance = 0
 			attn1 = 0
 			attn2 = 0
 			test = 0
@@ -26,9 +28,14 @@ for file in os.listdir(path):
 			allie_false_belief_location = 0
 			for row in reader:
 				id = row['child_hashed_id']
+				if row['key'] == "videoShown" and row['frame_id'] == "11-alexa-protocol":
+					video = row["value"]
+					matches = re.search("([a-zA-Z]+)-CB([0-9])",video)
+					condition = matches.group(1)
+					counterbalance = matches.group(2)
 				if row['key'] == "selectedImage":
 					frame_id = row['frame_id']
-					if frame_id == "12-null":
+					if frame_id == "12-alexa-protocol":
 						value = row['value']
 						if value == "left":
 							attn1 = "wheels"
@@ -36,7 +43,7 @@ for file in os.listdir(path):
 							attn1 = "twinkle"
 						elif value == "right":
 							attn1 = "spider"
-					elif frame_id == "15-null":
+					elif frame_id == "15-alexa-protocol":
 						value = row['value']
 						if value == "left":
 							attn2 = "wheels"
@@ -44,7 +51,7 @@ for file in os.listdir(path):
 							attn2 = "twinkle"
 						elif value == "right":
 							attn2 = "spider"
-					elif frame_id == "18-null":
+					elif frame_id == "18-alexa-protocol":
 						value = row['value']
 						if value == "left":
 							test = "wheels"
@@ -79,8 +86,9 @@ for file in os.listdir(path):
 						if diverse_beliefs_selected_location != diverse_beliefs_response_location:
 							diverse_beliefs = 1
 			if test == 0:
+				print("Ignoring data from pilot 1...")
 				continue
-			csv_str = str(id) + "," + str(attn1) + "," + str(attn2) + "," + str(test) + "," + str(diverse_desires) + "," + str(implicit_false_belief) + "," + str(diverse_beliefs) + "," + str(diana_false_belief_location) + "," + str(diana_false_belief_control) + "," + str(allie_false_belief_location) + "\n"
+			csv_str = str(id) + "," + condition + "," + counterbalance + "," + str(attn1) + "," + str(attn2) + "," + str(test) + "," + str(diverse_desires) + "," + str(implicit_false_belief) + "," + str(diverse_beliefs) + "," + str(diana_false_belief_location) + "," + str(diana_false_belief_control) + "," + str(allie_false_belief_location) + "\n"
 			data.write(csv_str)
 data.close()
 
