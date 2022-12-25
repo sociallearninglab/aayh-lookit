@@ -5,7 +5,7 @@ from pathlib import Path
 
 data = open("data.csv", "w")
 data.truncate()
-title = "child__hashed_id,condition,counterbalance,attn1,attn2,test,diverse_desires,implicit_false_belief,diverse_beliefs,diana_false_belief_location,diana_false_belief_control,allie_false_belief_location\n"
+title = "child__hashed_id,condition,counterbalance,attn1,attn2,test,diverse_desires,implicit_false_belief,diverse_beliefs,diana_false_belief_location,diana_false_belief_control,allie_false_belief_location,num_speakers,coding_experience,smartphone_frequency,smart_speaker_frequency,voice_assistant_frequency\n"
 data.write(title)
 path = os.path.expanduser("~/Downloads/Guess-What-Happens-Next_framedata_per_session")
 for file in os.listdir(path):
@@ -26,6 +26,11 @@ for file in os.listdir(path):
 			diana_false_belief_location = 0
 			diana_false_belief_control = 0
 			allie_false_belief_location = 0
+			num_speakers = ""
+			coding_experience = ""
+			smartphone_frequency = ""
+			smart_speaker_frequency = ""
+			voice_assistant_frequency = ""
 			for row in reader:
 				id = row['child_hashed_id']
 				if row['key'] == "videoShown" and row['frame_id'] == "11-alexa-protocol":
@@ -85,10 +90,21 @@ for file in os.listdir(path):
 						diverse_beliefs_response_location = row['value']
 						if diverse_beliefs_selected_location != diverse_beliefs_response_location:
 							diverse_beliefs = 1
+				if row['frame_id'] == "46-parent-survey":
+					if row['key'] == "formData.num_speakers":
+						num_speakers = row['value']
+					elif row['key'] == "formData.coding_experience":
+						coding_experience = "\"" + row['value'] + "\""
+					elif row['key'] == "formData.smartphone_frequency":
+						smartphone_frequency = row['value']
+					elif row['key'] == "formData.smart_speaker_frequency":
+						smart_speaker_frequency = row['value']
+					elif row['key'] == "formData.voice_assistant_frequency":
+						voice_assistant_frequency = row['value']
 			if test == 0:
 				print("Ignoring data from pilot 1...")
 				continue
-			csv_str = str(id) + "," + condition + "," + counterbalance + "," + str(attn1) + "," + str(attn2) + "," + str(test) + "," + str(diverse_desires) + "," + str(implicit_false_belief) + "," + str(diverse_beliefs) + "," + str(diana_false_belief_location) + "," + str(diana_false_belief_control) + "," + str(allie_false_belief_location) + "\n"
+			csv_str = str(id) + "," + condition + "," + counterbalance + "," + str(attn1) + "," + str(attn2) + "," + str(test) + "," + str(diverse_desires) + "," + str(implicit_false_belief) + "," + str(diverse_beliefs) + "," + str(diana_false_belief_location) + "," + str(diana_false_belief_control) + "," + str(allie_false_belief_location) + "," + num_speakers + "," + coding_experience + "," + smartphone_frequency + "," + smart_speaker_frequency + "," + voice_assistant_frequency + "\n"
 			data.write(csv_str)
 data.close()
 
