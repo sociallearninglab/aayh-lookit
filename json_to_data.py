@@ -6,7 +6,7 @@ import datetime
 
 data = open("data.csv", "w")
 data.truncate()
-title = "child__hashed_id,condition,counterbalance,attn1,attn2,test,attn3,rachel_false_belief,diana_false_belief,allie_false_belief,num_speakers,coding_experience,smartphone_frequency,smart_speaker_frequency,voice_assistant_frequency\n"
+title = "child__hashed_id,condition,counterbalance,attn1,attn2,test,attn3,rachel_false_belief,diana_false_belief,allie_false_belief,num_speakers,coding_experience,smartphone_frequency,smart_speaker_frequency,voice_assistant_frequency,pass_attn1,pass_attn2,pass_attn3,pass_all_attn,chose_song_1\n"
 data.write(title)
 path = os.path.expanduser("~/Downloads/Guess-What-Happens-Next_framedata_per_session")
 for file in os.listdir(path):
@@ -40,7 +40,7 @@ for file in os.listdir(path):
 					video = row["value"]
 					matches = re.search("([a-zA-Z]+)-CB([0-9])",video)
 					condition = matches.group(1)
-					counterbalance = matches.group(2)
+					counterbalance = int(matches.group(2))
 				if row['key'] == "selectedImage":
 					frame_id = row['frame_id']
 					if frame_id == "12-alexa-protocol":
@@ -92,13 +92,31 @@ for file in os.listdir(path):
 						smart_speaker_frequency = row['value']
 					elif row['key'] == "formData.voice_assistant_frequency":
 						voice_assistant_frequency = row['value']
-			if test == 0:
-				print("Ignoring data from pilot 1...")
-				continue
 			if not current_data:
 				print("Ignoring data from earlier study version")
 				continue
-			csv_str = str(id) + "," + condition + "," + counterbalance + "," + str(attn1) + "," + str(attn2) + "," + str(test) + "," + str(attn3) + "," + str(rachel_false_belief) + "," + str(diana_false_belief) + "," + str(allie_false_belief) + "," + num_speakers + "," + coding_experience + "," + smartphone_frequency + "," + smart_speaker_frequency + "," + voice_assistant_frequency + "\n"
+			pass_attn1 = 0
+			pass_attn2 = 0
+			pass_attn3 = 0
+			pass_all_attn = 0
+			if counterbalance is 1 or counterbalance == 3:
+				correct_song_1 = "spider"
+				correct_song_2 = "wheels"
+			else:
+				correct_song_1 = "wheels"
+				correct_song_2 = "spider"
+			if attn1 == correct_song_1:
+				pass_attn1 = 1
+			if attn2 == correct_song_2:
+				pass_attn2 = 1
+			pass_attn3 = attn3
+			if pass_attn1 + pass_attn2 + pass_attn3 == 3:
+				pass_all_attn = 1
+			if test == correct_song_1:
+				chose_song_1 = 1
+			else:
+				chose_song_1 = 0
+			csv_str = str(id) + "," + condition + "," + str(counterbalance) + "," + str(attn1) + "," + str(attn2) + "," + str(test) + "," + str(attn3) + "," + str(rachel_false_belief) + "," + str(diana_false_belief) + "," + str(allie_false_belief) + "," + num_speakers + "," + coding_experience + "," + smartphone_frequency + "," + smart_speaker_frequency + "," + voice_assistant_frequency + "," + str(pass_attn1) + "," + str(pass_attn2) + "," + str(pass_attn3) + "," + str(pass_all_attn) + "," + str(chose_song_1) + "\n"
 			data.write(csv_str)
 data.close()
 
