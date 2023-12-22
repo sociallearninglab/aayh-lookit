@@ -1,29 +1,273 @@
 child__hashed_id,condition,counterbalance,attn1,attn2,test,attn3,rachel_false_belief,diana_false_belief,allie_false_belief,num_speakers,coding_experience,smartphone_frequency,smart_speaker_frequency,voice_assistant_frequency,pass_attn1,pass_attn2,pass_attn3,pass_all_attn,chose_song_1
+KBQDD5,person,3,spider,wheels,spider,1,1,1,1,0,"no experience with coding",About once a day,Never,Never,1,1,1,1,1
+QdRUdL,person,4,wheels,spider,wheels,1,1,1,1,,"coding class at school",About once a day,Less than once a week,About once a week,1,1,1,1,1
+UK5MMG,person,1,spider,wheels,spider,1,1,1,0,3,"after school programs or camps related to coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
 R27BW6,person,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",Several times a day,,,1,1,1,1,1
+WGSZS6,person,4,wheels,spider,spider,1,1,1,0,3,"no experience with coding",About once a week,About once a week,Less than once a week,1,1,1,1,0
+NZKdcH,AI,4,wheels,spider,wheels,1,1,1,1,4,"no experience with coding",Several times a day,Never,Never,1,1,1,1,1
+GFRFTR,person,3,spider,wheels,spider,1,1,1,1,0,"no experience with coding",Never,Less than once a week,Never,1,1,1,1,1
+EZ6FZQ,AI,4,wheels,spider,wheels,0,0,0,0,2,"no experience with coding",Never,About once a day,About once a day,1,1,0,0,1
+5c3F4C,person,1,spider,wheels,spider,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+NMW7J7,person,1,spider,wheels,spider,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a week,About once a week,1,1,1,1,1
+AEVA5R,AI,3,spider,wheels,spider,1,0,0,0,2,"no experience with coding",About once a day,About once a week,,1,1,1,1,1
+VGYA6F,person,2,wheels,spider,wheels,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+WDETH6,person,4,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",About once a week,Several times a day,Several times a day,1,1,1,1,1
 CQKHMP,person,2,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,About once a day,1,1,1,1,1
+Q4cDH5,AI,2,wheels,spider,wheels,1,1,1,1,0,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
+6P4c2V,person,2,wheels,spider,wheels,1,1,1,1,2,"coding class at school",Several times a day,About once a day,About once a day,1,1,1,1,1
+PBLZWN,person,2,wheels,spider,wheels,1,1,1,1,4,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+d3R2U4,person,2,wheels,spider,wheels,1,1,1,1,0,"coding class at school",About once a week,Never,Less than once a week,1,1,1,1,1
+PK2YGJ,person,4,wheels,spider,wheels,1,1,1,1,2,"after school programs or camps related to coding",About once a day,About once a day,About once a day,1,1,1,1,1
+WDY6c7,person,3,spider,wheels,spider,1,1,1,1,2,"no experience with coding",Several times a day,About once a day,About once a day,1,1,1,1,1
+GYU46J,AI,3,spider,wheels,spider,1,1,1,1,,,About once a day,,About once a day,1,1,1,1,1
+4QcY5E,AI,4,wheels,spider,wheels,1,1,0,0,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a day,1,1,1,1,1
+JFd4LQ,AI,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
+CPcQFY,person,2,wheels,spider,wheels,1,1,1,1,1,"coding class at school",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+S7FVQH,AI,4,wheels,spider,wheels,1,1,1,1,,,,,,1,1,1,1,1
+ECZKcH,person,4,wheels,spider,wheels,1,1,1,1,0,"coding class at school",Less than once a week,Never,Never,1,1,1,1,1
 PXXPWV,person,4,wheels,spider,wheels,1,1,1,1,,,About once a day,,About once a week,1,1,1,1,1
+MM7MHD,person,3,spider,wheels,spider,1,1,1,1,0,"coding class at school",About once a week,Never,Never,1,1,1,1,1
+cYGACQ,person,2,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
 HBWDcR,AI,3,spider,wheels,spider,1,1,1,1,4,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
+Y5C3MY,person,2,wheels,spider,wheels,1,1,1,1,6,"coding class at school",About once a week,About once a day,Several times a day,1,1,1,1,1
+YLJTKQ,AI,2,wheels,spider,wheels,0,1,1,1,0,"no experience with coding",About once a week,Never,Never,1,1,0,0,1
+NEQP2Q,person,4,wheels,spider,wheels,1,1,1,1,,,Less than once a week,Less than once a week,Less than once a week,1,1,1,1,1
+Y2M3FQ,person,4,wheels,spider,wheels,1,1,1,1,,"no experience with coding",Several times a day,About once a day,About once a day,1,1,1,1,1
+dADL67,AI,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",About once a day,,About once a day,1,1,1,1,1
+VEYGC2,AI,1,spider,wheels,spider,1,1,1,1,1,"after school programs or camps related to coding",Several times a day,,About once a day,1,1,1,1,1
+BJZGD2,AI,4,wheels,spider,wheels,1,1,1,1,,"no experience with coding",About once a day,,Several times a day,1,1,1,1,1
 dVMXCc,AI,2,wheels,spider,spider,1,1,1,1,2,"no experience with coding",Never,Never,Never,1,1,1,1,0
+37LAQX,person,2,wheels,spider,wheels,1,1,1,1,,,About once a day,,Less than once a week,1,1,1,1,1
+LCDQES,AI,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",About once a day,Less than once a week,Never,1,1,1,1,1
+5HHGcY,AI,4,wheels,spider,spider,1,1,1,1,0,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a week,1,1,1,1,0
+QTNWUY,person,2,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,Several times a day,1,1,1,1,1
+VRRTXM,AI,1,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Never,1,1,1,1,1
+3G522Y,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+QARBCD,AI,2,wheels,spider,wheels,0,0,0,0,2,"no experience with coding",About once a day,Never,About once a week,1,1,0,0,1
+3MGZ2D,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+UZG2dX,person,2,wheels,spider,wheels,1,1,1,1,2,"no experience with coding",About once a week,Never,About once a day,1,1,1,1,1
+NBXP7N,person,4,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",,About once a week,,1,1,1,1,1
 75ZW26,person,4,wheels,spider,wheels,1,0,0,0,,,Several times a day,,About once a week,1,1,1,1,1
+BLMEUH,AI,2,wheels,spider,wheels,1,1,1,1,,,About once a day,,Several times a day,1,1,1,1,1
+d2RNVQ,AI,3,spider,wheels,spider,1,1,1,1,,,Several times a day,,About once a day,1,1,1,1,1
+FG2KCN,AI,1,spider,wheels,wheels,0,1,1,1,0,"no experience with coding",Several times a day,Never,Several times a day,1,1,0,0,0
+TRMZMN,person,2,wheels,spider,wheels,1,0,0,0,0,"coding class at school",Several times a day,Never,Never,1,1,1,1,1
+MXBAP4,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+RL5F7C,person,1,spider,wheels,spider,1,0,0,0,4,,About once a day,About once a day,About once a day,1,1,1,1,1
+dB3YRD,AI,2,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",Several times a day,,Less than once a week,1,1,1,1,1
+2SXZZA,AI,1,spider,wheels,wheels,1,0,0,0,3,"after school programs or camps related to coding",About once a week,Less than once a week,Never,1,1,1,1,0
+226DPJ,AI,2,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",Several times a day,,About once a day,1,1,1,1,1
+2cLdd2,person,3,spider,wheels,spider,1,0,0,1,,,About once a day,,About once a day,1,1,1,1,1
+cFJCJK,person,3,spider,wheels,spider,1,1,1,1,5,"coding class at school",About once a week,Several times a day,Several times a day,1,1,1,1,1
+dZUWST,AI,2,wheels,spider,wheels,1,1,0,1,1,"no experience with coding",Less than once a week,Less than once a week,Less than once a week,1,1,1,1,1
+V5REVB,person,4,wheels,spider,spider,1,0,0,0,0,"no experience with coding",Never,Never,Never,1,1,1,1,0
+2N2GAd,AI,3,spider,wheels,spider,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a week,About once a week,1,1,1,1,1
+XEKPSB,AI,2,wheels,spider,wheels,1,1,1,1,,,,,,1,1,1,1,1
+FG5XVM,AI,4,wheels,spider,wheels,1,1,1,1,2,"no experience with coding",About once a day,About once a day,About once a day,1,1,1,1,1
+5d3X5S,AI,4,wheels,spider,spider,1,1,1,1,0,"no experience with coding",About once a day,Never,Less than once a week,1,1,1,1,0
+PU2VcV,person,3,spider,wheels,spider,1,1,1,1,,,,,,1,1,1,1,1
+AEL3EQ,person,3,spider,wheels,spider,1,0,1,0,0,"no experience with coding",Less than once a week,,Less than once a week,1,1,1,1,1
+UGcYTS,AI,1,spider,wheels,spider,1,1,1,1,1,"no experience with coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+K7YdLP,AI,1,spider,wheels,spider,1,1,1,1,0,"coding class at school",Several times a day,Never,Never,1,1,1,1,1
+XQS345,person,2,wheels,spider,spider,1,0,1,0,0,"no experience with coding",About once a day,Never,About once a week,1,1,1,1,0
+PXBcNU,person,2,wheels,spider,wheels,1,1,0,0,,,About once a week,,Less than once a week,1,1,1,1,1
 ARMW2Y,person,1,spider,wheels,spider,1,1,1,1,,,Several times a day,,About once a week,1,1,1,1,1
+XFK5GQ,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+dJPCR7,AI,2,wheels,spider,wheels,1,1,1,1,2,"no experience with coding",About once a day,Several times a day,Several times a day,1,1,1,1,1
+CUCSW3,AI,4,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a day,Less than once a week,1,1,1,1,1
+GLQULU,person,3,spider,wheels,spider,1,1,1,1,,,About once a day,Never,Never,1,1,1,1,1
+DMX5NS,person,3,spider,wheels,spider,1,1,1,1,3,"no experience with coding",Several times a day,About once a week,About once a week,1,1,1,1,1
+QVDCEG,AI,3,spider,wheels,spider,1,0,0,0,3,"no experience with coding",About once a day,Several times a day,Several times a day,1,1,1,1,1
+c6dNFC,person,3,spider,wheels,spider,0,1,1,0,3,,Less than once a week,About once a day,About once a day,1,1,0,0,1
+DKUY4F,AI,4,wheels,spider,wheels,1,1,1,0,1,"no experience with coding",Less than once a week,About once a day,About once a day,1,1,1,1,1
+DHZ3NG,person,4,wheels,spider,wheels,1,1,1,1,5,"no experience with coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+YM2G5C,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
 RPWSSB,AI,4,wheels,spider,wheels,1,1,1,0,2,"after school programs or camps related to coding",Several times a day,,About once a day,1,1,1,1,1
+ADcDUM,AI,3,spider,wheels,spider,1,1,1,1,2,"no experience with coding",Several times a day,Less than once a week,Never,1,1,1,1,1
+K7R7CV,AI,2,wheels,0,0,0,0,0,0,,,,,,1,0,0,0,0
+LKKFPd,AI,1,spider,wheels,spider,1,1,1,1,0,"no experience with coding",Several times a day,,About once a day,1,1,1,1,1
+LXRCcF,person,3,spider,wheels,wheels,1,0,0,0,1,"no experience with coding",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+6WDXTc,person,2,wheels,spider,wheels,1,1,1,1,2,,About once a day,About once a day,About once a day,1,1,1,1,1
+NZcKZR,AI,4,wheels,spider,wheels,1,1,1,1,2,,Several times a day,About once a day,Several times a day,1,1,1,1,1
+H3HBTJ,AI,2,wheels,spider,wheels,0,1,1,1,3,"no experience with coding",Never,Never,Never,1,1,0,0,1
 SCHcHE,AI,2,wheels,spider,wheels,1,1,1,1,2,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,About once a day,1,1,1,1,1
+WQGT5Y,AI,1,spider,wheels,wheels,1,0,0,0,0,"no experience with coding",About once a week,Never,Never,1,1,1,1,0
+RKKSJM,person,3,spider,wheels,spider,1,1,1,1,2,"no experience with coding",About once a day,About once a week,About once a day,1,1,1,1,1
+Q4EEd6,AI,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",Several times a day,About once a week,Less than once a week,1,1,1,1,1
+7YdT45,person,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",Several times a day,,,1,1,1,1,1
+dMcX57,person,1,spider,wheels,wheels,0,1,1,1,1,"no experience with coding",About once a week,Several times a day,Several times a day,1,1,0,0,0
+d6RFVM,person,3,spider,wheels,spider,1,1,1,1,,,Several times a day,Never,About once a week,1,1,1,1,1
+XUUFNU,person,1,spider,wheels,spider,1,1,1,1,0,"no experience with coding",Several times a day,Never,Less than once a week,1,1,1,1,1
+BZVQUN,AI,4,wheels,spider,wheels,1,1,1,1,6,"coding class at school",About once a day,Several times a day,About once a day,1,1,1,1,1
+CT6TE2,AI,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",About once a day,Several times a day,Several times a day,1,1,1,1,1
+GXJBPE,AI,3,spider,wheels,spider,1,0,0,1,3,"no experience with coding",Several times a day,Less than once a week,Less than once a week,1,1,1,1,1
 4P2QUV,person,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",About once a day,Never,Never,1,1,1,1,1
+3MGZ2D,AI,3,twinkle,twinkle,wheels,1,1,1,0,1,"no experience with coding",About once a day,Less than once a week,Less than once a week,0,0,1,0,0
+PRPWZF,person,2,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",Several times a day,About once a day,About once a week,1,1,1,1,1
 YFLMKE,AI,2,wheels,spider,wheels,1,1,1,1,2,"no experience with coding",About once a week,About once a day,About once a day,1,1,1,1,1
+MBCA5E,person,2,wheels,spider,wheels,1,0,1,1,3,"no experience with coding",About once a day,Several times a day,Several times a day,1,1,1,1,1
 5c5BKL,person,4,wheels,spider,wheels,1,0,0,0,0,"no experience with coding",Less than once a week,,,1,1,1,1,1
+XdAMGC,person,2,wheels,spider,wheels,1,1,1,1,3,"no experience with coding",About once a day,About once a day,About once a day,1,1,1,1,1
+VdA4LW,AI,2,twinkle,twinkle,wheels,1,0,1,0,3,"no experience with coding",About once a day,Less than once a week,About once a week,0,0,1,0,1
+4XE3KX,person,3,spider,wheels,spider,1,1,1,1,3,"after school programs or camps related to coding",About once a week,Several times a day,Several times a day,1,1,1,1,1
+YLAdC4,person,1,spider,wheels,spider,1,1,1,1,1,"no experience with coding",About once a week,Never,Never,1,1,1,1,1
+ZPAG2A,person,3,spider,wheels,spider,1,1,1,1,2,"no experience with coding",Several times a day,About once a week,Never,1,1,1,1,1
+33NPWV,person,2,wheels,spider,wheels,1,0,1,0,0,"no experience with coding",Never,Never,Never,1,1,1,1,1
 AWZXWB,person,1,spider,wheels,wheels,0,0,0,0,,,Less than once a week,,Never,1,1,0,0,0
 PHK3XR,person,2,wheels,spider,wheels,1,1,1,1,2,"no experience with coding",About once a week,About once a day,About once a day,1,1,1,1,1
+PWRD2W,person,3,spider,wheels,spider,1,1,1,1,0,"no experience with coding",Several times a day,Never,Never,1,1,1,1,1
+YFE323,AI,1,spider,wheels,spider,1,1,1,1,4,"no experience with coding",About once a week,About once a week,,1,1,1,1,1
+EFdd5c,AI,4,wheels,spider,wheels,1,1,1,1,3,"after school programs or camps related to coding",About once a day,About once a day,About once a day,1,1,1,1,1
+BVA42Y,person,4,wheels,spider,wheels,1,0,0,0,1,"no experience with coding",About once a week,About once a week,About once a week,1,1,1,1,1
+VdM6UX,person,4,wheels,spider,wheels,1,1,1,1,1,,About once a day,Never,About once a day,1,1,1,1,1
+dR3ZQW,person,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",About once a day,About once a day,Never,1,1,1,1,1
+4d2CPG,AI,1,spider,wheels,wheels,1,1,1,1,0,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a day,1,1,1,1,0
+7JUJPC,person,3,spider,wheels,spider,1,1,1,1,,"no experience with coding",Several times a day,About once a day,Less than once a week,1,1,1,1,1
+C2J3Kd,AI,2,wheels,spider,spider,1,0,0,0,0,"no experience with coding",About once a day,Never,Never,1,1,1,1,0
+RC5T3R,AI,3,spider,wheels,spider,1,1,1,1,,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable),no experience with coding",,,,1,1,1,1,1
+KYNWJ7,person,1,spider,wheels,spider,1,0,0,0,,,,,,1,1,1,1,1
+FVTKHG,AI,1,spider,wheels,spider,1,1,1,1,1,"coding class at school",Several times a day,About once a week,Less than once a week,1,1,1,1,1
+5WHcX5,person,2,wheels,spider,wheels,1,1,1,1,,"no experience with coding",About once a day,,About once a week,1,1,1,1,1
+65LC6N,person,1,spider,twinkle,spider,0,0,0,1,3,"no experience with coding",About once a day,About once a day,About once a day,1,0,0,0,1
+BNXB5D,AI,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",Several times a day,,,1,1,1,1,1
+4ABCC4,AI,3,wheels,twinkle,spider,1,0,0,1,0,"no experience with coding",Less than once a week,,,0,0,1,0,1
+747d4U,person,1,spider,wheels,spider,1,0,0,0,0,"no experience with coding",Less than once a week,Never,Never,1,1,1,1,1
+MBSYFS,person,3,spider,wheels,spider,1,0,0,0,2,"no experience with coding",About once a day,About once a week,About once a week,1,1,1,1,1
+QVSRQC,person,1,spider,wheels,spider,1,0,0,0,,"no experience with coding",,,,1,1,1,1,1
+dcddCF,person,1,spider,wheels,wheels,1,1,1,1,,"no experience with coding",Never,About once a day,Never,1,1,1,1,0
+4NJCTY,person,2,wheels,spider,wheels,1,1,0,0,,"no experience with coding",About once a week,Several times a day,Several times a day,1,1,1,1,1
+Xd7JWC,person,1,spider,wheels,spider,1,1,1,1,3,"no experience with coding",About once a day,About once a week,About once a day,1,1,1,1,1
+DBFU24,person,3,spider,wheels,spider,1,0,0,1,2,"coding class at school",Several times a day,Never,Never,1,1,1,1,1
+6S42XL,person,2,wheels,spider,wheels,1,1,1,1,4,"coding class at school",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+SCMMCA,person,1,spider,wheels,spider,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a day,Several times a day,1,1,1,1,1
+KE6McV,AI,3,spider,wheels,wheels,1,1,1,1,5,"no experience with coding",Several times a day,About once a day,About once a day,1,1,1,1,0
 VDGZL2,AI,2,wheels,spider,wheels,0,1,1,0,1,"no experience with coding",About once a day,Less than once a week,Less than once a week,1,1,0,0,1
 N4N6Q2,AI,1,spider,wheels,spider,1,0,1,0,0,"no experience with coding",Several times a day,,,1,1,1,1,1
+ZYPLRK,AI,1,spider,wheels,spider,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+CXMSKS,person,4,wheels,spider,wheels,1,1,1,1,5,"no experience with coding",About once a day,About once a day,Less than once a week,1,1,1,1,1
+5Q24K5,person,2,wheels,spider,wheels,1,0,0,1,0,"no experience with coding",About once a week,Never,Never,1,1,1,1,1
+V6MN6V,AI,4,wheels,spider,wheels,1,0,0,0,,,Less than once a week,,Less than once a week,1,1,1,1,1
+4HBDTF,person,4,wheels,spider,wheels,1,1,1,1,7,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,,1,1,1,1,1
+ZEYSWL,AI,1,spider,wheels,spider,1,0,0,0,0,"no experience with coding",About once a week,Never,Never,1,1,1,1,1
+YPMRcS,AI,2,wheels,spider,wheels,1,1,0,0,0,"no experience with coding",About once a day,Never,Never,1,1,1,1,1
+EG4DM2,AI,4,wheels,spider,spider,0,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,Never,1,1,0,0,0
+347dJH,AI,3,spider,wheels,spider,1,0,0,0,0,"no experience with coding",Less than once a week,Never,Never,1,1,1,1,1
+YM2G5C,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
 EFYJWW,person,1,spider,wheels,spider,1,0,0,0,2,"no experience with coding",About once a week,About once a day,About once a day,1,1,1,1,1
 7EBDYc,person,2,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",,,,1,1,1,1,1
+LUQK5d,AI,1,spider,wheels,wheels,1,1,0,0,0,"no experience with coding",About once a week,,,1,1,1,1,0
+K6FCZV,AI,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",Several times a day,About once a week,About once a day,1,1,1,1,1
+RCAU4S,AI,2,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+QMLL2R,person,3,spider,wheels,wheels,1,1,1,1,2,"no experience with coding",Less than once a week,Less than once a week,Never,1,1,1,1,0
+RL56d4,person,1,spider,wheels,spider,1,1,1,1,1,"no experience with coding",Several times a day,Never,About once a week,1,1,1,1,1
+YPNJKP,person,1,spider,wheels,spider,1,1,1,1,1,"no experience with coding",About once a week,About once a week,About once a week,1,1,1,1,1
 BC76CA,person,2,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+AS4P67,AI,3,spider,wheels,spider,1,0,0,0,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,Less than once a week,1,1,1,1,1
 75ZW26,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+P3MYF5,AI,1,spider,wheels,spider,1,1,1,0,0,"no experience with coding",About once a week,,Less than once a week,1,1,1,1,1
 LRAUYL,person,3,spider,wheels,spider,1,1,1,1,2,"no experience with coding",About once a week,About once a day,About once a day,1,1,1,1,1
+4JccdB,person,3,spider,wheels,spider,1,1,1,1,0,"after school programs or camps related to coding",Several times a day,,Less than once a week,1,1,1,1,1
+SEAHSd,person,3,spider,wheels,wheels,0,0,1,0,,,About once a day,,Less than once a week,1,1,0,0,0
+XAVQXc,person,1,spider,wheels,wheels,1,0,0,1,1,"no experience with coding",Less than once a week,Never,Never,1,1,1,1,0
+ZPHDLT,person,3,spider,wheels,spider,1,1,1,0,,,Several times a day,About once a week,Several times a day,1,1,1,1,1
 QRZ4QE,person,2,wheels,spider,spider,1,1,1,1,1,"no experience with coding",About once a day,Never,Never,1,1,1,1,0
+KRLDTE,AI,4,wheels,spider,wheels,1,1,1,1,,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Less than once a week,1,1,1,1,1
+P2JCDF,person,1,spider,wheels,spider,1,0,1,1,,"no experience with coding",,,,1,1,1,1,1
+5MGCBZ,AI,2,wheels,spider,wheels,1,1,1,1,1,"no experience with coding",About once a day,,About once a day,1,1,1,1,1
+6c4MZT,person,2,wheels,spider,wheels,1,1,1,1,4,"no experience with coding",About once a day,About once a day,About once a day,1,1,1,1,1
+CR3XRZ,person,4,wheels,spider,wheels,1,1,0,0,3,,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+YHGER6,person,4,wheels,spider,wheels,1,1,1,1,0,"coding class at school",Several times a day,,Several times a day,1,1,1,1,1
+Z6JWFD,AI,4,wheels,spider,wheels,1,0,0,0,,"no experience with coding",About once a day,,,1,1,1,1,1
+6S42XL,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+FJZ4BR,person,4,wheels,spider,wheels,1,1,1,1,6,"coding class at school",Several times a day,Several times a day,About once a day,1,1,1,1,1
+2ZPdLJ,person,3,spider,wheels,wheels,1,0,0,0,0,"no experience with coding",Several times a day,Never,Never,1,1,1,1,0
+3G522Y,AI,4,wheels,spider,wheels,1,1,1,1,,,,,,1,1,1,1,1
+SDF2YR,AI,4,wheels,twinkle,spider,1,0,0,0,2,"no experience with coding",About once a day,Several times a day,Several times a day,1,0,1,0,0
+3ADQJK,person,3,spider,wheels,spider,1,0,0,0,0,"no experience with coding",About once a day,Never,Never,1,1,1,1,1
+2ZBH3d,person,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
+UPTL7Y,person,1,spider,wheels,spider,1,1,1,1,1,"no experience with coding",About once a week,Several times a day,Never,1,1,1,1,1
+THHUXY,person,4,wheels,spider,wheels,1,1,0,1,1,"no experience with coding",Several times a day,About once a week,About once a week,1,1,1,1,1
+LKJRX3,AI,3,spider,wheels,spider,1,1,1,1,0,"coding class at school",Several times a day,,About once a week,1,1,1,1,1
+PcR4BM,AI,3,spider,wheels,spider,1,1,1,1,3,"no experience with coding",About once a day,,Several times a day,1,1,1,1,1
+CcXK5V,person,1,spider,wheels,spider,1,1,1,1,4,"coding class at school,after school programs or camps related to coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+VGGS3V,person,2,wheels,spider,wheels,1,1,1,1,3,"no experience with coding",Several times a day,,Less than once a week,1,1,1,1,1
+5Hd5XN,person,1,spider,wheels,spider,0,0,0,1,0,"coding class at school",About once a day,Never,Never,1,1,0,0,1
+3STC7T,person,1,spider,wheels,spider,1,0,0,0,2,"no experience with coding",About once a day,Never,Never,1,1,1,1,1
 Z6D7dB,person,3,spider,wheels,spider,1,1,1,1,0,"no experience with coding",About once a week,,,1,1,1,1,1
+KPRDT6,person,1,spider,wheels,spider,1,1,1,1,0,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,Never,1,1,1,1,1
+UAPd65,AI,2,wheels,spider,wheels,1,0,1,1,6,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+W575AK,AI,4,wheels,spider,wheels,1,1,1,1,2,"no experience with coding",About once a day,About once a day,About once a day,1,1,1,1,1
+NPVQNQ,AI,4,wheels,spider,wheels,1,0,0,0,1,"no experience with coding",About once a week,About once a week,About once a week,1,1,1,1,1
+d5Ud2c,person,2,wheels,spider,spider,1,1,1,1,2,"no experience with coding",About once a day,Less than once a week,Less than once a week,1,1,1,1,0
+Y4MHXV,person,4,wheels,spider,wheels,1,1,1,1,,,,,,1,1,1,1,1
+HX2GJ6,AI,3,spider,wheels,spider,1,1,1,1,3,"after school programs or camps related to coding",About once a day,About once a day,About once a week,1,1,1,1,1
+YM2G5C,person,2,wheels,spider,spider,1,0,0,0,1,"no experience with coding",About once a week,,,1,1,1,1,0
 GCCDGU,person,2,twinkle,twinkle,wheels,1,0,0,1,0,"no experience with coding",About once a week,Never,Never,0,0,1,0,1
+FXKXTL,AI,4,wheels,spider,spider,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,Several times a day,1,1,1,1,0
+M6LdNB,AI,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",Several times a day,Less than once a week,Less than once a week,1,1,1,1,1
+dXAQG4,person,1,spider,wheels,spider,1,1,1,1,3,"no experience with coding",About once a week,About once a week,About once a week,1,1,1,1,1
+PZ5DPJ,AI,3,spider,wheels,spider,1,0,0,0,4,"no experience with coding",Less than once a week,About once a day,About once a day,1,1,1,1,1
+C5HA27,AI,3,spider,wheels,spider,1,0,0,1,1,"no experience with coding",About once a week,Several times a day,Less than once a week,1,1,1,1,1
+SCHcHE,AI,3,spider,wheels,spider,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,About once a day,1,1,1,1,1
+7W2BAS,person,3,spider,wheels,spider,1,1,1,1,1,"no experience with coding",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
+3XcSJ2,AI,3,spider,wheels,wheels,1,1,1,1,0,"no experience with coding",Less than once a week,,,1,1,1,1,0
+AF6JVZ,AI,1,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Less than once a week,Never,Never,1,1,1,1,1
+KN4QXT,AI,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",About once a week,About once a week,Less than once a week,1,1,1,1,1
+DUJVEL,AI,3,spider,wheels,spider,1,1,1,1,1,"coding class at school",Several times a day,About once a week,About once a week,1,1,1,1,1
+MR5MAH,AI,3,spider,wheels,spider,1,1,1,1,0,"no experience with coding",About once a day,,Never,1,1,1,1,1
+AZQZZJ,person,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Never,1,1,1,1,1
+WUBBEK,person,3,spider,wheels,spider,1,1,0,1,3,"no experience with coding",About once a week,Never,Never,1,1,1,1,1
+Fc7UHG,AI,1,spider,wheels,spider,1,1,1,1,1,"coding class at school",Less than once a week,Less than once a week,Several times a day,1,1,1,1,1
+V6JVMB,AI,2,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,Less than once a week,1,1,1,1,1
+dJZ5QE,person,2,wheels,spider,spider,1,1,1,1,3,"no experience with coding",Never,About once a day,Never,1,1,1,1,0
+Ddd42B,AI,1,spider,wheels,wheels,1,1,1,1,8,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+XS57KJ,AI,4,wheels,spider,wheels,1,1,1,1,3,"no experience with coding",Several times a day,About once a week,About once a week,1,1,1,1,1
+44WWDL,AI,1,spider,wheels,wheels,0,0,1,0,,,About once a day,,Less than once a week,1,1,0,0,0
+dJUH64,AI,2,wheels,spider,wheels,1,1,1,1,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a week,About once a day,1,1,1,1,1
+4VHdUK,AI,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",Several times a day,Never,Never,1,1,1,1,1
+TJAT32,person,4,wheels,spider,spider,0,0,0,1,3,"no experience with coding",About once a week,Never,Never,1,1,0,0,0
+d44R4W,AI,4,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,,Several times a day,1,1,1,1,1
 WMJVGR,person,3,spider,wheels,spider,1,1,1,0,2,"no experience with coding",Never,Less than once a week,Never,1,1,1,1,1
+MHAFcY,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+P3MYF5,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+ZPHDLT,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+NSQ3X6,AI,1,spider,wheels,spider,1,1,1,1,0,"no experience with coding",About once a day,,,1,1,1,1,1
+VRHSL4,AI,1,spider,wheels,spider,1,1,1,1,,,Several times a day,,About once a week,1,1,1,1,1
+SQPHC7,person,4,wheels,spider,wheels,1,1,1,1,0,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+YMH4W3,AI,4,wheels,spider,wheels,1,0,0,0,,,Less than once a week,,Less than once a week,1,1,1,1,1
+VZ53KA,person,4,wheels,spider,wheels,1,1,1,1,4,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+PKXKVJ,person,4,wheels,spider,wheels,1,1,1,1,4,"after school programs or camps related to coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3BCE74,AI,3,wheels,spider,spider,0,0,0,0,,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,0,0,0,0,1
+KE3Z6Z,person,4,wheels,spider,wheels,1,1,1,1,0,"no experience with coding",About once a week,,Less than once a week,1,1,1,1,1
+K73D3S,person,3,spider,wheels,spider,1,1,0,0,6,"no experience with coding",Less than once a week,About once a day,Several times a day,1,1,1,1,1
+FW72XL,AI,4,wheels,spider,wheels,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,,Several times a day,1,1,1,1,1
+WPK4FZ,AI,4,wheels,spider,wheels,1,0,0,1,1,"no experience with coding",About once a day,About once a day,Several times a day,1,1,1,1,1
+CAECUF,AI,2,wheels,spider,wheels,1,1,1,1,1,,About once a day,,About once a day,1,1,1,1,1
+7UQ674,AI,1,wheels,twinkle,wheels,0,0,1,1,2,"no experience with coding",About once a day,About once a week,About once a day,0,0,0,0,0
+BdHTN4,person,1,spider,wheels,spider,1,0,0,1,0,"no experience with coding",Several times a day,,Less than once a week,1,1,1,1,1
 4VCRcA,person,2,wheels,spider,wheels,1,1,1,0,2,"no experience with coding",Never,Never,Never,1,1,1,1,1
+Y324M2,person,3,spider,wheels,wheels,1,1,1,1,,,About once a day,,Several times a day,1,1,1,1,0
+CACCCP,AI,1,spider,wheels,spider,1,1,1,1,1,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,,Less than once a week,1,1,1,1,1
+K7YdLP,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+3BMEHF,person,3,spider,wheels,spider,1,0,0,0,3,"no experience with coding",Never,About once a week,Never,1,1,1,1,1
+Kc6RMY,AI,4,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+6FL4TM,AI,4,wheels,spider,wheels,1,1,1,1,3,"no experience with coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+cE3WXc,person,3,wheels,twinkle,spider,1,1,1,0,1,"no experience with coding",Less than once a week,,Less than once a week,0,0,1,0,1
 KMUTBA,person,1,spider,wheels,wheels,1,1,1,1,0,"no experience with coding",,,,1,1,1,1,0
+EHPQXP,AI,3,spider,wheels,spider,1,0,0,0,3,"no experience with coding",About once a day,About once a day,About once a day,1,1,1,1,1
+NY2cZA,AI,4,wheels,spider,wheels,1,1,1,1,4,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a day,About once a week,1,1,1,1,1
+UQYP3K,person,2,wheels,spider,spider,1,1,1,1,0,"no experience with coding",About once a day,Never,Never,1,1,1,1,0
+XC7SMU,person,4,wheels,spider,wheels,1,1,1,1,4,"after school programs or camps related to coding",About once a day,About once a day,About once a day,1,1,1,1,1
 PB3S3Y,AI,2,spider,wheels,spider,1,1,0,0,2,"no experience with coding",Several times a day,Several times a day,Several times a day,0,0,1,0,0
+7R4XY2,person,3,spider,wheels,spider,0,1,1,0,0,"no experience with coding",About once a day,Never,Never,1,1,0,0,1
+J33Q67,AI,3,spider,wheels,wheels,1,0,0,0,,,Several times a day,,Less than once a week,1,1,1,1,0
+GE4NBT,AI,3,spider,wheels,wheels,1,1,1,1,,,Several times a day,Never,About once a day,1,1,1,1,0
+DY7SUJ,AI,3,spider,wheels,wheels,1,1,1,1,1,"coding class at school",About once a week,Never,Several times a day,1,1,1,1,0
+ZALG7S,person,2,wheels,spider,wheels,1,0,0,0,1,"no experience with coding",About once a day,Never,Never,1,1,1,1,1
+6RDT55,AI,3,spider,wheels,wheels,1,1,1,1,3,"no experience with coding",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+KHRJM7,AI,4,wheels,spider,spider,1,1,1,1,4,"after school programs or camps related to coding",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+c2DEY3,AI,1,spider,wheels,wheels,1,0,0,0,0,"no experience with coding",About once a day,,Less than once a week,1,1,1,1,0
+K7R7CV,AI,3,spider,wheels,spider,1,1,0,0,2,"no experience with coding",About once a day,,About once a week,1,1,1,1,1
+5c3F4C,AI,4,spider,spider,wheels,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,0,1,1,0,1
+4VA6AQ,,0,0,0,0,0,0,0,0,,,,,,0,0,0,0,0
+NDM42C,person,1,spider,wheels,spider,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Less than once a week,1,1,1,1,1
