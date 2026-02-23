@@ -4,6 +4,8 @@ import csv
 from pathlib import Path
 import datetime
 
+SPAM_IDS = ["ZNBZd7","22EDKR","AMRKB5","2CJGWA","McANR2","R5dVKM","RQCJLU","A3ESRd","VUGDDS","QUF5ZS","5HA7R5","E4SEBD","DSVC6M","KPc32Z","RQCJLU","A3ESRd","JTHHMT","VUGDDS","5HA7R5","E4SEBD","KPc32Z","QUF5ZS","RQCJLU","DSVC6M","cKSVZR","4Hc4L5","GQAC2c","MPXMDG","NW3GDF","LLRBS5"]
+
 data = open("data.csv", "w")
 data.truncate()
 title = "child__hashed_id,condition,counterbalance,attn1,attn2,test,attn3,rachel_false_belief,diana_false_belief,allie_false_belief,num_speakers,coding_experience,smartphone_frequency,smart_speaker_frequency,voice_assistant_frequency,pass_attn1,pass_attn2,pass_attn3,pass_all_attn,chose_song_1\n"
@@ -94,6 +96,9 @@ for file in os.listdir(path):
 						voice_assistant_frequency = row['value']
 			if not current_data:
 				print("Ignoring data from earlier study version")
+				continue
+			if str(id) in SPAM_IDS:
+				print("Ignoring spam data")
 				continue
 			pass_attn1 = 0
 			pass_attn2 = 0
