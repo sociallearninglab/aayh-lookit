@@ -20,24 +20,12 @@ se <- function(x, n) {
 
 ## Data Wrangling
 ```{r data}
-child_data <- read_csv("~/Downloads/Guess-What-Happens-Next_all-children-identifiable.csv") %>% select(child__hashed_id, child__age_in_days)
-colnames(child_data) <- c("child__hashed_id", "age_days")
-child_data <- child_data %>% 
-  mutate(age = age_days/365,
+data <- read_csv("../r_data.csv")
+data <- data %>% 
+  mutate(age = age_days/365.25,
          floor_age = floor(age),
          six_mo_floor_age = (0.5 * round(age-floor_age)) + floor_age)
-data <- read_csv("../data.csv") 
-data <- merge(child_data, data)
-attn_summary <- data %>% 
-  group_by(floor_age, pass_all_attn) %>% 
-  summarise(n = n()) 
-attn_summary$pass_all_attn[attn_summary$pass_all_attn == 0] <- "Failed"
-attn_summary$pass_all_attn[attn_summary$pass_all_attn == 1] <- "Passed"
-data$condition[data$condition == "person"] <- "Person"
-attn_summary <- attn_summary %>% 
-  pivot_wider(names_from = pass_all_attn, values_from = n)
-data <- data %>%
-  filter(pass_all_attn == 1)
+
 data$voice_assistant_frequency = factor(data$voice_assistant_frequency, levels = c("Never", "Less than once a week
 ", "About once a week", "About once a day", "Several times a day"))
 data <- data %>% mutate(va_daily = (voice_assistant_frequency == "About once a day" | voice_assistant_frequency == "Several times a day"))
