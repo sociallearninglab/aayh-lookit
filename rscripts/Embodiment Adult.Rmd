@@ -1,0 +1,78 @@
+---
+title: "Embodiment MTurk Counterbalanced"
+output: html_document
+---
+
+## Setup
+```{r setup}
+library(tidyverse)
+library(readxl)
+
+se <- function(x, n) {
+  sd(x)/sqrt(n)
+}
+```
+
+## Data Wrangling
+```{r data}
+data <- read_csv("adult.csv")%>% 
+  mutate(chose_song1 = (song1 == answer),
+         multiple_ss = (num_ss >= 2))
+
+
+```
+
+## GLM
+```{r glm}
+mod <- glm(chose_song1 ~ condition * multiple_ss, family = binomial, data)
+summary(mod)
+```
+
+## Binomial Tests
+```{r glm}
+person_data <- data %>% 
+  filter(condition == "Person") %>% 
+  summarise(x = sum(chose_song1),
+            n = n())
+binom.test(x = person_data$x, n = person_data$n, alternative = "greater")
+
+ai_data <- data %>% 
+  filter(condition == "AI") %>% 
+  summarise(x = sum(chose_song1),
+            n = n())
+binom.test(x = ai_data$x, n = ai_data$n, alternative = "less")
+```
+
+## Plot
+```{r plot}
+plot_data <- data %>% 
+  group_by(condition) %>% 
+  summarise(percent = mean(chose_song1),
+            n = n(),
+            se = se(chose_song1,n),
+            ci = 1.96*(sd(chose_song1)/sqrt(n())),
+            ci_min = max(0, percent - ci),
+            ci_max = min(1,percent + ci))
+
+ggplot(plot_data, aes(fill=condition, x=condition, y=percent)) +
+  geom_col() + 
+  geom_errorbar(aes(ymin = ci_min, ymax = ci_max), width=0.3, position = position_dodge(0.9)) +
+  ylab("Percent Choosing Song 1") +
+  xlab("") +
+  labs(title = "Adult Predictions of Song Played (Replication)",
+       x = "",
+       y = "Percent Consistent w/ Separate Minds",
+       fill = "Condition") +
+  scale_fill_manual(values=c("#B6B6B6", "#457AEE")) +
+  scale_y_continuous(limit = c(0,1), breaks=c(0,0.25,0.5,0.75,1), labels = c(0, 0.25, 0.50, 0.75, 1.00)) +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+```
