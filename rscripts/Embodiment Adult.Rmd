@@ -15,7 +15,7 @@ se <- function(x, n) {
 
 ## Data Wrangling
 ```{r data}
-data <- read_csv("adult.csv")%>% 
+data <- read_csv("adult_data.csv")%>% 
   mutate(chose_song1 = (song1 == answer),
          multiple_ss = (num_ss >= 2))
 

@@ -20,7 +20,7 @@ se <- function(x, n) {
 
 ## Data Wrangling
 ```{r data}
-data <- read_csv("../r_data.csv")
+data <- read_csv("r_data.csv")
 data <- data %>% 
   mutate(age = age_days/365.25,
          floor_age = floor(age),
