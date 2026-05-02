@@ -126,12 +126,6 @@ ggplot(exploratory_data, aes(x=floor_age, y=chose_song_1)) +
 
 ```
 
-## GLM
-```{r data}
-mod <- glm(chose_song_1  ~ condition * age * multiSSexperience, family = binomial, data %>% filter(age >= 9))
-summary(mod)
-```
-
 ## Plot Age Line
 ```{r data}
 ggplot(data, aes(x=age, y=chose_song_1)) +
@@ -220,42 +214,4 @@ ggplot(merged_older, aes(x=floor_age, y=chose_song_1)) +
         legend.justification = "left",
         legend.text = element_text(size = 12),
         legend.title = element_text(face = "bold"))
-
-six_mo_bar_data <- merged_older %>% 
-  group_by(six_mo_floor_age, condition) %>% 
-  summarise(percent_song_1 = mean(chose_song_1),
-            n = n())
-
-ggplot(merged_older, aes(x=floor_age, y=chose_song_1)) +
-  geom_col(data=six_mo_bar_data, aes(x=six_mo_floor_age, y=percent_song_1, fill=condition), position="Dodge", alpha=0.3) +
-  geom_smooth(method = "glm", method.args = list(family = "binomial"), formula = y ~ x + I(x^2), aes(color=condition)) +
-  scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
-  scale_fill_manual(values=c("#457AEE", "#888888")) +
-  scale_color_manual(values=c("#457AEE", "#888888")) +
-  labs(title = "Developmental Data",
-       x = "Age",
-       y = "Percent Consistent w/ Separate Minds",
-       color = "Condition",
-       fill = "Condition") +
-  guides(color = guide_legend(order = 1), 
-        linetype = guide_legend(order = 2),
-        fill = "none") +
-  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
-        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
-        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
-        axis.ticks = element_line(color = "#595959"),
-        axis.line.x = element_line(color = "#595959"),
-        axis.line.y = element_line(color = "#595959"),
-        legend.position = "right",
-        legend.justification = "left",
-        legend.text = element_text(size = 12),
-        legend.title = element_text(face = "bold"))
-```
-```{r}
-oldest <- data %>% 
-  filter(floor_age >= 14) %>% 
-  group_by(floor_age, condition) %>% 
-  summarise(n = n(),
-            percent_song_1 = mean(chose_song_1))
-
 ```
