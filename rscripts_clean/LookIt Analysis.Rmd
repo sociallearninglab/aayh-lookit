@@ -1,0 +1,137 @@
+---
+title: "LookIt Analysis"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup
+```{r setup}
+library(tidyverse)
+library(readxl)
+theme_set(theme_classic())
+
+se <- function(x, n) {
+  sd(x)/sqrt(n)
+}
+```
+
+## Data Wrangling
+```{r data}
+data <- read_csv("lookit_data.csv")
+data <- data %>% 
+  mutate(age = age_days/365.25,
+         floor_age = floor(age),
+         six_mo_floor_age = (0.5 * round(age-floor_age)) + floor_age)
+
+data$voice_assistant_frequency = factor(data$voice_assistant_frequency, levels = c("Never", "Less than once a week
+", "About once a week", "About once a day", "Several times a day"))
+data <- data %>% mutate(va_daily = (voice_assistant_frequency == "About once a day" | voice_assistant_frequency == "Several times a day"))
+data <- data %>% mutate(ss_daily = (smart_speaker_frequency == "About once a day" | smart_speaker_frequency == "Several times a day"))
+```
+## Demograpics
+```{r demo}
+data %>% summarise(
+  mean_age = mean(age),
+  sd_age = sd(age),
+  n = n()
+)
+```
+
+## H1
+```{r h1}
+mod <- glm(chose_song_1 ~ 1 + age * condition, family = binomial, data)
+summary(mod)
+```
+
+## H2
+```{r h1}
+mod <- glm(chose_song_1 ~ age^2, family = binomial, data %>% filter(condition=="AI"))
+summary(mod)
+```
+## Plot Age
+```{r data}
+merged_older <- data
+merged_older$floor_age[merged_older$floor_age>=14] <- 14
+data
+bar_data <- merged_older %>% 
+  group_by(floor_age, condition) %>% 
+  summarise(percent_song_1 = mean(chose_song_1),
+            n = n())
+
+ggplot(merged_older, aes(x=floor_age, y=chose_song_1)) +
+  geom_col(data=bar_data, aes(x=floor_age, y=percent_song_1, fill=condition), position="Dodge", alpha=0.3) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"), formula = y ~ x + I(x^2), aes(color=condition)) +
+  scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
+  scale_fill_manual(values=c("#457AEE", "#888888")) +
+  scale_color_manual(values=c("#457AEE", "#888888")) +
+  labs(title = "Developmental Data",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       color = "Condition") +
+  guides(color = guide_legend(order = 1), 
+        linetype = guide_legend(order = 2),
+        fill = "none") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+```
+
+
+## Exploratory
+```{r exploratory}
+exploratory_data <- data %>% filter(condition=="AI" & !is.na(ss_daily))
+exploratory_data <- exploratory_data %>% filter(floor_age >= 6)
+mod <- glm(chose_song_1 ~ 1 + age^2 * ss_daily, family = binomial, exploratory_data)
+summary(mod)
+
+nrow(exploratory_data)
+
+exploratory_data$ss_daily[exploratory_data$ss_daily == TRUE] <- "Daily"
+exploratory_data$ss_daily[exploratory_data$ss_daily == FALSE] <- "Less than Daily"
+
+exploratory_data <- exploratory_data %>% filter(floor_age >= 6)
+
+exploratory_data$floor_age[exploratory_data$floor_age>=14] <- 14
+exploratory_bar_data <- exploratory_data %>% 
+  group_by(floor_age, ss_daily) %>% 
+  summarise(percent_song_1 = mean(chose_song_1),
+            n = n())
+
+ggplot(exploratory_data, aes(x=floor_age, y=chose_song_1)) +
+  geom_col(data=exploratory_bar_data, aes(x=floor_age, y=percent_song_1, fill=ss_daily), position="Dodge", alpha=0.3) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"), formula = y ~ x + I(x^2), aes(color=ss_daily)) +
+  scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
+  scale_fill_manual(values=c("#B6A6E9", "#3D2785")) +
+  scale_color_manual(values=c("#B6A6E9", "#3D2785")) +
+  labs(title = "Impact of Daily Smart Speaker Usage",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       color = "Daily Smart Speaker Usage",
+       fill = "Daily Smart Speaker Usage") +
+  guides(color = guide_legend(order = 1), 
+        linetype = guide_legend(order = 2)) +
+  scale_x_discrete(limits=6:14) +
+  guides(fill="none") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+
+
+```

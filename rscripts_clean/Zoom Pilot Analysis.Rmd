@@ -1,0 +1,99 @@
+---
+title: "Zoom Pilot Analysis"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup
+```{r setup}
+library(tidyverse)
+library(readxl)
+theme_set(theme_classic())
+
+se <- function(x, n) {
+  sd(x)/sqrt(n)
+}
+```
+
+## Data Wrangling
+```{r data}
+data <- read_csv("zoom_data.csv") %>% 
+  filter(usable == 1 & english_all_or_most_or_first_lang_or_school == 1 & age < 9) %>% 
+  mutate(multiSSexperience = number_of_SS_in_home > 1,
+         high_tom_no_why = ifelse(tom_no_why > 4, 1, 0),
+         high_tom = ifelse(tom_no_moral > 6, 1, 0),
+         chose_song_1 = ifelse(first_song == test_q, 1, 0),
+         chose_correctly = ifelse(condition == "VUI", ifelse(chose_song_1, 0, 1), ifelse(chose_song_1, 1, 0)),
+         fb_score = (rachel_prediction_implicit_false_belief + diana_prediction_false_belief_location + allie_predicition_false_belief_location)/3.0)
+data$condition <- recode(data$condition, "VUI"="AI")
+data$condition <- factor(data$condition, levels = c("Person", "AI"))
+data$multiSSexperience <- factor(data$multiSSexperience)
+```
+
+## GLM
+```{r data}
+mod <- glm(chose_song_1  ~ 1 + condition * age * multiSSexperience, data=data, family = binomial)
+summary(mod)
+
+mod <- lm(tom  ~ age, data=data)
+summary(mod)
+person_data <- data %>%  filter(condition == "Person")
+cor.test(person_data$fb_score, person_data$age, method = "spearman")
+summary(glm(chose_song_1  ~ fb_score, data=person_data, family = binomial))
+
+mod2 <- glm(chose_song_1  ~ age * multiSSexperience, data=data %>% filter(condition=="AI"), family = binomial)
+summary(mod2)
+```
+
+```{r, warning=FALSE, message = FALSE}
+require(gridExtra)
+theme_set(theme_classic())
+
+colors <- c("Has Connected Smart Speakers" = "blue", "Without Connected Smart Speakers" = "red", "False Belief Score" = "black")
+
+
+person_plot <- ggplot() +
+    geom_smooth(data = data %>% filter(condition=="Person")  %>% filter(number_of_SS_in_home > 1), aes(x=age, y=chose_song_1), color="red") +
+  geom_smooth(data = data %>% filter(condition=="Person")  %>% filter(number_of_SS_in_home <= 1), aes(x=age, y=chose_song_1), color="blue") +
+  geom_smooth(data = data %>% filter(condition=="Person"), aes(x=age, y=fb_score), color="black") +
+  coord_cartesian(ylim = c(0,1)) +
+  labs(title = "Person Condition",
+       x = "Age",
+       y = "Accuracy",
+       color = "") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"))
+
+ai_plot <- ggplot() +
+  geom_smooth(data = data %>% filter(condition=="AI")  %>% filter(number_of_SS_in_home > 1), aes(x=age, y=chose_song_1, color="Has Connected Smart Speakers")) +
+  geom_smooth(data = data %>% filter(condition=="AI") %>% filter(number_of_SS_in_home <= 1), aes(x=age, y=chose_song_1, color="Without Connected Smart Speakers")) +
+  geom_smooth(data = data %>% filter(condition=="AI"), aes(x=age, y=fb_score, color="False Belief Score")) +
+  coord_cartesian(ylim = c(0,1)) +
+  labs(title = "AI Condition",
+       x = "Age",
+       y = "",
+       color = "") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "none",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold")) + 
+  scale_color_manual(values = colors)
+
+person_plot
+ai_plot
+
+grid.arrange(person_plot, ai_plot, ncol=2)
+```

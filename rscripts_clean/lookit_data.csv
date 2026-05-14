@@ -1,0 +1,417 @@
+age_days,condition,counterbalance,attn1,attn2,test,attn3,rachel_false_belief,diana_false_belief,allie_false_belief,num_speakers,coding_experience,smartphone_frequency,smart_speaker_frequency,voice_assistant_frequency,pass_attn1,pass_attn2,pass_attn3,pass_all_attn,chose_song_1
+1594,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a day,Several times a day,About once a day,1,1,1,1,1
+3878,AI,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,Several times a day,NA,About once a day,1,1,1,1,1
+4875,Person,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,NA,Several times a day,1,1,1,1,1
+4059,Person,2,wheels,spider,wheels,1,1,1,1,NA,NA,About once a week,About once a day,NA,1,1,1,1,1
+2960,Person,3,spider,wheels,spider,1,1,1,1,2,no experience with coding,About once a day,About once a week,About once a day,1,1,1,1,1
+2960,Person,3,spider,wheels,spider,1,0,0,1,NA,NA,About once a day,NA,About once a day,1,1,1,1,1
+5202,Person,1,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,About once a week,1,1,1,1,1
+4984,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,NA,1,1,1,1,1
+5451,AI,2,wheels,spider,spider,1,1,1,1,6,coding class at school,Several times a day,Several times a day,Several times a day,1,1,1,1,0
+3062,AI,3,spider,wheels,spider,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a week,About once a week,1,1,1,1,1
+3736,Person,1,spider,wheels,spider,1,1,1,1,5,after school programs or camps related to coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+2385,AI,1,spider,wheels,wheels,1,0,0,0,3,after school programs or camps related to coding,About once a week,Less than once a week,Never,1,1,1,1,0
+4166,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+4034,Person,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+1494,Person,3,spider,wheels,wheels,1,0,0,0,0,no experience with coding,Several times a day,Never,Never,1,1,1,1,0
+1390,Person,2,wheels,spider,wheels,1,0,1,0,0,no experience with coding,Never,Never,Never,1,1,1,1,1
+1809,AI,3,spider,wheels,spider,1,0,0,0,0,no experience with coding,Less than once a week,Never,Never,1,1,1,1,1
+4825,AI,2,wheels,spider,spider,1,1,1,1,2,coding class at school,About once a day,About once a week,About once a week,1,1,1,1,0
+2909,Person,2,wheels,spider,wheels,1,1,1,1,NA,NA,About once a day,NA,NA,1,1,1,1,1
+1164,Person,3,spider,wheels,spider,1,0,0,0,0,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+1326,AI,2,wheels,spider,wheels,1,0,0,0,0,no experience with coding,About once a week,Never,Never,1,1,1,1,1
+2135,Person,3,spider,wheels,spider,1,0,0,0,3,no experience with coding,Never,About once a week,Never,1,1,1,1,1
+4866,AI,3,spider,wheels,spider,1,1,1,1,1,coding class at school,Several times a day,Less than once a week,NA,1,1,1,1,1
+2462,AI,4,wheels,spider,wheels,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+3351,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,About once a day,NA,Several times a day,1,1,1,1,1
+1485,Person,1,spider,wheels,spider,1,0,0,0,2,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+3811,AI,3,spider,wheels,wheels,1,1,1,1,0,no experience with coding,Less than once a week,NA,NA,1,1,1,1,0
+4876,AI,4,wheels,spider,spider,1,0,0,0,6,coding class at school,Several times a day,About once a day,NA,1,1,1,1,0
+3765,Person,3,spider,wheels,spider,1,1,1,1,1,after school programs or camps related to coding,About once a day,About once a day,About once a day,1,1,1,1,1
+3000,AI,1,spider,wheels,wheels,1,1,1,1,0,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a day,1,1,1,1,0
+1520,Person,4,wheels,spider,spider,1,0,0,0,1,no experience with coding,About once a week,Several times a day,Several times a day,1,1,1,1,0
+3831,Person,4,wheels,spider,wheels,1,1,1,1,7,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,NA,1,1,1,1,1
+2816,Person,3,spider,wheels,spider,1,1,1,1,0,after school programs or camps related to coding,Several times a day,NA,NA,1,1,1,1,1
+1098,AI,1,spider,wheels,spider,1,0,0,0,1,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+1579,Person,2,wheels,spider,wheels,1,1,0,0,NA,no experience with coding,About once a week,Several times a day,Several times a day,1,1,1,1,1
+1868,Person,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+2058,AI,4,wheels,spider,wheels,1,1,0,0,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a day,1,1,1,1,1
+5072,AI,2,wheels,spider,wheels,1,1,1,1,1,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,NA,1,1,1,1,1
+4646,AI,2,wheels,spider,spider,1,1,1,1,0,after school programs or camps related to coding,Several times a day,Less than once a week,About once a week,1,1,1,1,0
+2535,Person,2,wheels,spider,wheels,1,1,1,0,2,no experience with coding,Never,Never,Never,1,1,1,1,1
+5030,AI,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,Several times a day,Never,Never,1,1,1,1,1
+3592,Person,3,spider,wheels,spider,1,1,1,1,3,after school programs or camps related to coding,About once a week,Several times a day,Several times a day,1,1,1,1,1
+5265,AI,2,wheels,spider,spider,1,1,1,1,3,coding class at school,Several times a day,About once a day,About once a day,1,1,1,1,0
+3514,Person,1,spider,wheels,spider,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4272,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,Several times a day,NA,NA,1,1,1,1,1
+2414,Person,4,wheels,spider,wheels,1,0,0,0,0,no experience with coding,Less than once a week,NA,NA,1,1,1,1,1
+5505,AI,2,wheels,spider,spider,1,1,1,1,10,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,0
+3241,AI,4,wheels,spider,wheels,1,1,1,1,2,no experience with coding,Less than once a week,About once a week,NA,1,1,1,1,1
+1630,AI,4,wheels,spider,spider,1,1,1,1,0,no experience with coding,About once a day,Never,NA,1,1,1,1,0
+2415,Person,1,spider,wheels,spider,1,1,1,1,NA,coding class at school,About once a week,Never,Never,1,1,1,1,1
+3706,Person,2,wheels,spider,wheels,1,1,1,1,NA,coding class at school,NA,NA,NA,1,1,1,1,1
+2631,AI,4,wheels,spider,spider,1,1,1,1,0,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a week,1,1,1,1,0
+4056,AI,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,About once a day,NA,About once a day,1,1,1,1,1
+1283,Person,2,wheels,spider,wheels,1,0,0,1,0,no experience with coding,About once a week,Never,Never,1,1,1,1,1
+1344,AI,4,wheels,spider,wheels,1,1,1,1,4,no experience with coding,About once a week,About once a day,About once a week,1,1,1,1,1
+5161,Person,3,spider,wheels,spider,1,1,1,1,4,after school programs or camps related to coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3749,Person,2,wheels,spider,wheels,1,1,1,1,NA,no experience with coding,About once a day,NA,About once a week,1,1,1,1,1
+2838,Person,2,wheels,spider,wheels,1,1,1,1,4,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+2536,AI,4,wheels,spider,wheels,1,1,1,1,3,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4342,AI,2,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+3540,Person,2,wheels,spider,wheels,1,1,1,1,2,coding class at school,Several times a day,About once a day,About once a day,1,1,1,1,1
+4924,AI,3,spider,wheels,wheels,1,1,1,1,3,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,0
+1250,AI,2,wheels,spider,spider,1,1,1,0,0,no experience with coding,Several times a day,NA,Never,1,1,1,1,0
+3479,Person,2,wheels,spider,wheels,1,1,1,1,4,coding class at school,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4993,AI,4,wheels,spider,spider,1,0,0,1,0,coding class at school,Several times a day,NA,NA,1,1,1,1,0
+3335,Person,4,wheels,spider,wheels,1,1,1,1,3,coding class at school,About once a week,Less than once a week,About once a week,1,1,1,1,1
+2157,Person,2,wheels,spider,wheels,1,1,1,1,2,NA,About once a day,About once a day,About once a day,1,1,1,1,1
+5248,AI,1,spider,wheels,wheels,1,0,1,1,1,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,0
+2033,Person,1,spider,wheels,spider,1,0,0,0,0,no experience with coding,Less than once a week,Never,Never,1,1,1,1,1
+1615,Person,4,wheels,spider,wheels,1,0,0,0,NA,NA,Several times a day,NA,About once a week,1,1,1,1,1
+4878,Person,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+3293,AI,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,Less than once a week,About once a week,About once a week,1,1,1,1,1
+5075,Person,4,wheels,spider,wheels,1,1,1,1,0,coding class at school,About once a day,Never,Never,1,1,1,1,1
+3278,Person,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,NA,NA,NA,1,1,1,1,1
+5193,AI,4,wheels,spider,wheels,1,1,1,1,NA,NA,About once a day,NA,About once a week,1,1,1,1,1
+5662,AI,2,wheels,spider,wheels,1,0,1,1,3,coding class at school,Several times a day,NA,About once a day,1,1,1,1,1
+2803,Person,3,spider,wheels,spider,1,1,1,1,NA,no experience with coding,Several times a day,About once a day,NA,1,1,1,1,1
+2988,Person,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a day,Less than once a week,NA,1,1,1,1,1
+2551,Person,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+1121,Person,4,wheels,spider,spider,1,1,0,0,5,no experience with coding,Several times a day,About once a day,NA,1,1,1,1,0
+3319,AI,3,spider,wheels,spider,1,1,1,1,2,no experience with coding,Several times a day,Less than once a week,Never,1,1,1,1,1
+1215,Person,3,spider,wheels,spider,1,0,1,0,0,no experience with coding,Less than once a week,NA,NA,1,1,1,1,1
+2610,AI,3,spider,wheels,spider,1,0,0,0,2,no experience with coding,About once a day,About once a week,NA,1,1,1,1,1
+2491,AI,1,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Less than once a week,Never,Never,1,1,1,1,1
+5710,Person,4,wheels,spider,wheels,1,1,1,1,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+3639,AI,4,wheels,spider,wheels,1,1,1,1,2,no experience with coding,Several times a day,Less than once a week,NA,1,1,1,1,1
+3900,Person,1,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,About once a week,1,1,1,1,1
+2034,AI,3,spider,wheels,spider,1,0,0,0,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,NA,1,1,1,1,1
+5078,Person,1,spider,wheels,spider,1,1,1,1,NA,NA,About once a day,About once a day,About once a day,1,1,1,1,1
+5078,AI,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,Less than once a week,NA,1,1,1,1,1
+3476,Person,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Never,1,1,1,1,1
+3977,AI,2,wheels,spider,wheels,1,1,1,1,1,coding class at school,Several times a day,About once a day,Several times a day,1,1,1,1,1
+2523,Person,2,wheels,spider,wheels,1,1,1,1,1,coding class at school,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+5042,AI,2,wheels,spider,wheels,1,1,1,1,NA,NA,About once a week,NA,About once a week,1,1,1,1,1
+3776,Person,2,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+3408,Person,1,spider,wheels,spider,1,0,0,1,0,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+4059,Person,1,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,NA,1,1,1,1,1
+3256,AI,4,wheels,spider,wheels,1,1,1,1,NA,no experience with coding,About once a day,NA,Several times a day,1,1,1,1,1
+1548,AI,2,wheels,spider,wheels,1,1,1,1,NA,NA,About once a day,NA,Several times a day,1,1,1,1,1
+2628,AI,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+1954,Person,4,wheels,spider,wheels,1,0,0,0,1,no experience with coding,About once a week,About once a week,About once a week,1,1,1,1,1
+4140,AI,1,spider,wheels,spider,1,0,0,1,0,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+3852,AI,4,wheels,spider,wheels,1,1,1,1,6,coding class at school,About once a day,Several times a day,About once a day,1,1,1,1,1
+1199,AI,1,spider,wheels,wheels,1,0,0,0,0,no experience with coding,About once a day,NA,NA,1,1,1,1,0
+1357,AI,2,wheels,spider,spider,1,0,0,0,0,no experience with coding,About once a day,Never,Never,1,1,1,1,0
+1372,AI,4,wheels,spider,wheels,1,0,0,0,NA,NA,Several times a day,NA,About once a day,1,1,1,1,1
+3713,AI,1,spider,wheels,spider,1,1,1,1,5,after school programs or camps related to coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3866,Person,1,spider,wheels,spider,1,1,1,1,5,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+4608,Person,1,spider,wheels,spider,1,0,1,1,NA,NA,About once a day,Less than once a week,NA,1,1,1,1,1
+4608,AI,3,spider,wheels,spider,1,0,0,1,1,no experience with coding,About once a week,Several times a day,NA,1,1,1,1,1
+2895,AI,1,spider,wheels,spider,1,1,1,1,1,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,NA,NA,1,1,1,1,1
+3871,AI,2,wheels,spider,wheels,1,1,1,1,1,NA,About once a day,NA,About once a day,1,1,1,1,1
+3622,Person,1,spider,wheels,spider,1,1,1,1,4,"coding class at school,after school programs or camps related to coding",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4964,Person,1,spider,wheels,spider,1,1,1,1,0,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,About once a day,1,1,1,1,1
+1134,Person,4,wheels,spider,wheels,1,0,0,1,2,no experience with coding,Less than once a week,Several times a day,Several times a day,1,1,1,1,1
+2499,Person,3,spider,wheels,spider,1,1,1,1,5,coding class at school,About once a week,Several times a day,Several times a day,1,1,1,1,1
+1232,AI,4,wheels,spider,spider,1,1,1,1,1,no experience with coding,About once a week,About once a week,About once a week,1,1,1,1,0
+4591,Person,2,wheels,spider,wheels,1,1,1,1,3,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,NA,1,1,1,1,1
+1773,AI,3,spider,wheels,spider,1,1,1,1,3,no experience with coding,About once a day,About once a week,About once a week,1,1,1,1,1
+4913,Person,1,spider,wheels,spider,1,1,1,1,3,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,Several times a day,1,1,1,1,1
+4913,AI,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4478,Person,2,wheels,spider,wheels,1,1,1,1,1,coding class at school,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4993,Person,2,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,About once a day,1,1,1,1,1
+3757,Person,4,wheels,spider,wheels,1,1,0,0,3,NA,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+5424,Person,4,wheels,spider,wheels,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,NA,NA,1,1,1,1,1
+2281,AI,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a day,Several times a day,Several times a day,1,1,1,1,1
+2492,AI,3,spider,wheels,spider,1,0,0,0,0,no experience with coding,Less than once a week,Never,Never,1,1,1,1,1
+4937,Person,3,spider,wheels,spider,1,1,1,1,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+2875,AI,4,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a day,NA,1,1,1,1,1
+4420,Person,1,spider,wheels,spider,1,1,1,1,7,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+2735,Person,4,wheels,spider,wheels,1,1,1,1,5,no experience with coding,About once a day,About once a day,NA,1,1,1,1,1
+1881,Person,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a day,Less than once a week,NA,1,1,1,1,1
+4940,AI,1,spider,wheels,wheels,1,1,1,1,7,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+4152,AI,3,spider,wheels,wheels,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a day,About once a day,1,1,1,1,0
+2975,AI,2,wheels,spider,wheels,1,1,1,1,0,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Never,1,1,1,1,1
+3098,AI,3,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,About once a day,1,1,1,1,1
+3075,Person,2,wheels,spider,wheels,1,1,1,1,0,coding class at school,About once a week,Never,NA,1,1,1,1,1
+4110,AI,4,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,NA,Several times a day,1,1,1,1,1
+1908,Person,2,wheels,spider,spider,1,1,1,1,2,no experience with coding,About once a day,Less than once a week,NA,1,1,1,1,0
+4109,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,Never,About once a week,1,1,1,1,1
+1893,AI,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a day,NA,About once a day,1,1,1,1,1
+4294,AI,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+4277,Person,3,spider,wheels,spider,1,0,0,1,2,coding class at school,Several times a day,Never,Never,1,1,1,1,1
+1777,Person,1,spider,wheels,wheels,1,1,1,1,NA,no experience with coding,Never,About once a day,Never,1,1,1,1,0
+4581,AI,1,spider,wheels,wheels,1,1,1,1,8,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+4488,Person,3,spider,wheels,spider,1,1,1,1,0,coding class at school,Several times a day,NA,About once a day,1,1,1,1,1
+1225,Person,2,wheels,spider,wheels,1,0,0,1,2,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+4442,Person,2,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,NA,1,1,1,1,1
+1429,Person,1,spider,wheels,spider,1,0,1,0,NA,no experience with coding,About once a week,Never,About once a week,1,1,1,1,1
+4563,AI,2,wheels,spider,wheels,1,1,1,1,0,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,NA,NA,1,1,1,1,1
+3612,Person,4,wheels,spider,wheels,1,1,1,1,5,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3609,AI,3,spider,wheels,spider,1,1,1,1,0,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,About once a week,1,1,1,1,1
+2596,AI,2,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a day,Several times a day,Several times a day,1,1,1,1,1
+2620,AI,2,wheels,spider,wheels,1,1,1,1,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a week,About once a day,1,1,1,1,1
+2836,Person,2,wheels,spider,spider,1,1,1,1,3,no experience with coding,Never,About once a day,Never,1,1,1,1,0
+1297,AI,4,wheels,spider,wheels,1,1,1,0,1,no experience with coding,Less than once a week,About once a day,About once a day,1,1,1,1,1
+2618,Person,3,spider,wheels,spider,1,1,1,1,3,no experience with coding,Several times a day,About once a week,About once a week,1,1,1,1,1
+3234,Person,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a day,About once a day,Never,1,1,1,1,1
+2410,AI,2,wheels,spider,wheels,1,0,0,1,1,coding class at school,Several times a day,Never,About once a day,1,1,1,1,1
+3157,AI,3,spider,wheels,spider,1,1,1,1,1,coding class at school,Several times a day,About once a week,About once a week,1,1,1,1,1
+1758,AI,2,wheels,spider,spider,1,1,1,1,2,no experience with coding,Never,Never,Never,1,1,1,1,0
+2760,Person,1,spider,wheels,spider,1,1,1,1,3,no experience with coding,About once a week,About once a week,About once a week,1,1,1,1,1
+3862,AI,3,spider,wheels,wheels,1,1,1,1,1,coding class at school,About once a week,Never,Several times a day,1,1,1,1,0
+2354,AI,2,wheels,spider,wheels,1,1,0,1,1,no experience with coding,Less than once a week,Less than once a week,NA,1,1,1,1,1
+5522,AI,1,spider,wheels,spider,1,1,1,1,2,no experience with coding,Several times a day,About once a week,NA,1,1,1,1,1
+4308,Person,4,wheels,spider,wheels,1,1,1,1,0,coding class at school,Several times a day,Never,Several times a day,1,1,1,1,1
+5137,AI,2,wheels,spider,wheels,1,1,1,0,1,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3092,Person,4,wheels,spider,wheels,1,1,1,1,0,coding class at school,Less than once a week,Never,Never,1,1,1,1,1
+3448,AI,4,wheels,spider,wheels,1,1,1,1,3,after school programs or camps related to coding,About once a day,About once a day,About once a day,1,1,1,1,1
+2024,Person,1,spider,wheels,spider,1,0,0,0,2,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+2681,AI,3,spider,wheels,spider,1,0,0,0,3,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+4748,Person,2,wheels,spider,wheels,1,1,1,1,0,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Never,NA,NA,1,1,1,1,1
+3486,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,About once a day,About once a day,1,1,1,1,1
+3875,Person,1,spider,wheels,spider,1,1,1,1,0,no experience with coding,Less than once a week,Never,Never,1,1,1,1,1
+1332,Person,2,wheels,spider,wheels,1,1,1,0,NA,no experience with coding,About once a week,Less than once a week,NA,1,1,1,1,1
+4631,Person,2,wheels,spider,wheels,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+4631,Person,1,spider,wheels,spider,1,1,1,1,2,"coding class at school,after school programs or camps related to coding",Several times a day,NA,About once a day,1,1,1,1,1
+5813,Person,4,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,NA,NA,1,1,1,1,1
+3259,AI,1,spider,wheels,spider,1,1,1,1,1,coding class at school,Less than once a week,Less than once a week,Several times a day,1,1,1,1,1
+4408,Person,1,spider,wheels,spider,1,1,1,1,8,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+1593,Person,1,spider,wheels,spider,1,1,1,1,NA,no experience with coding,About once a day,Never,NA,1,1,1,1,1
+2561,AI,4,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+4532,Person,4,wheels,spider,wheels,1,1,1,1,6,coding class at school,Several times a day,Several times a day,About once a day,1,1,1,1,1
+5144,AI,3,spider,wheels,spider,1,1,1,1,4,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+2796,AI,1,spider,wheels,spider,1,1,1,1,1,coding class at school,Several times a day,About once a week,NA,1,1,1,1,1
+3143,AI,4,wheels,spider,wheels,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,NA,Several times a day,1,1,1,1,1
+4283,AI,4,wheels,spider,spider,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,Several times a day,1,1,1,1,0
+3838,AI,4,wheels,spider,wheels,1,1,1,1,2,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4427,Person,1,spider,wheels,spider,1,1,1,1,0,after school programs or camps related to coding,About once a week,Never,NA,1,1,1,1,1
+4233,AI,3,spider,wheels,spider,1,1,1,1,3,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a week,About once a day,1,1,1,1,1
+3299,Person,1,spider,wheels,spider,1,1,1,1,3,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+5628,AI,3,spider,wheels,wheels,1,1,1,1,NA,NA,Several times a day,Never,About once a day,1,1,1,1,0
+1915,Person,3,spider,wheels,spider,1,1,1,1,0,no experience with coding,Never,Less than once a week,Never,1,1,1,1,1
+2655,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,About once a day,Never,Never,1,1,1,1,1
+2339,Person,3,spider,wheels,spider,1,1,1,1,NA,no experience with coding,About once a day,NA,NA,1,1,1,1,1
+1219,Person,1,spider,wheels,spider,1,0,0,1,3,no experience with coding,Several times a day,Less than once a week,NA,1,1,1,1,1
+1178,AI,3,spider,wheels,spider,1,0,0,1,3,no experience with coding,Several times a day,Less than once a week,NA,1,1,1,1,1
+4148,AI,3,spider,wheels,spider,1,1,1,1,NA,NA,About once a day,NA,About once a day,1,1,1,1,1
+5244,AI,1,spider,wheels,spider,1,1,1,1,NA,no experience with coding,Several times a day,About once a week,About once a week,1,1,1,1,1
+3039,Person,4,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a day,Several times a day,About once a day,1,1,1,1,1
+3210,AI,3,spider,wheels,spider,1,1,1,1,4,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+3859,Person,4,wheels,spider,wheels,1,1,1,0,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,NA,NA,1,1,1,1,1
+3542,AI,3,spider,wheels,spider,1,1,1,1,3,after school programs or camps related to coding,About once a day,About once a day,About once a week,1,1,1,1,1
+1454,AI,3,spider,wheels,wheels,1,0,0,0,NA,NA,Several times a day,NA,NA,1,1,1,1,0
+3936,Person,4,wheels,spider,wheels,1,1,1,1,3,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+5636,Person,4,wheels,spider,wheels,1,1,1,1,5,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+5636,Person,4,wheels,spider,wheels,1,1,1,1,5,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4560,Person,2,wheels,spider,wheels,1,1,1,1,NA,NA,Several times a day,Never,Several times a day,1,1,1,1,1
+4541,AI,3,spider,wheels,spider,1,1,1,1,2,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a week,About once a week,1,1,1,1,1
+3133,AI,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+4731,Person,3,spider,wheels,spider,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a week,About once a day,1,1,1,1,1
+3526,AI,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,About once a week,About once a day,1,1,1,1,1
+1861,Person,3,spider,wheels,spider,1,1,0,0,6,no experience with coding,Less than once a week,About once a day,Several times a day,1,1,1,1,1
+5337,AI,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,About once a day,NA,About once a week,1,1,1,1,1
+5337,AI,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a day,NA,Never,1,1,1,1,1
+2564,AI,3,spider,wheels,spider,1,1,0,0,2,no experience with coding,About once a day,NA,About once a week,1,1,1,1,1
+5632,AI,1,spider,wheels,spider,1,1,1,1,0,coding class at school,Several times a day,Never,Never,1,1,1,1,1
+2703,Person,3,spider,wheels,spider,1,1,1,1,0,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+3342,AI,4,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+5738,Person,1,spider,wheels,spider,1,1,1,1,1,coding class at school,Several times a day,Less than once a week,Several times a day,1,1,1,1,1
+3811,Person,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a week,NA,NA,1,1,1,1,1
+4019,AI,3,spider,wheels,wheels,1,1,1,1,5,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,0
+3818,AI,4,wheels,spider,spider,1,1,1,1,4,after school programs or camps related to coding,Several times a day,Several times a day,Several times a day,1,1,1,1,0
+4261,Person,2,wheels,spider,wheels,1,1,1,1,0,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Never,1,1,1,1,1
+2795,Person,1,spider,wheels,wheels,1,1,1,1,0,no experience with coding,NA,NA,NA,1,1,1,1,0
+1879,AI,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a week,About once a week,NA,1,1,1,1,1
+3483,Person,1,spider,wheels,spider,1,1,1,1,0,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,Never,1,1,1,1,1
+4334,Person,4,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,NA,NA,1,1,1,1,1
+4334,AI,4,wheels,spider,wheels,1,1,1,1,NA,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,NA,1,1,1,1,1
+2472,Person,4,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+3410,Person,1,spider,wheels,spider,1,0,0,0,NA,NA,NA,NA,NA,1,1,1,1,1
+4773,AI,1,spider,wheels,wheels,1,1,1,1,4,"coding class at school,after school programs or camps related to coding",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+1518,AI,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a day,Less than once a week,Never,1,1,1,1,1
+2959,AI,3,spider,wheels,spider,1,1,1,1,0,coding class at school,Several times a day,NA,About once a week,1,1,1,1,1
+2390,AI,1,spider,wheels,spider,1,1,1,1,0,no experience with coding,Several times a day,NA,About once a day,1,1,1,1,1
+4340,Person,2,wheels,spider,wheels,1,1,1,1,NA,NA,Several times a day,NA,NA,1,1,1,1,1
+2024,Person,3,spider,wheels,spider,1,1,1,1,2,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+5426,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,Several times a day,Never,NA,1,1,1,1,1
+1350,AI,1,spider,wheels,wheels,1,1,0,0,0,no experience with coding,About once a week,NA,NA,1,1,1,1,0
+1993,Person,3,spider,wheels,wheels,1,0,0,0,1,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,0
+4140,AI,2,wheels,spider,spider,1,1,1,1,1,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,About once a day,1,1,1,1,0
+3390,AI,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,About once a day,NA,NA,1,1,1,1,1
+4611,AI,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,Less than once a week,NA,1,1,1,1,1
+3160,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+2739,Person,2,wheels,spider,wheels,1,0,1,1,3,no experience with coding,About once a day,Several times a day,Several times a day,1,1,1,1,1
+1739,Person,3,spider,wheels,spider,1,0,0,0,2,no experience with coding,About once a day,About once a week,About once a week,1,1,1,1,1
+2903,Person,3,spider,wheels,spider,1,1,1,1,0,coding class at school,About once a week,Never,Never,1,1,1,1,1
+2903,AI,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,NA,NA,NA,1,1,1,1,1
+5375,AI,1,spider,wheels,wheels,1,1,1,1,0,coding class at school,Never,Never,NA,1,1,1,1,0
+4267,AI,3,spider,wheels,wheels,1,1,1,1,3,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,0
+2695,AI,3,spider,wheels,spider,1,1,1,1,0,no experience with coding,About once a day,NA,Never,1,1,1,1,1
+1886,AI,1,spider,wheels,spider,1,0,1,0,0,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+5748,Person,3,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,Never,1,1,1,1,1
+3651,Person,4,wheels,spider,wheels,1,1,1,1,1,coding class at school,Less than once a week,Less than once a week,NA,1,1,1,1,1
+3390,Person,4,wheels,spider,wheels,1,1,1,1,1,no experience with coding,NA,About once a week,NA,1,1,1,1,1
+4751,Person,4,wheels,spider,wheels,1,1,1,1,1,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a week,About once a week,1,1,1,1,1
+1815,Person,1,spider,wheels,spider,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,NA,1,1,1,1,1
+1850,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,Less than once a week,Less than once a week,NA,1,1,1,1,1
+5529,Person,2,wheels,spider,wheels,1,1,1,1,5,"coding class at school,after school programs or camps related to coding",Several times a day,Less than once a week,Never,1,1,1,1,1
+1487,Person,1,spider,wheels,spider,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a week,About once a week,1,1,1,1,1
+4455,AI,4,wheels,spider,wheels,1,1,1,1,2,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+1753,AI,4,wheels,spider,wheels,1,0,0,0,1,no experience with coding,About once a week,About once a week,About once a week,1,1,1,1,1
+3411,AI,1,spider,wheels,spider,1,1,1,1,0,no experience with coding,About once a day,NA,NA,1,1,1,1,1
+3934,Person,4,wheels,spider,wheels,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3518,AI,4,wheels,spider,wheels,1,1,1,1,4,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a day,About once a week,1,1,1,1,1
+2476,AI,4,wheels,spider,wheels,1,1,1,1,2,NA,Several times a day,About once a day,Several times a day,1,1,1,1,1
+1543,AI,4,wheels,spider,wheels,1,1,1,1,4,no experience with coding,Several times a day,Never,Never,1,1,1,1,1
+1739,Person,1,spider,wheels,spider,1,0,1,1,NA,no experience with coding,NA,NA,NA,1,1,1,1,1
+3313,AI,1,spider,wheels,spider,1,1,1,0,0,no experience with coding,About once a week,NA,NA,1,1,1,1,1
+4204,AI,1,spider,wheels,spider,1,1,1,1,NA,coding class at school,About once a day,About once a day,About once a week,1,1,1,1,1
+4204,AI,4,wheels,spider,spider,1,1,1,1,1,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,About once a week,1,1,1,1,0
+5197,Person,2,wheels,spider,wheels,1,1,1,1,4,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+1982,AI,3,spider,wheels,spider,1,1,1,1,3,no experience with coding,About once a day,NA,Several times a day,1,1,1,1,1
+4080,AI,4,wheels,spider,spider,1,1,1,1,3,coding class at school,About once a week,About once a day,Several times a day,1,1,1,1,0
+5091,AI,2,wheels,spider,spider,1,1,1,1,2,after school programs or camps related to coding,Several times a day,Several times a day,About once a day,1,1,1,1,0
+2609,Person,2,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+4201,Person,4,wheels,spider,wheels,1,1,1,1,2,after school programs or camps related to coding,About once a day,About once a day,About once a day,1,1,1,1,1
+3179,Person,4,wheels,spider,wheels,1,1,1,1,4,after school programs or camps related to coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+2231,Person,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,Several times a day,About once a day,About once a week,1,1,1,1,1
+4608,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+4608,Person,1,spider,wheels,spider,1,1,1,1,NA,NA,About once a day,Less than once a week,NA,1,1,1,1,1
+3252,Person,3,spider,wheels,spider,1,1,1,1,0,no experience with coding,Several times a day,Never,Never,1,1,1,1,1
+1495,Person,2,wheels,spider,wheels,1,1,0,0,NA,NA,About once a week,NA,NA,1,1,1,1,1
+2010,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,About once a day,NA,About once a week,1,1,1,1,1
+1178,AI,3,spider,wheels,spider,1,0,0,0,4,no experience with coding,Less than once a week,About once a day,About once a day,1,1,1,1,1
+2301,AI,2,wheels,spider,wheels,1,1,1,1,0,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+2445,AI,3,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,About once a week,NA,1,1,1,1,1
+4505,AI,2,wheels,spider,spider,1,1,1,1,6,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a day,About once a day,1,1,1,1,0
+4485,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,Less than once a week,Less than once a week,NA,1,1,1,1,1
+4168,Person,4,wheels,spider,wheels,1,1,1,1,NA,coding class at school,About once a day,Less than once a week,About once a week,1,1,1,1,1
+3284,AI,4,wheels,spider,wheels,1,1,1,1,2,coding class at school,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+1524,Person,3,spider,wheels,wheels,1,1,1,1,2,no experience with coding,Less than once a week,Less than once a week,Never,1,1,1,1,0
+1530,Person,2,wheels,spider,spider,1,1,1,1,1,no experience with coding,About once a day,Never,Never,1,1,1,1,0
+2963,Person,2,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,Several times a day,1,1,1,1,1
+2768,AI,3,spider,wheels,spider,1,0,0,0,3,no experience with coding,About once a day,Several times a day,Several times a day,1,1,1,1,1
+1981,Person,1,spider,wheels,spider,1,0,0,0,NA,no experience with coding,NA,NA,NA,1,1,1,1,1
+1515,Person,1,spider,wheels,wheels,1,1,1,0,0,no experience with coding,About once a week,Never,Never,1,1,1,1,0
+5122,Person,4,wheels,spider,wheels,1,1,1,1,0,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+2368,AI,2,wheels,spider,wheels,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Less than once a week,About once a day,Never,1,1,1,1,1
+5257,AI,3,spider,wheels,wheels,1,1,1,1,2,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,0
+3480,AI,3,spider,wheels,spider,1,1,1,1,NA,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable),no experience with coding",NA,NA,NA,1,1,1,1,1
+1993,AI,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3028,AI,4,wheels,spider,wheels,1,0,1,0,5,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+5013,AI,1,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,NA,1,1,1,1,1
+1288,Person,2,wheels,spider,spider,1,1,1,1,0,no experience with coding,About once a day,Never,Never,1,1,1,1,0
+3019,Person,3,spider,wheels,spider,1,1,1,1,2,no experience with coding,About once a day,About once a week,About once a day,1,1,1,1,1
+3054,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,Never,About once a week,1,1,1,1,1
+1578,Person,1,spider,wheels,spider,1,0,0,0,4,NA,About once a day,About once a day,About once a day,1,1,1,1,1
+2965,AI,4,wheels,spider,wheels,1,1,1,0,2,after school programs or camps related to coding,Several times a day,NA,About once a day,1,1,1,1,1
+1572,Person,3,spider,wheels,wheels,1,0,0,0,0,no experience with coding,About once a day,NA,NA,1,1,1,1,0
+2064,AI,4,wheels,spider,wheels,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+3425,AI,2,wheels,spider,wheels,1,1,1,1,2,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,About once a day,1,1,1,1,1
+3425,AI,3,spider,wheels,spider,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Never,About once a day,1,1,1,1,1
+3147,Person,1,spider,wheels,spider,1,1,1,1,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a day,Several times a day,1,1,1,1,1
+5302,AI,3,spider,wheels,spider,1,1,1,1,0,no experience with coding,Less than once a week,Never,Never,1,1,1,1,1
+4245,AI,4,wheels,spider,wheels,1,1,1,1,4,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,About once a day,1,1,1,1,1
+2303,Person,4,wheels,spider,wheels,1,1,1,1,0,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Never,Never,1,1,1,1,1
+4943,Person,2,wheels,spider,wheels,1,1,1,1,3,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,1
+4766,Person,3,spider,wheels,spider,1,1,1,1,NA,no experience with coding,About once a day,NA,About once a week,1,1,1,1,1
+2778,Person,4,wheels,spider,wheels,1,1,0,1,1,no experience with coding,Several times a day,About once a week,About once a week,1,1,1,1,1
+2391,Person,2,wheels,spider,wheels,1,0,0,0,0,coding class at school,Several times a day,Never,Never,1,1,1,1,1
+3873,Person,2,wheels,spider,wheels,1,1,1,1,0,"coding class at school,after school programs or camps related to coding",About once a day,NA,NA,1,1,1,1,1
+3873,Person,2,wheels,spider,wheels,1,1,1,1,0,"coding class at school,after school programs or camps related to coding",About once a day,Never,Never,1,1,1,1,1
+4954,AI,1,spider,wheels,spider,1,1,1,1,3,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Less than once a week,Several times a day,About once a day,1,1,1,1,1
+3070,AI,2,wheels,spider,wheels,1,0,1,1,6,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+3324,AI,1,spider,wheels,spider,1,1,1,1,2,no experience with coding,Several times a day,About once a week,NA,1,1,1,1,1
+3289,AI,2,wheels,spider,wheels,1,0,0,0,NA,NA,About once a day,NA,NA,1,1,1,1,1
+3861,Person,4,wheels,spider,wheels,1,1,1,1,4,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+2970,AI,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+3720,Person,1,spider,wheels,spider,1,1,1,0,3,after school programs or camps related to coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+4425,AI,3,spider,wheels,spider,1,1,1,1,1,coding class at school,Several times a day,About once a day,NA,1,1,1,1,1
+3398,Person,2,wheels,spider,wheels,1,1,1,1,NA,NA,About once a day,NA,NA,1,1,1,1,1
+1167,AI,2,wheels,spider,wheels,1,0,1,0,1,no experience with coding,Several times a day,Less than once a week,NA,1,1,1,1,1
+3706,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a week,Several times a day,Never,1,1,1,1,1
+2164,Person,2,wheels,spider,spider,1,1,1,1,0,no experience with coding,About once a day,Never,Never,1,1,1,1,0
+4918,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,NA,NA,NA,1,1,1,1,1
+4918,Person,2,wheels,spider,wheels,1,1,1,1,1,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,1
+4640,AI,2,wheels,spider,spider,1,1,1,1,NA,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,About once a week,1,1,1,1,0
+2943,Person,2,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a week,Never,About once a day,1,1,1,1,1
+4881,Person,4,wheels,spider,wheels,1,1,1,1,4,after school programs or camps related to coding,Several times a day,About once a day,About once a day,1,1,1,1,1
+1489,Person,4,wheels,spider,spider,1,0,0,0,0,no experience with coding,Never,Never,Never,1,1,1,1,0
+2692,AI,2,wheels,spider,wheels,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+3467,AI,4,wheels,spider,wheels,1,0,0,0,NA,NA,Less than once a week,NA,NA,1,1,1,1,1
+2928,AI,3,spider,wheels,spider,1,1,1,1,1,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Less than once a week,Less than once a week,NA,1,1,1,1,1
+4100,AI,1,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,About once a week,1,1,1,1,1
+4112,Person,3,spider,wheels,spider,1,1,1,1,8,no experience with coding,Several times a day,Several times a day,Several times a day,1,1,1,1,1
+2886,Person,4,wheels,spider,wheels,1,1,1,1,1,NA,About once a day,Never,About once a day,1,1,1,1,1
+3825,AI,1,spider,wheels,spider,1,1,1,1,1,after school programs or camps related to coding,Several times a day,NA,About once a day,1,1,1,1,1
+3473,Person,2,wheels,spider,wheels,1,1,1,1,3,no experience with coding,Several times a day,NA,NA,1,1,1,1,1
+3242,Person,2,wheels,spider,wheels,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+3378,AI,3,spider,wheels,spider,1,1,1,1,4,NA,About once a day,About once a day,About once a day,1,1,1,1,1
+5175,AI,4,wheels,spider,spider,1,1,1,1,0,no experience with coding,About once a day,Less than once a week,About once a day,1,1,1,1,0
+4364,Person,4,wheels,spider,wheels,1,1,1,1,4,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a week,NA,1,1,1,1,1
+4510,Person,2,wheels,spider,wheels,1,1,1,1,NA,coding class at school,About once a day,Never,About once a week,1,1,1,1,1
+3452,AI,1,spider,wheels,spider,1,1,1,1,NA,NA,Several times a day,NA,About once a week,1,1,1,1,1
+3545,AI,1,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,Never,Never,1,1,1,1,1
+5055,Person,1,spider,wheels,spider,1,1,1,1,5,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,About once a day,1,1,1,1,1
+4123,Person,4,wheels,spider,wheels,1,1,1,1,4,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Several times a day,Several times a day,1,1,1,1,1
+5583,AI,2,wheels,spider,spider,1,1,1,1,NA,coding class at school,NA,NA,NA,1,1,1,1,0
+2793,AI,4,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+2665,Person,4,wheels,spider,wheels,1,1,1,1,1,no experience with coding,About once a week,Several times a day,Several times a day,1,1,1,1,1
+3998,AI,2,wheels,spider,wheels,1,1,1,1,1,"coding class at school,after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+2556,Person,3,spider,wheels,spider,1,1,1,1,2,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,1
+1905,Person,4,wheels,spider,spider,1,1,1,0,3,no experience with coding,About once a week,About once a week,NA,1,1,1,1,0
+3001,Person,3,spider,wheels,spider,1,1,1,0,2,no experience with coding,Never,Less than once a week,Never,1,1,1,1,1
+2764,AI,4,wheels,spider,wheels,1,0,0,1,1,no experience with coding,About once a day,About once a day,Several times a day,1,1,1,1,1
+1200,AI,1,spider,wheels,wheels,1,0,0,0,0,no experience with coding,About once a week,Never,Never,1,1,1,1,0
+5181,AI,3,spider,wheels,wheels,1,1,1,1,6,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a week,About once a day,About once a day,1,1,1,1,0
+2652,Person,3,spider,wheels,spider,1,1,0,1,3,no experience with coding,About once a week,Never,Never,1,1,1,1,1
+4825,Person,3,spider,wheels,spider,1,1,1,1,12,coding class at school,About once a day,Several times a day,Several times a day,1,1,1,1,1
+4971,AI,4,wheels,spider,wheels,1,1,1,1,1,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a week,About once a week,1,1,1,1,1
+3302,AI,4,wheels,spider,spider,1,1,1,1,2,"after school programs or camps related to coding,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,About once a day,NA,1,1,1,1,0
+2106,Person,1,spider,wheels,wheels,1,0,0,1,1,no experience with coding,Less than once a week,Never,Never,1,1,1,1,0
+4044,Person,4,wheels,spider,wheels,1,1,1,1,4,after school programs or camps related to coding,About once a day,About once a day,About once a day,1,1,1,1,1
+2006,Person,1,spider,wheels,spider,1,1,1,1,3,no experience with coding,About once a day,About once a week,About once a day,1,1,1,1,1
+2537,Person,2,wheels,spider,wheels,1,1,1,1,3,no experience with coding,About once a day,About once a day,About once a day,1,1,1,1,1
+1981,AI,2,wheels,spider,wheels,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+2403,AI,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,Less than once a week,NA,NA,1,1,1,1,1
+4178,Person,1,spider,wheels,spider,1,0,0,0,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,Less than once a week,NA,1,1,1,1,1
+2297,Person,3,spider,wheels,spider,1,0,0,0,2,no experience with coding,Several times a day,Less than once a week,Never,1,1,1,1,1
+2491,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+3503,Person,4,wheels,spider,wheels,1,1,1,1,2,coding class at school,Never,About once a week,NA,1,1,1,1,1
+1153,Person,2,wheels,spider,spider,1,0,1,0,0,no experience with coding,About once a day,Never,About once a week,1,1,1,1,0
+2181,AI,4,wheels,spider,wheels,1,1,1,1,3,no experience with coding,Several times a day,About once a week,About once a week,1,1,1,1,1
+2469,Person,1,spider,wheels,spider,1,1,1,1,0,no experience with coding,Several times a day,Never,NA,1,1,1,1,1
+4679,Person,1,spider,wheels,spider,1,1,1,1,0,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Less than once a week,About once a day,1,1,1,1,1
+4226,Person,4,wheels,spider,wheels,1,1,1,1,NA,no experience with coding,Several times a day,About once a day,About once a day,1,1,1,1,1
+4710,Person,3,spider,wheels,wheels,1,1,1,1,NA,NA,About once a day,NA,Several times a day,1,1,1,1,0
+2164,Person,4,wheels,spider,wheels,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+2874,Person,2,wheels,spider,wheels,1,1,1,1,6,coding class at school,About once a week,About once a day,Several times a day,1,1,1,1,1
+5681,Person,2,wheels,spider,wheels,1,1,1,1,1,coding class at school,Several times a day,Never,About once a week,1,1,1,1,1
+2052,AI,1,spider,wheels,spider,1,1,1,1,4,no experience with coding,About once a week,About once a week,NA,1,1,1,1,1
+2486,AI,2,wheels,spider,wheels,1,1,1,1,2,no experience with coding,About once a week,About once a day,About once a day,1,1,1,1,1
+3660,Person,4,wheels,spider,wheels,1,1,1,1,0,coding class at school,Several times a day,NA,Several times a day,1,1,1,1,1
+4177,Person,2,wheels,spider,wheels,1,1,1,1,0,no experience with coding,Several times a day,Never,NA,1,1,1,1,1
+4027,Person,4,wheels,spider,wheels,1,1,1,1,3,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a week,NA,1,1,1,1,1
+1838,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a week,Never,Never,1,1,1,1,1
+1370,Person,2,wheels,spider,spider,1,0,0,0,1,no experience with coding,About once a week,NA,NA,1,1,1,1,0
+1638,AI,4,wheels,spider,wheels,1,0,0,0,NA,NA,Less than once a week,NA,NA,1,1,1,1,1
+1715,AI,2,wheels,spider,wheels,1,1,0,0,0,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+1734,Person,1,spider,wheels,spider,1,1,1,1,1,no experience with coding,About once a week,About once a week,About once a week,1,1,1,1,1
+1266,Person,2,wheels,spider,wheels,1,0,0,1,0,no experience with coding,NA,NA,NA,1,1,1,1,1
+4521,Person,4,wheels,spider,wheels,1,1,1,1,NA,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,NA,NA,1,1,1,1,1
+4138,AI,4,wheels,spider,wheels,1,1,1,1,5,no experience with coding,About once a day,Several times a day,Several times a day,1,1,1,1,1
+2228,Person,3,spider,wheels,spider,1,1,1,1,0,no experience with coding,About once a week,NA,NA,1,1,1,1,1
+2986,AI,4,wheels,spider,wheels,1,0,0,0,NA,no experience with coding,About once a day,NA,NA,1,1,1,1,1
+3630,AI,4,wheels,spider,wheels,1,1,1,1,1,"coding class at school,coding apps at home (e.g., Osmo, Scratch, Kodable)",About once a day,About once a day,About once a day,1,1,1,1,1
+3583,Person,2,wheels,spider,wheels,1,0,0,0,1,no experience with coding,About once a day,Never,Never,1,1,1,1,1
+1209,Person,4,wheels,spider,wheels,1,0,0,0,4,no experience with coding,About once a week,Several times a day,Several times a day,1,1,1,1,1
+1555,AI,1,spider,wheels,spider,1,0,0,0,0,no experience with coding,About once a week,Never,Never,1,1,1,1,1
+1100,Person,1,spider,wheels,spider,1,0,0,1,NA,no experience with coding,Less than once a week,Less than once a week,NA,1,1,1,1,1
+2397,Person,3,spider,wheels,spider,1,1,1,1,2,no experience with coding,Several times a day,About once a week,Never,1,1,1,1,1
+3055,Person,3,spider,wheels,spider,1,1,1,0,NA,NA,Several times a day,About once a week,Several times a day,1,1,1,1,1
+4721,AI,1,spider,wheels,spider,1,1,1,1,NA,coding class at school,Several times a day,NA,About once a day,1,1,1,1,1
+3284,Person,3,spider,wheels,spider,1,1,1,1,NA,NA,NA,NA,NA,1,1,1,1,1
+3658,AI,1,spider,wheels,spider,1,1,1,0,3,"coding apps at home (e.g., Osmo, Scratch, Kodable)",Several times a day,Several times a day,Several times a day,1,1,1,1,1
