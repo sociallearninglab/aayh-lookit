@@ -24,7 +24,8 @@ data <- read_csv("lookit_data.csv")
 data <- data %>% 
   mutate(age = age_days/365.25,
          floor_age = floor(age),
-         six_mo_floor_age = (0.5 * round(age-floor_age)) + floor_age)
+         fb_over_2 = as.integer((rachel_false_belief + diana_false_belief + allie_false_belief)>=2))
+         
 
 data$voice_assistant_frequency = factor(data$voice_assistant_frequency, levels = c("Never", "Less than once a week
 ", "About once a week", "About once a day", "Several times a day"))
@@ -84,6 +85,31 @@ ggplot(merged_older, aes(x=floor_age, y=chose_song_1)) +
         legend.justification = "left",
         legend.text = element_text(size = 12),
         legend.title = element_text(face = "bold"))
+```
+
+```{r fb_corr}
+person_data <- data %>% 
+  filter(condition == "Person")
+cor.test(person_data$fb_over_2, person_data$chose_song_1, method = "spearman")
+
+fb_bar_data <- data %>% 
+  group_by(floor_age) %>% 
+  summarise(mean_fb = mean(fb_score))
+
+ggplot() +
+  geom_col(data=fb_bar_data, aes(x=floor_age, y=mean_fb))
+  geom_smooth(data=data, aes(x=age, y=fb_score), color="black") +
+  coord_cartesian(ylim = c(0,1)) +
+  labs(title = "Person Condition",
+       x = "Age",
+       y = "Accuracy",
+       color = "") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"))
 ```
 
 

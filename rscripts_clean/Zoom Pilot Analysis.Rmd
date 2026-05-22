@@ -42,6 +42,7 @@ mod <- lm(tom  ~ age, data=data)
 summary(mod)
 person_data <- data %>%  filter(condition == "Person")
 cor.test(person_data$fb_score, person_data$age, method = "spearman")
+
 summary(glm(chose_song_1  ~ fb_score, data=person_data, family = binomial))
 
 mod2 <- glm(chose_song_1  ~ age * multiSSexperience, data=data %>% filter(condition=="AI"), family = binomial)
