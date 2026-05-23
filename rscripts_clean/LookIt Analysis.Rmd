@@ -192,6 +192,10 @@ ggplot(multiSS_data, aes(x=as.numeric(factor(age_group)), y=chose_song_1)) +
         legend.text = element_text(size = 12),
         legend.title = element_text(face = "bold"))
 
+
+wide_multiSS <- multiSS_bar_data %>% 
+  select(-percent_song_1) %>% 
+  pivot_wider(names_from = multiSSexperience, values_from = n)
 ```
 
 ```{r exploratory_dailySS}
@@ -233,4 +237,7 @@ ggplot(data=exploratory_bar_data, aes(x=age_group, y=percent_song_1, fill=ss_dai
         legend.title = element_text(face = "bold"))
 
 
+wide_dailySS <- exploratory_bar_data %>% 
+  select(-percent_song_1) %>% 
+  pivot_wider(names_from = ss_daily, values_from = n)
 ```
