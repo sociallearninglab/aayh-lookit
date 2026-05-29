@@ -36,14 +36,14 @@ data$multiSSexperience <- factor(data$multiSSexperience)
 
 ## GLM
 ```{r data}
+library(irr)
 mod <- glm(chose_song_1  ~ 1 + condition * age * multiSSexperience, data=data, family = binomial)
 summary(mod)
 
 mod <- lm(tom  ~ age, data=data)
 summary(mod)
 person_data <- data %>%  filter(condition == "Person")
-chisq.test(person_data$fb_over_2, person_data$chose_song_1)
-
+fisher.test(person_data$fb_over_2, person_data$chose_song_1)
 
 
 summary(glm(chose_song_1  ~ fb_score, data=person_data, family = binomial))
@@ -52,57 +52,7 @@ mod2 <- glm(chose_song_1  ~ age * multiSSexperience, data=data %>% filter(condit
 summary(mod2)
 ```
 
-```{r, warning=FALSE, message = FALSE}
-require(gridExtra)
-theme_set(theme_classic())
-
-colors <- c("Has Connected Smart Speakers" = "blue", "Without Connected Smart Speakers" = "red", "False Belief Score" = "black")
-
-
-person_plot <- ggplot() +
-    geom_smooth(data = data %>% filter(condition=="Person")  %>% filter(number_of_SS_in_home > 1), aes(x=age, y=chose_song_1), color="red") +
-  geom_smooth(data = data %>% filter(condition=="Person")  %>% filter(number_of_SS_in_home <= 1), aes(x=age, y=chose_song_1), color="blue") +
-  geom_smooth(data = data %>% filter(condition=="Person"), aes(x=age, y=fb_score), color="black") +
-  coord_cartesian(ylim = c(0,1)) +
-  labs(title = "Person Condition",
-       x = "Age",
-       y = "Accuracy",
-       color = "") +
-  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
-        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
-        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
-        axis.ticks = element_line(color = "#595959"),
-        axis.line.x = element_line(color = "#595959"),
-        axis.line.y = element_line(color = "#595959"))
-
-ai_plot <- ggplot() +
-  geom_smooth(data = data %>% filter(condition=="AI")  %>% filter(number_of_SS_in_home > 1), aes(x=age, y=chose_song_1, color="Has Connected Smart Speakers")) +
-  geom_smooth(data = data %>% filter(condition=="AI") %>% filter(number_of_SS_in_home <= 1), aes(x=age, y=chose_song_1, color="Without Connected Smart Speakers")) +
-  geom_smooth(data = data %>% filter(condition=="AI"), aes(x=age, y=fb_score, color="False Belief Score")) +
-  coord_cartesian(ylim = c(0,1)) +
-  labs(title = "AI Condition",
-       x = "Age",
-       y = "",
-       color = "") +
-  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
-        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
-        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
-        axis.ticks = element_line(color = "#595959"),
-        axis.line.x = element_line(color = "#595959"),
-        axis.line.y = element_line(color = "#595959"),
-        legend.position = "none",
-        legend.justification = "left",
-        legend.text = element_text(size = 12),
-        legend.title = element_text(face = "bold")) + 
-  scale_color_manual(values = colors)
-
-person_plot
-ai_plot
-
-grid.arrange(person_plot, ai_plot, ncol=2)
-```
-
-```{r recreation}
+```{r graph}
 require(gridExtra)
 binned_data <- data
 binned_data$age_group <- cut(data$age,
@@ -134,7 +84,7 @@ key_plot <- ggplot(binned_data, aes(x=as.numeric(factor(age_group)), y=chose_son
         axis.ticks = element_line(color = "#595959"),
         axis.line.x = element_line(color = "#595959"),
         axis.line.y = element_line(color = "#595959"),
-        legend.position = "right",
+        legend.position = "none",
         legend.justification = "left",
         legend.text = element_text(size = 12),
         legend.title = element_text(face = "bold"))

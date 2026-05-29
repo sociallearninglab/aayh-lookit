@@ -74,7 +74,7 @@ key_plot <- ggplot(binned_data, aes(x=as.numeric(factor(age_group)), y=chose_son
   scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
   scale_fill_manual(values=c("#3D2785", "#999999")) +
   scale_color_manual(values=c("#3D2785", "#999999")) +
-  labs(title = "Study Data",
+  labs(title = "Main Task",
        x = "Age",
        y = "Percent Consistent w/ Separate Minds",
        color = "Condition") +
@@ -104,9 +104,9 @@ fb_plot <- ggplot(binned_data, aes(x=as.numeric(factor(age_group)), y=fb_over_2)
   scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
   scale_fill_manual(values=c("#3D2785", "#999999")) +
   scale_color_manual(values=c("#3D2785", "#999999")) +
-  labs(title = "False Belief Data",
+  labs(title = "Standard False Belief Task",
        x = "Age",
-       y = "Percent Above Chance on False Belief",
+       y = "Percent Passing False Belief Task",
        color = "Condition") +
   guides(color = guide_legend(order = 1), 
         linetype = guide_legend(order = 2),
@@ -130,25 +130,7 @@ grid.arrange(key_plot, fb_plot, ncol=2)
 person_data <- data %>% 
   filter(condition == "Person")
 chisq.test(person_data$fb_over_2, person_data$chose_song_1)
-
-fb_bar_data <- data %>% 
-  group_by(floor_age) %>% 
-  summarise(mean_fb = mean(fb_score))
-
-ggplot() +
-  geom_col(data=fb_bar_data, aes(x=floor_age, y=mean_fb))
-  geom_smooth(data=data, aes(x=age, y=fb_score), color="black") +
-  coord_cartesian(ylim = c(0,1)) +
-  labs(title = "Person Condition",
-       x = "Age",
-       y = "Accuracy",
-       color = "") +
-  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
-        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
-        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
-        axis.ticks = element_line(color = "#595959"),
-        axis.line.x = element_line(color = "#595959"),
-        axis.line.y = element_line(color = "#595959"))
+fisher.test(person_data$fb_over_2, person_data$chose_song_1)
 ```
 
 
