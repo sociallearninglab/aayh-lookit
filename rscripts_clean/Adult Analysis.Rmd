@@ -16,15 +16,14 @@ se <- function(x, n) {
 ## Data Wrangling
 ```{r data}
 data <- read_csv("adult_data.csv")%>% 
-  mutate(chose_song1 = (song1 == answer),
-         multiple_ss = (num_ss >= 2))
+  mutate(chose_song1 = (song1 == answer))
 
 
 ```
 
 ## GLM
 ```{r glm}
-mod <- glm(chose_song1 ~ condition * multiple_ss, family = binomial, data)
+mod <- glm(chose_song1 ~ condition, family = binomial, data)
 summary(mod)
 ```
 
