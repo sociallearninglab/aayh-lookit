@@ -1,0 +1,112 @@
+---
+title: "Experiment2_Preprocessing"
+output: html_document
+date: "2026-06-09"
+---
+
+README
+
+This script adds a gender column to the original data file (i.e. Experiment2_data_original.csv (renamed from Experiment2_data.csv)). It takes as input (1) data.csv (a file generated from running the python script on session data from Lookit), data_with_gender.csv (a file downloaded from Lookit with demographic information), and Experiment2_data_original.csv (the data file we had on the repo originally, which Griffin previously added, and which did not have a gender field). This is because data.csv has the child_ids used to identify unique children, and data_with_gender.csv has the gender information. It creates the output file: Experiment2_data.csv.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup
+```{r setup}
+library(tidyverse)
+library(readxl)
+library(irr)
+theme_set(theme_classic())
+
+se <- function(x, n) {
+  sd(x)/sqrt(n)
+}
+
+```
+
+## Import data
+
+```{r}
+#raw session data (that was on script, that seems to have been wrangled post-Lookit export but we don't know how exactly)
+data <- read_csv("Experiment2_data_original.csv")
+
+#raw session data directly from lookit
+data_lookit <- read_csv("data.csv") %>% 
+  rename("child_id" = child__hashed_id) %>% 
+  mutate(condition = ifelse(condition == "person", "Person", condition))
+
+#demographic data from lookit
+dat_gender <- read_csv("data_with_gender.csv") 
+
+```
+
+# Append Gender
+```{r}
+#Join and count
+columns_to_join <- c("condition", "counterbalance", "attn1", "attn2", "attn3", "test", 
+               "rachel_false_belief", "diana_false_belief", "allie_false_belief", 
+               "num_speakers", "coding_experience", "smartphone_frequency", 
+               "smart_speaker_frequency", "voice_assistant_frequency", "pass_attn1", 
+               "pass_attn2", "pass_attn3", "pass_all_attn", "chose_song_1")
+
+sessions_indexed <- data %>%
+  group_by(across(all_of(columns_to_join))) %>%
+  mutate(match_num = row_number()) %>%
+  ungroup()
+
+# raw_indexed <- data %>%
+raw_indexed <- data_lookit %>%
+  filter(!(child_id == "YM2G5C" & counterbalance == 0)) %>%
+  group_by(across(all_of(columns_to_join))) %>%
+  mutate(match_num = row_number()) %>%
+  ungroup() %>%
+  select(child_id, all_of(columns_to_join), match_num)
+
+data_sessions_with_ids <- sessions_indexed %>%
+  left_join(
+    raw_indexed,
+    # by = c(join_cols, "match_num")) %>%
+    by = c(columns_to_join, "match_num")) %>%
+  select(-match_num) %>% 
+  relocate(child_id, .before = age_days)
+
+#add gender
+gender_lookup <- dat_gender %>%
+  distinct(child_id, .keep_all = TRUE) %>%
+  select(child_id, child_age_rounded, child_gender)
+
+data_sessions_with_gender <- data_sessions_with_ids %>%
+  left_join(gender_lookup, by = "child_id") %>% 
+  relocate(child_gender, .after = child_id) %>% 
+  relocate(child_age_rounded, .after = child_gender)
+
+data <- data_sessions_with_gender %>% 
+  mutate(age = age_days/365.25,
+         age_months = age_days/30.417,
+         floor_age = floor(age)) %>% 
+  rowwise() %>% 
+  mutate(mean_fb = sum(rachel_false_belief, diana_false_belief, allie_false_belief) / 3) %>% 
+  relocate(age, .after = age_days) %>% 
+  relocate(mean_fb, .after = allie_false_belief)
+
+data$voice_assistant_frequency = factor(data$voice_assistant_frequency, levels = c("Never", "Less than once a week
+", "About once a week", "About once a day", "Several times a day"))
+data <- data %>% mutate(va_daily = (voice_assistant_frequency == "About once a day" | voice_assistant_frequency == "Several times a day"))
+data <- data %>% mutate(ss_daily = (smart_speaker_frequency == "About once a day" | smart_speaker_frequency == "Several times a day"))
+data <- data %>% mutate(multiSSexperience = (num_speakers >= 2))
+
+data
+
+```
+
+
+# Export
+```{r}
+write.csv(data, "Experiment2_data.csv", row.names = FALSE)
+```
+
+
+
+
+
