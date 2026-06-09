@@ -1,0 +1,209 @@
+---
+title: "gender_extract"
+output: html_document
+date: "2026-06-05"
+---
+
+## Set options
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load packages
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(jsonlite)
+library(purrr)
+library(tidyr)
+library(tidyverse)
+library(ggplot2)
+library(rlang) # for %||%
+library(here)
+library(cowplot)
+library(bookdown)
+library(lubridate)
+
+```
+
+## Set variables
+
+```{r}
+base_path <- here("rscripts_clean")
+data_path <- paste0(base_path, "/Guess-What-Happens-Next_all-responses-identifiable.json")
+
+```
+
+# Confirmatory Analysis - Prep
+
+## Read data
+
+```{r}
+dat <- fromJSON(
+  data_path,
+  simplifyVector = FALSE
+) #do not view dat, it will crash
+
+SPAM_IDS <- c(
+  "ZNBZd7", "22EDKR", "AMRKB5", "2CJGWA", "McANR2", "R5dVKM",
+  "RQCJLU", "A3ESRd", "VUGDDS", "QUF5ZS", "5HA7R5", "E4SEBD",
+  "DSVC6M", "KPc32Z", "JTHHMT", "cKSVZR", "4Hc4L5", "GQAC2c",
+  "MPXMDG", "NW3GDF", "LLRBS5"
+)
+
+# dat_extracted <- dat %>%
+dat_extracted <- dat %>%
+  discard(function(rec) {
+    child_id <- rec$child$hashed_id %||% NA_character_
+    participant_id <- rec$participant$hashed_id %||% NA_character_
+
+    child_id %in% SPAM_IDS | participant_id %in% SPAM_IDS
+  }) %>%
+  # map_dfr(function(rec) {
+  map_dfr(function(rec) {
+    #one-row tibble of record-level metadata
+    base_info <- tibble(
+      response_id        = rec$response$id           %||% NA,
+      response_uuid      = rec$response$uuid         %||% NA,
+      response_date      = rec$response$date_created %||% NA,
+      study_uuid         = rec$study$uuid            %||% NA,
+      participant_id     = rec$participant$hashed_id %||% NA,
+      child_id           = rec$child$hashed_id       %||% NA,
+      child_age_rounded  = rec$child$age_rounded     %||% NA,
+      child_gender       = rec$child$gender          %||% NA,
+    )
+    #extract exp_data
+    rec$exp_data %||% list() %>%
+      #drop empty records
+      discard(~ length(.x) == 0) %>% 
+      #iterate over frames
+      imap_dfr(function(frame, frame_name) { 
+        frame_row <- tibble(
+          frame_name           = frame_name,
+          frameType            = frame$frameType            %||% NA_character_,
+          frameDuration        = frame$frameDuration        %||% NA_real_,
+          videoShown           = frame$videoShown           %||% NA_character_,
+          audioPlayed          = frame$audioPlayed %||% "" |> na_if(""),
+          selectedImage        = frame$selectedImage        %||% NA_character_,
+          correctImageSelected = frame$correctImageSelected %||% NA,
+        )
+
+        bind_cols(base_info, frame_row)
+      })
+  })
+
+#filter date range
+dat_extracted_filtered <- dat_extracted %>% 
+  mutate(response_date = ymd_hms(response_date)) %>% 
+  arrange(desc(response_date)) %>% 
+  filter(response_date > ymd("2023-11-22")) %>% #11/22 was start date
+  separate(frame_name, c("frame_number", "frame_label"), sep = "-", 
+           extra = "merge", convert = TRUE) %>% 
+  arrange(frame_number)
+
+valid_ids <- dat_extracted_filtered %>%
+  group_by(response_uuid, child_id) %>%
+  summarise(
+    has_condition_frame = any(frame_number == 11 & frame_label == "alexa-protocol" & !is.na(videoShown)),
+    has_test_frame      = any(frame_number == 18 & frame_label == "alexa-protocol" & !is.na(selectedImage)),
+    .groups = "drop"
+  ) %>%
+  filter(has_condition_frame, has_test_frame)
+
+dat_extracted_filtered_valid <- dat_extracted_filtered %>%
+  semi_join(valid_ids, by = c("response_uuid", "child_id"))
+
+# wrangle age
+dat_age <- dat_extracted_filtered_valid %>% 
+  mutate(child_age_rounded = as.numeric(child_age_rounded),
+         child_gender = as.factor(child_gender),
+         age = child_age_rounded / 365.2425,
+         age = round(age, 2),
+         age_floor = floor(age)) %>% 
+  select(child_id, child_age_rounded, child_gender)
+
+write.csv(dat_age, "data_with_gender.csv")
+
+#n count
+subj_count <- dat_age %>% 
+  distinct(response_id) %>% 
+  nrow()
+
+
+subj_count
+
+dat_extracted %>% 
+  distinct(response_id, .keep_all = TRUE) %>% 
+  count(child_gender)
+
+
+dat_counts <- dat %>%
+  map_dfr(function(rec) {
+    tibble(
+      response_uuid = rec$response$uuid %||% NA,
+      response_date = rec$response$date_created %||% NA,
+      child_id = rec$child$hashed_id %||% NA,
+      participant_id = rec$participant$hashed_id %||% NA,
+      study_uuid = rec$study$uuid %||% NA,
+      response_keys = paste(names(rec$response), collapse = ", ")
+    )
+  })
+
+dat_counts %>%
+  summarise(
+    n_responses = n(),
+    n_child_ids = n_distinct(child_id),
+    n_response_uuids = n_distinct(response_uuid),
+    n_studies = n_distinct(study_uuid)
+  )
+
+dat_counts %>%
+  count(study_uuid, sort = TRUE)
+
+
+dat_counts %>%
+  count(child_id, sort = TRUE) %>%
+  filter(n > 1)
+
+valid_responses <- dat_extracted_filtered %>%
+  group_by(response_id) %>%
+  summarise(
+    has_condition = any(frame_number == 11 & frame_label == "alexa-protocol" & !is.na(videoShown)),
+    has_attn1     = any(frame_number == 12 & frame_label == "alexa-protocol" & !is.na(selectedImage)),
+    has_attn2     = any(frame_number == 15 & frame_label == "alexa-protocol" & !is.na(selectedImage)),
+    has_test      = any(frame_number == 18 & frame_label == "alexa-protocol" & !is.na(selectedImage)),
+    has_attn3     = any(frame_number == 22 & frame_label == "null" & !is.na(selectedImage)),
+    .groups = "drop"
+  ) %>%
+  filter(has_condition, has_attn1, has_attn2, has_test, has_attn3)
+
+dat_age_joined <- dat_age %>%
+  semi_join(valid_responses, by = "response_id")
+
+dat_age_joined 
+
+dat_age_joined %>% 
+  distinct(response_id) %>% 
+  nrow()
+```
+
+```{r}
+dat_extracted %>% 
+    mutate(child_age_rounded = as.numeric(child_age_rounded),
+         child_gender = as.factor(child_gender),
+         age = child_age_rounded / 365.2425,
+         age = round(age, 2),
+         age_floor = floor(age))
+
+#Remain with data for study dates
+dat_extracted_filt <- dat_extracted %>% 
+  mutate(response_date = ymd_hms(response_date)) %>% 
+  arrange(desc(response_date)) %>% 
+  filter(response_date > ymd("2026-04-28")) %>% #4/28 was start date
+  separate(frame_name, c("frame_number", "frame_label"), sep = "-", 
+           extra = "merge", convert = TRUE) %>% 
+  arrange(frame_number)
+
+rmarkdown::paged_table(dat_extracted_filt)
+```
+

@@ -1,5 +1,5 @@
 ---
-title: "MTurk Counterbalanced Analysis"
+title: "Experiment 1"
 output: html_document
 ---
 
@@ -15,16 +15,55 @@ se <- function(x, n) {
 
 ## Data Wrangling
 ```{r data}
-data <- read_csv("adult_data.csv")%>% 
+data <- read_csv("Experiment1_data.csv")%>% 
   mutate(chose_song1 = (song1 == answer))
 
+```
 
+## Demographics - Gender
+
+```{r}
+data_gender <- data %>% 
+  count(gender)
+
+data_gender
+```
+
+## Descriptive stats - Age Range
+
+```{r}
+age_range <- data %>% 
+  arrange(age) %>% 
+  slice(1, 57) %>% 
+  select(age)
+
+age_range
+
+```
+
+## Summary statistics
+
+```{r}
+plot_data <- data %>% 
+  group_by(condition) %>% 
+  summarise(percent = mean(chose_song1),
+            n = n(),
+            se = se(chose_song1,n),
+            ci = 1.96*(sd(chose_song1)/sqrt(n())),
+            ci_min = max(0, percent - ci),
+            ci_max = min(1,percent + ci))
+
+plot_data
 ```
 
 ## GLM
 ```{r glm}
 mod <- glm(chose_song1 ~ condition, family = binomial, data)
 summary(mod)
+
+allEffects(mod)
+
+library(effects)
 ```
 
 ## Binomial Tests
@@ -51,8 +90,11 @@ plot_data <- data %>%
             se = se(chose_song1,n),
             ci = 1.96*(sd(chose_song1)/sqrt(n())),
             ci_min = max(0, percent - ci),
-            ci_max = min(1,percent + ci))
-
+            ci_max = min(1,percent + ci)) %>% 
+  mutate(percent = percent * 100,
+         ci_min = ci_min * 100,
+         ci_max = ci_max * 100)
+  
 plot_data$condition <- factor(plot_data$condition, levels = c("Person", "AI"))
 
 
@@ -66,15 +108,18 @@ ggplot(plot_data, aes(fill=condition, x=condition, y=percent)) +
        y = "Percent Consistent w/ Separate Minds",
        fill = "Condition") +
   scale_fill_manual(values=c("#999999", "#3D2785")) +
-  scale_y_continuous(limit = c(0,1), breaks=c(0,0.25,0.5,0.75,1), labels = c(0, 0.25, 0.50, 0.75, 1.00)) +
+  scale_y_continuous(limit = c(0,100), breaks=c(0,25,50,75,100), labels = c(0, 25, 50, 75, 100)) +
+  theme_cowplot() +
   theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
-        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
-        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        text = element_text(size = 16, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 16, color = "#595959", family = "Avenir Medium"),
         axis.ticks = element_line(color = "#595959"),
         axis.line.x = element_line(color = "#595959"),
         axis.line.y = element_line(color = "#595959"),
         legend.position = "right",
         legend.justification = "left",
-        legend.text = element_text(size = 12),
+        legend.text = element_text(size = 16),
         legend.title = element_text(face = "bold"))
+
+ggsave("figures/exp1_purple.png", bg = "white", width = 7, height = 7)
 ```

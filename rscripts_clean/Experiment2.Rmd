@@ -17,15 +17,80 @@ theme_set(theme_classic())
 se <- function(x, n) {
   sd(x)/sqrt(n)
 }
+
+```
+
+## Import data
+
+```{r}
+#raw session data (that was on script, that seems to have been wrangled post-Lookit export but we don't know how exactly)
+data <- read_csv("Experiment2_data.csv")
+
+#raw session data directly from lookit
+data_lookit <- read_csv("data.csv") %>% 
+  rename("child_id" = child__hashed_id) %>% 
+  mutate(condition = ifelse(condition == "person", "Person", condition))
+
+#demographic data from lookit
+dat_gender <- read_csv("data_with_gender.csv", row_names = FALSE) 
+
+```
+
+# Gender
+```{r}
+#Join and count
+columns_to_join <- c("condition", "counterbalance", "attn1", "attn2", "attn3", "test", 
+               "rachel_false_belief", "diana_false_belief", "allie_false_belief", 
+               "num_speakers", "coding_experience", "smartphone_frequency", 
+               "smart_speaker_frequency", "voice_assistant_frequency", "pass_attn1", 
+               "pass_attn2", "pass_attn3", "pass_all_attn", "chose_song_1")
+
+sessions_indexed <- data %>%
+  group_by(across(all_of(columns_to_join))) %>%
+  mutate(match_num = row_number()) %>%
+  ungroup()
+
+raw_indexed <- data_raw %>%
+  filter(!(child_id == "YM2G5C" & counterbalance == 0)) %>%
+  group_by(across(all_of(columns_to_join))) %>%
+  mutate(match_num = row_number()) %>%
+  ungroup() %>%
+  select(child_id, all_of(columns_to_join), match_num)
+
+data_sessions_with_ids <- sessions_indexed %>%
+  left_join(
+    raw_indexed,
+    by = c(join_cols, "match_num")) %>%
+  select(-match_num) %>% 
+  relocate(child_id, .before = age_days)
+
+#add gender
+gender_lookup <- dat_gender %>%
+  distinct(child_id, .keep_all = TRUE) %>%
+  select(child_id, child_age_rounded, child_gender)
+
+data_sessions_with_gender <- data_sessions_with_ids %>%
+  left_join(gender_lookup, by = "child_id") %>% 
+  relocate(child_gender, .after = child_id) %>% 
+  relocate(child_age_rounded, .after = child_gender)
+
+#count gender
+data_sessions_with_gender %>% 
+  count(child_gender)
+
 ```
 
 ## Data Wrangling
+
 ```{r data}
-data <- read_csv("lookit_data.csv")
+data <- read_csv("Experiment2_data.csv")
+
 data <- data %>% 
   mutate(age = age_days/365.25,
+         age_months = age_days/30.417,
          floor_age = floor(age),
-         fb_over_2 = as.integer((rachel_false_belief + diana_false_belief + allie_false_belief)>=2))
+         fb_over_2 = as.integer((rachel_false_belief + diana_false_belief + allie_false_belief)>=2)) %>% 
+  relocate(age, .after = age_days)
          
 
 data$voice_assistant_frequency = factor(data$voice_assistant_frequency, levels = c("Never", "Less than once a week
@@ -33,27 +98,96 @@ data$voice_assistant_frequency = factor(data$voice_assistant_frequency, levels =
 data <- data %>% mutate(va_daily = (voice_assistant_frequency == "About once a day" | voice_assistant_frequency == "Several times a day"))
 data <- data %>% mutate(ss_daily = (smart_speaker_frequency == "About once a day" | smart_speaker_frequency == "Several times a day"))
 data <- data %>% mutate(multiSSexperience = (num_speakers >= 2))
+
 ```
-## Demograpics
+
+## Demographics
 ```{r demo}
+#Age
 data %>% summarise(
   mean_age = mean(age),
   sd_age = sd(age),
-  n = n()
-)
+  n = n())
+
+#Condition
+data %>%
+  group_by(condition) %>% 
+  summarize(
+    condition_count = n())
+
+#Age by Condition
+data %>%
+  group_by(condition) %>% 
+  summarize(
+    mean_age = mean(age))
+  
 ```
 
-## H1
+
+# Preregistered Analyses
+
+## H1: Effect of Age by Condition
+
 ```{r h1}
 mod <- glm(chose_song_1 ~ 1 + age * condition, family = binomial, data)
 summary(mod)
+
 ```
 
-## H2
+## H2: Quadratic Regression in AI condition
+
 ```{r h1}
-mod <- glm(chose_song_1 ~ age^2, family = binomial, data %>% filter(condition=="AI"))
-summary(mod)
+data_AI <- data %>% 
+  filter(condition == "AI") %>% 
+  mutate(age_c = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_quadratic_ai <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_AI)
+summary(mod_quadratic_ai)
+
 ```
+
+# Exploratory Analyses
+
+## Quadratic Regression in Person condition
+
+```{r}
+data_person <- data %>% 
+  filter(condition == "Person") %>% 
+  mutate(age_c = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_quadratic_person <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_person)
+summary(mod_quadratic_person)
+
+```
+
+## Full Model: Interaction of Quadratic Age and Condition
+
+```{r}
+data <- data %>% 
+  mutate(age_c = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_full <- glm(chose_song_1 ~ (age_c + age_c2) * condition, family = binomial, data)
+summary(mod_full)
+
+```
+
+# Effect of Smart Speaker Experience in AI condition beyond age 9
+
+```{r}
+df_ai_decline <- data_AI %>% filter(age > 9) #NOTE: median split data!
+
+m_daily <- glm(chose_song_1 ~ age_c + ss_daily, family = binomial, data = df_ai_decline)
+m_multi <- glm(chose_song_1 ~ age_c + multiSSexperience , family = binomial, data = df_ai_decline) #this is what we're reporting
+
+summary(m_daily)
+summary(m_multi)
+
+```
+
+
 ## Plot Age
 ```{r data}
 require(gridExtra)
@@ -126,21 +260,11 @@ grid.arrange(key_plot, fb_plot, ncol=2)
 ```
 
 
-```{r fb_corr}
-person_data <- data %>% 
-  filter(condition == "Person")
-chisq.test(person_data$fb_over_2, person_data$chose_song_1)
-fisher.test(person_data$fb_over_2, person_data$chose_song_1)
-```
-
-
 ## Exploratory
 ```{r exploratory_multiSS}
 multiSS_data <- data %>% filter(condition=="AI" & !is.na(multiSSexperience))
 mod <- glm(chose_song_1 ~ 1 + age^2 * multiSSexperience, family = binomial, multiSS_data)
 summary(mod)
-
-
 
 multiSS_data$age_group <- cut(multiSS_data$age,
                     breaks = c(3, 5, 7, 9, 11, 13, Inf),
@@ -178,7 +302,12 @@ ggplot(multiSS_data, aes(x=as.numeric(factor(age_group)), y=chose_song_1)) +
 wide_multiSS <- multiSS_bar_data %>% 
   select(-percent_song_1) %>% 
   pivot_wider(names_from = multiSSexperience, values_from = n)
+
+
+
 ```
+
+
 
 ```{r exploratory_dailySS}
 exploratory_data <- data %>% filter(condition=="AI" & !is.na(ss_daily))
@@ -199,7 +328,7 @@ exploratory_bar_data <- exploratory_data %>%
   summarise(percent_song_1 = mean(chose_song_1),
             n = n())
 
-ggplot(data=exploratory_bar_data, aes(x=age_group, y=percent_song_1, fill=ss_daily)) +
+ggplot(data=exploratory_bar_data %>% filter(age > 9), aes(x=age_group, y=percent_song_1, fill=ss_daily)) +
   geom_col(position="Dodge") +
   scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
   scale_fill_manual(values=c("#3D2785", "#B6A6E9")) +
@@ -222,4 +351,33 @@ ggplot(data=exploratory_bar_data, aes(x=age_group, y=percent_song_1, fill=ss_dai
 wide_dailySS <- exploratory_bar_data %>% 
   select(-percent_song_1) %>% 
   pivot_wider(names_from = ss_daily, values_from = n)
+
+#===points
+exploratory_data_point <- exploratory_data %>% 
+  filter(age > 9.14) %>% 
+  mutate(age_floor = floor(age)) %>% 
+  mutate(ss_daily = as.factor(ss_daily))
+
+## plotting points
+ggplot(exploratory_data_point, aes(x=age_floor, y=chose_song_1)) +
+  # geom_point(aes(color = ss_daily)) +
+  # geom_jitter(aes(color = ss_daily), height = .05, width = .05) +
+  geom_smooth(method = "lm", aes(color = ss_daily)) +
+  geom_col(aes(x=age_group, y=percent_song_1, fill=multiSSexperience), position="Dodge") +
+  scale_y_continuous(limits=c(0,1),breaks=c(0,0.2,0.4,0.6,0.8,1)) +
+  scale_color_manual(values=c("#3D2785", "#B6A6E9")) +
+  labs(title = "Impact of Owning Multiple Smart Speakers",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       fill = "Number of Smart\nSeakers in Home") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
 ```
