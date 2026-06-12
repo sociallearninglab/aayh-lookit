@@ -1,0 +1,107 @@
+---
+title: "Experiment 1"
+output: html_document
+---
+
+## Setup
+```{r setup}
+library(tidyverse)
+library(readxl)
+library(effects)
+library(cowplot)
+library(boot)
+```
+
+## Data Wrangling
+```{r data}
+data_e1 <- read_csv("Experiment1_data.csv") %>%
+  mutate(chose_song1 = (song1 == answer))
+```
+
+## Demographics - Gender
+```{r demographics_gender}
+data_gender <- data_e1 %>%
+  count(gender)
+
+data_gender
+```
+
+## Descriptive Stats - Age Range
+```{r demographics_age}
+age_range <- data_e1 %>%
+  summarise(min_age = min(age, na.rm = TRUE),
+            max_age = max(age, na.rm = TRUE),
+            n = n())
+
+age_range
+```
+
+
+## GLM
+```{r glm}
+mod <- glm(chose_song1 ~ condition, family = binomial, data_e1)
+summary(mod)
+
+allEffects(mod)
+```
+
+## Binomial Tests
+```{r binomial_tests}
+person_data <- data_e1 %>%
+  filter(condition == "Person") %>%
+  summarise(x = sum(chose_song1), n = n())
+person_binom <- binom.test(x = person_data$x, n = person_data$n, alternative = "greater")
+person_binom
+cat("Person 95% CI: [", round(person_binom$conf.int[1], 2), ",", round(person_binom$conf.int[2], 2), "]\n")
+
+ai_data <- data_e1 %>%
+  filter(condition == "AI") %>%
+  summarise(x = sum(chose_song1), n = n())
+ai_binom <- binom.test(x = ai_data$x, n = ai_data$n, alternative = "less")
+ai_binom
+cat("AI 95% CI: [", round(ai_binom$conf.int[1], 2), ",", round(ai_binom$conf.int[2], 2), "]\n")
+```
+
+## Plot
+```{r plot}
+# Bootstrapped 95% CI
+set.seed(42)
+boot_mean <- function(x, i) mean(x[i])
+
+plot_data <- map_dfr(unique(data_e1$condition), function(cond) {
+  x <- data_e1$chose_song1[data_e1$condition == cond]
+  b  <- boot(x, boot_mean, R = 1000)
+  ci <- boot.ci(b, type = "perc")$percent[4:5]
+  tibble(condition = cond,
+         percent  = mean(x) * 100,
+         ci_lower = ci[1]  * 100,
+         ci_upper = ci[2]  * 100,
+         n        = length(x))
+})
+
+plot_data$condition <- factor(plot_data$condition, levels = c("Person", "AI"))
+plot_data  # print for reporting
+
+ggplot(plot_data, aes(fill = condition, x = condition, y = percent)) +
+  geom_col() +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.3, position = position_dodge(0.9)) +
+  labs(title = "Adult Predictions of Song Played",
+       x = "",
+       y = "Percent Consistent w/ Separate Minds",
+       fill = "Condition") +
+  scale_fill_manual(values = c("#999999", "#3D2785")) +
+  scale_y_continuous(limit = c(0, 100), breaks = c(0, 25, 50, 75, 100), labels = c(0, 25, 50, 75, 100)) +
+  theme_cowplot() +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 16, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 16, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(size = 16),
+        legend.title = element_text(face = "bold"))
+
+ggsave("exp1.png", bg = "white", width = 7, height = 7)
+```

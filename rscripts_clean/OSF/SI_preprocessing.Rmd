@@ -1,0 +1,47 @@
+---
+title: "Zoom Pilot Analysis (SI)"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup
+```{r libraries}
+library(tidyverse)
+library(readxl)
+library(irr)
+theme_set(theme_classic())
+```
+
+# Read Data
+```{r read_data}
+si_data <- read_csv("SI_data.csv") %>%
+  filter(usable == 1 &
+           english_all_or_most_or_first_lang_or_school == 1) %>%
+  mutate(
+    chose_song_1     = ifelse(first_song == test_q, 1, 0),
+    multiSSexperience = as.integer(number_of_SS_in_home) > 1,
+    mean_fb         = (rachel_prediction_implicit_false_belief +
+                          diana_prediction_false_belief_location +
+                          allie_predicition_false_belief_location) / 3.0,
+    fb_over_2        = as.integer(
+                         (rachel_prediction_implicit_false_belief +
+                            diana_prediction_false_belief_location +
+                            allie_predicition_false_belief_location) >= 2)
+  )
+
+# Recode VUI → AI and set factor levels
+si_data$condition <- recode(si_data$condition, "VUI" = "AI")
+si_data$condition <- factor(si_data$condition, levels = c("Person", "AI"))
+```
+
+# Demographics
+```{r cleanup}
+si_data$testing_date <- NULL
+
+#si_data_withfb <- si_data[!is.na(si_data$diana_prediction_false_belief_location), ]
+
+
+```

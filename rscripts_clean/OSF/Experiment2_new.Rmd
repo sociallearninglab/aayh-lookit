@@ -1,0 +1,277 @@
+---
+title: "Experiment 2"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup
+```{r libraries}
+library(tidyverse)
+library(readxl)
+library(irr)
+theme_set(theme_classic())
+```
+
+# Read Data
+```{r read_data}
+data_e2 <- read_csv("Experiment2_data.csv")
+```
+
+# Demographics
+```{r demographics}
+# Age
+data_e2 %>% summarise(
+  mean_age = mean(age),
+  sd_age = sd(age),
+  n = n())
+
+# Condition
+data_e2 %>%
+  group_by(condition) %>%
+  summarize(condition_count = n())
+
+# Gender
+data_e2 %>%
+  count(child_gender)
+```
+
+# Preregistered Analyses
+
+## Exploratory: Relationship between ToM and Person condition
+```{r tom_person}
+mod_tom <- data_e2 %>%
+  filter(condition == "Person") %>%
+  glm(chose_song_1 ~ mean_fb, family = binomial, data = .)
+
+summary(mod_tom)
+```
+
+## H1: Effect of Age by Condition
+```{r h1_age_condition}
+mod_h1 <- glm(chose_song_1 ~ 1 + age * condition, family = binomial, data_e2)
+summary(mod_h1)
+```
+
+## H2: Quadratic Regression in AI Condition
+```{r h2_quadratic_ai}
+data_ai <- data_e2 %>%
+  filter(condition == "AI") %>%
+  mutate(age_c  = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_h2 <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_ai)
+summary(mod_h2)
+```
+
+# Exploratory Analyses
+
+## Quadratic Regression in Person Condition
+```{r quadratic_person}
+data_person <- data_e2 %>%
+  filter(condition == "Person") %>%
+  mutate(age_c  = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_quadratic_person <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_person)
+summary(mod_quadratic_person)
+```
+
+## Full Model: Interaction of Quadratic Age and Condition
+```{r full_model}
+# Center age on the overall mean for the full model
+data_e2 <- data_e2 %>%
+  mutate(age_c  = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_full <- glm(chose_song_1 ~ (age_c + age_c2) * condition, family = binomial, data_e2)
+summary(mod_full)
+```
+
+## Main Task and False Belief by Age
+```{r plot_age}
+require(gridExtra)
+
+binned_data <- data_e2
+binned_data$age_group <- cut(data_e2$age,
+                             breaks = c(3, 5, 7, 9, 11, 13, Inf),
+                             labels = c("3-4", "5-6", "7-8", "9-10", "11-12", "13+"),
+                             right = FALSE)
+
+binned_data <- binned_data %>%
+  mutate(condition = factor(condition, levels = c("Person", "AI")))
+
+bar_data <- binned_data %>%
+  group_by(age_group, condition) %>%
+  summarise(percent_song_1 = mean(chose_song_1),
+            n = n())
+
+key_plot <- ggplot(binned_data, aes(x = as.numeric(factor(age_group)), y = chose_song_1)) +
+  geom_col(data = bar_data, aes(x = age_group, y = percent_song_1, fill = condition),
+           position = "Dodge", alpha = 0.3) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"),
+              formula = y ~ x + I(x^2), aes(color = condition)) +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_fill_manual(values = c("#999999", "#3D2785")) +
+  scale_color_manual(values = c("#999999", "#3D2785")) +
+  labs(title = "Main Task",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       color = "Condition") +
+  guides(color = guide_legend(order = 1),
+         linetype = guide_legend(order = 2),
+         fill = "none") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "none",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+
+key_plot
+
+fb_bar_data <- binned_data %>%
+  group_by(age_group, condition) %>%
+  summarise(percent_fb = mean(mean_fb),
+            n = n())
+
+fb_plot <- ggplot(binned_data, aes(x = as.numeric(factor(age_group)), y = mean_fb)) +
+  geom_col(data = fb_bar_data, aes(x = age_group, y = percent_fb, fill = condition),
+           position = "Dodge", alpha = 0.3) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"),
+              formula = y ~ x, aes(color = condition)) +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_fill_manual(values = c("#999999", "#3D2785")) +
+  scale_color_manual(values = c("#999999", "#3D2785")) +
+  labs(title = "Standard False Belief Task",
+       x = "Age",
+       y = "Average False Belief Score",
+       color = "Condition") +
+  guides(color = guide_legend(order = 1),
+         linetype = guide_legend(order = 2),
+         fill = "none") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "none",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+
+fb_plot
+
+grid.arrange(key_plot, fb_plot, ncol = 2)
+```
+
+
+## Effect of Smart Speaker Experience in AI Condition (age > 9)
+```{r ss_experience}
+# Restrict analysis to children aged 9 and up
+data_ai_decline <- data_ai %>%
+  filter(age > 9)
+
+# Multiple smart speaker ownership (2 or more) — reported in paper
+mod_multi <- glm(chose_song_1 ~ age_c + multiSSexperience, family = binomial, data = data_ai_decline)
+summary(mod_multi)
+
+# Daily smart speaker usage
+mod_daily <- glm(chose_song_1 ~ age_c + ss_daily, family = binomial, data = data_ai_decline)
+summary(mod_daily)
+
+
+```
+
+# Plots
+
+## Smart Speaker Ownership by Age Group (AI condition, age > 9)
+```{r plot_multiSS}
+multiSS_data <- data_e2 %>%
+  filter(condition == "AI" & age > 9 & !is.na(multiSSexperience)) %>%
+  mutate(
+    age_bin = case_when(
+      floor(age) <= 10 ~ "9-10",
+      floor(age) <= 12 ~ "11-12",
+      TRUE             ~ "13-15"
+    ),
+    age_bin = factor(age_bin, levels = c("9-10", "11-12", "13-15")),
+    multiSSexperience = ifelse(multiSSexperience, "2 or more", "Less than 2")
+  )
+
+multiSS_bar_data <- multiSS_data %>%
+  group_by(age_bin, multiSSexperience) %>%
+  summarise(percent_song_1 = mean(chose_song_1), n = n(), .groups = "drop")
+
+ggplot(multiSS_bar_data, aes(x = age_bin, y = percent_song_1, fill = multiSSexperience)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = paste0("n=", n)),
+            position = position_dodge(width = 0.9),
+            vjust = -0.5, size = 3, color = "#595959") +
+  scale_y_continuous(limits = c(0, 1.15), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_fill_manual(values = c("2 or more" = "#3D2785", "Less than 2" = "#B6A6E9")) +
+  labs(title = "Impact of Owning Multiple Smart Speakers",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       fill = "Number of Smart\nSpeakers in Home") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+  nrow(multiSS_data)
+```
+
+## Daily Smart Speaker Usage by Age Group (AI condition, age > 9)
+```{r plot_dailySS}
+dailySS_data <- data_e2 %>%
+  filter(condition == "AI" & age > 9 & !is.na(ss_daily)) %>%
+  mutate(
+    age_bin = case_when(
+      floor(age) <= 10 ~ "9-10",
+      floor(age) <= 12 ~ "11-12",
+      TRUE             ~ "13-15"
+    ),
+    age_bin = factor(age_bin, levels = c("9-10", "11-12", "13-15")),
+    ss_daily = ifelse(ss_daily, "Daily", "Less than Daily")
+  )
+
+dailySS_bar_data <- dailySS_data %>%
+  group_by(age_bin, ss_daily) %>%
+  summarise(percent_song_1 = mean(chose_song_1), n = n(), .groups = "drop")
+
+ggplot(dailySS_bar_data, aes(x = age_bin, y = percent_song_1, fill = ss_daily)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = paste0("n=", n)),
+            position = position_dodge(width = 0.9),
+            vjust = -0.5, size = 3, color = "#595959") +
+  scale_y_continuous(limits = c(0, 1.15), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_fill_manual(values = c("Daily" = "#3D2785", "Less than Daily" = "#B6A6E9")) +
+  labs(title = "Impact of Daily Smart Speaker Usage",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       fill = "Smart Speaker\nUsage Frequency") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "right",
+        legend.justification = "left",
+        legend.text = element_text(face = "bold"))
+  nrow(dailySS_data)
+```
+

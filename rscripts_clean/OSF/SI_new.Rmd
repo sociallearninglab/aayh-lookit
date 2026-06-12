@@ -1,0 +1,213 @@
+---
+title: "Zoom Pilot Analysis (SI)"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup
+```{r libraries}
+library(tidyverse)
+library(readxl)
+library(irr)
+theme_set(theme_classic())
+
+se <- function(x, n) {
+  sd(x)/sqrt(n)
+}
+```
+
+# Read Data
+```{r read_data}
+si_data <- read_csv("SI_data.csv") %>%
+  filter(usable == 1 &
+           english_all_or_most_or_first_lang_or_school == 1) %>%
+  mutate(
+    chose_song_1     = ifelse(first_song == test_q, 1, 0),
+    multiSSexperience = as.integer(number_of_SS_in_home) > 1,
+    mean_fb         = (rachel_prediction_implicit_false_belief +
+                          diana_prediction_false_belief_location +
+                          allie_predicition_false_belief_location) / 3.0,
+    fb_over_2        = as.integer(
+                         (rachel_prediction_implicit_false_belief +
+                            diana_prediction_false_belief_location +
+                            allie_predicition_false_belief_location) >= 2)
+  )
+
+# Recode VUI → AI and set factor levels
+si_data$condition <- recode(si_data$condition, "VUI" = "AI")
+si_data$condition <- factor(si_data$condition, levels = c("Person", "AI"))
+
+```
+
+# Demographics
+```{r demographics}
+# Age
+si_data %>% summarise(
+  mean_age = mean(age),
+  sd_age   = sd(age),
+  n        = n())
+
+# Condition
+si_data %>%
+  group_by(condition) %>%
+  summarize(condition_count = n())
+
+# Gender
+si_data %>%
+  count(gender)
+```
+
+# Preregistered Analyses
+
+## Exploratory: Relationship between False Belief Score and Person Condition
+```{r tom_person}
+# mean_fb: mean of 3 standard false belief trials 
+mod_tom <- si_data %>%
+  filter(condition == "Person") %>%
+  glm(chose_song_1 ~ mean_fb, family = binomial, data = .)
+
+summary(mod_tom)
+```
+
+## H1: Effect of Age by Condition
+```{r h1_age_condition}
+mod_h1 <- glm(chose_song_1 ~ 1 + age * condition, family = binomial, si_data)
+summary(mod_h1)
+```
+
+## H2: Quadratic Regression in AI Condition
+```{r h2_quadratic_ai}
+si_data_ai <- si_data %>%
+  filter(condition == "AI") %>%
+  mutate(age_c  = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_quadratic_ai <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, si_data_ai)
+summary(mod_quadratic_ai)
+```
+
+# Exploratory Analyses
+
+## Quadratic Regression in Person Condition
+```{r quadratic_person}
+si_data_person <- si_data %>%
+  filter(condition == "Person") %>%
+  mutate(age_c  = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_quadratic_person <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, si_data_person)
+summary(mod_quadratic_person)
+```
+
+## Full Model: Interaction of Quadratic Age and Condition
+```{r full_model}
+# Center age on the overall mean for the full model
+si_data <- si_data %>%
+  mutate(age_c  = age - mean(age),
+         age_c2 = age_c^2)
+
+mod_full <- glm(chose_song_1 ~ (age_c + age_c2) * condition, family = binomial, si_data)
+summary(mod_full)
+```
+
+## Effect of Smart Speaker Experience in AI Condition (age > 6)
+```{r ss_experience}
+# 6 is approximately the median age; restricts to the older half
+si_data_ai_older <- si_data_ai %>%
+  filter(age > 6)
+
+# Any smart speaker ownership (SS_experience: binary 0/1)
+mod_ss <- glm(chose_song_1 ~ age_c + SS_experience, family = binomial, data = si_data_ai_older)
+summary(mod_ss)
+
+# Multiple smart speaker ownership (2 or more)
+mod_multi <- glm(chose_song_1 ~ age_c + multiSSexperience, family = binomial, data = si_data_ai_older)
+summary(mod_multi)
+```
+
+# Plots
+
+## Main Task and False Belief by Age
+```{r plot_age}
+require(gridExtra)
+
+binned_si_data <- si_data
+binned_si_data$age_group <- cut(si_data$age,
+                             breaks = c(3, 5, 7, Inf),
+                             labels = c("3-4", "5-6", "7-8"),
+                             right = FALSE)
+
+binned_si_data <- binned_si_data %>%
+  mutate(condition = factor(condition, levels = c("Person", "AI")))
+
+bar_si_data <- binned_si_data %>%
+  group_by(age_group, condition) %>%
+  summarise(percent_song_1 = mean(chose_song_1),
+            n = n())
+
+key_plot <- ggplot(binned_si_data, aes(x = as.numeric(factor(age_group)), y = chose_song_1)) +
+  geom_col(data = bar_si_data, aes(x = age_group, y = percent_song_1, fill = condition),
+           position = "Dodge", alpha = 0.3) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"),
+              formula = y ~ x + I(x^2), aes(color = condition)) +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_fill_manual(values = c("#999999", "#3D2785")) +
+  scale_color_manual(values = c("#999999", "#3D2785")) +
+  labs(title = "Main Task",
+       x = "Age",
+       y = "Percent Consistent w/ Separate Minds",
+       color = "Condition") +
+  guides(color = guide_legend(order = 1),
+         linetype = guide_legend(order = 2),
+         fill = "none") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "none",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+
+key_plot
+
+fb_bar_si_data <- binned_si_data %>%
+  group_by(age_group, condition) %>%
+  summarise(percent_fb = mean(mean_fb),
+            n = n())
+
+fb_plot <- ggplot(binned_si_data, aes(x = as.numeric(factor(age_group)), y = mean_fb)) +
+  geom_col(data = fb_bar_si_data, aes(x = age_group, y = percent_fb, fill = condition),
+           position = "Dodge", alpha = 0.3) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"),
+              formula = y ~ x, aes(color = condition)) +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_fill_manual(values = c("#999999", "#3D2785")) +
+  scale_color_manual(values = c("#999999", "#3D2785")) +
+  labs(title = "False Belief Task",
+       x = "Age",
+       y = "Average False Belief Score",
+       color = "Condition") +
+  guides(color = guide_legend(order = 1),
+         linetype = guide_legend(order = 2),
+         fill = "none") +
+  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+        text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
+        axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
+        axis.ticks = element_line(color = "#595959"),
+        axis.line.x = element_line(color = "#595959"),
+        axis.line.y = element_line(color = "#595959"),
+        legend.position = "none",
+        legend.justification = "left",
+        legend.text = element_text(size = 12),
+        legend.title = element_text(face = "bold"))
+
+fb_plot
+
+grid.arrange(key_plot, fb_plot, ncol = 2)
+```
