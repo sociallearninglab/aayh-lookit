@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(readxl)
 library(irr)
-library(ggpubr)
+library(cowplot)
 library(gridExtra)
 theme_set(theme_classic())
 ```

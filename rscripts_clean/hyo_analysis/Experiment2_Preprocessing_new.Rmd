@@ -31,7 +31,8 @@ data <- read_csv("Experiment2_all_data_061326.csv")
 data <- data %>%
   rename(
     age_days     = child__age_in_days,
-    child_gender = child__gender
+    child_gender = child__gender,
+    carrie_diverse_desire = attn3
   )
 
 data <- data %>%
@@ -79,8 +80,8 @@ data <- data %>%
   select(
     child__hashed_id, age_days, child_gender,
     condition, counterbalance,
-    attn1, attn2, pass_attn1, pass_attn2, test, chose_song_1,
-    rachel_false_belief, diana_false_belief, allie_false_belief,
+    attn1, attn2, pass_attn1, pass_attn2, test, chose_song_1, 
+    carrie_diverse_desire, rachel_false_belief, diana_false_belief, allie_false_belief,
     num_speakers, smart_speaker_frequency
   )
 ```
