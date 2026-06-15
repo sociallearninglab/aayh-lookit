@@ -1,0 +1,91 @@
+---
+title: "Experiment2_Preprocessing_new"
+output: html_document
+date: "2026-06-13"
+---
+
+README
+This script takes Experiment2_all_data_061326.csv which includes all sessions between 11/22/2023 to 8/16/2024 (see README.rtf for info on how it was generated), and excludes (1) incomplete sessions, (2) duplicate participants (keeps the first complete session), (3) excludes children with autism and learning disability, (4) selects relevant columns, and exports the data file that will be uploaded to OSF. 
+
+Column name notes:
+- age in days: child__age_in_days (vs age_days in original script)
+- gender: child__gender (vs child_gender in original script)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup
+```{r setup}
+library(tidyverse)
+theme_set(theme_classic())
+```
+
+## Import data
+```{r}
+data <- read_csv("Experiment2_all_data_061326.csv")
+```
+
+## Rename columns to match original script conventions
+```{r}
+data <- data %>%
+  rename(
+    age_days     = child__age_in_days,
+    child_gender = child__gender
+  )
+
+data <- data %>%
+  mutate(condition = ifelse(condition == "person", "Person", condition))
+```
+
+## Exclusions
+
+### Step 1 — Remove incomplete sessions
+```{r}
+# Removes all rows where response__completed is FALSE
+data <- data %>%
+  filter(response__completed == TRUE)
+
+cat("Rows after removing incomplete sessions:", nrow(data), "\n")
+```
+
+### Step 2 — Remove duplicate participants (keep earliest session)
+```{r}
+# For participants appearing more than once, keep only the row with the earliest response__date_created
+data <- data %>%
+  mutate(response__date_created = as.POSIXct(response__date_created)) %>%
+  group_by(child__hashed_id) %>%
+  arrange(response__date_created) %>%
+  slice(1) %>%
+  ungroup()
+
+cat("Rows after removing later duplicate sessions:", nrow(data), "\n")
+```
+
+### Step 3 — Exclude participants with autism spectrum disorder or learning disability
+```{r}
+data <- data %>%
+  filter(
+    !str_detect(coalesce(child__condition_list, ""), "autism_spectrum_disorder") &
+    !str_detect(coalesce(child__additional_information, ""), regex("learning disability", ignore_case = TRUE))
+  )
+
+cat("Rows after excluding ASD and learning disability:", nrow(data), "\n")
+```
+
+## Step 4 - Select columns
+```{r}
+data <- data %>%
+  select(
+    child__hashed_id, age_days, child_gender,
+    condition, counterbalance,
+    attn1, attn2, pass_attn1, pass_attn2, test, chose_song_1,
+    rachel_false_belief, diana_false_belief, allie_false_belief,
+    num_speakers, smart_speaker_frequency
+  )
+```
+
+## Export
+```{r}
+write.csv(data, "Experiment2_data.csv", row.names = FALSE)
+```
