@@ -225,11 +225,13 @@ ggsave("fig3.png", plot = fig3, width = 10, height = 5, dpi = 300)
 ## Effect of Smart Speaker Experience in AI Condition (age > peak of inv-U curve to focus on the declining trend)
 ```{r ss_experience}
 data_ai_decline <- data_ai %>%
-  filter(age > peak_age)
+  filter(age > peak_age) 
 
 # main analysis: looking at heavy smart speaker users vs non-heavy users: children who have 2+ smart speakers at home AND use them daily
 data_ai_decline <- data_ai_decline %>%
-  mutate(heavy_ss_user = (num_speakers >= 2) & (ss_daily == TRUE))
+  mutate(heavy_ss_user = (num_speakers >= 2) & (ss_daily == TRUE)) %>%
+  filter(!is.na(heavy_ss_user))
+
 
 data_ai_decline %>%
   group_by(heavy_ss_user) %>%
@@ -266,7 +268,9 @@ heavySS_data <- data_e2 %>%
       TRUE     ~ "13+"
     ),
     age_bin = factor(age_bin, levels = c("7-8", "9-10", "11-12", "13+"))
-  )
+  ) %>%
+  filter(!is.na(heavy_ss_user))
+
 
 heavySS_bar_data <- heavySS_data %>%
   group_by(age_bin, heavy_ss_user) %>%
