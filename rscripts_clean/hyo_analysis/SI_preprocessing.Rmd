@@ -1,0 +1,77 @@
+---
+title: "Zoom Pilot Analysis (SI)"
+output: pdf_document
+date: "2026-06-15"
+---
+
+README
+This script takes SI_data.csv and does some clean-up, selects key variables, and exports the data file that will be uploaded to OSF. 
+One change: Includes all children with ToM data (rather than cutting off at age 9); this results in oversampling of AI condition.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup
+```{r libraries}
+library(tidyverse)
+library(readxl)
+library(irr)
+theme_set(theme_classic())
+```
+
+# Read Data 
+```{r read_data}
+# read data 
+data_si <- read_csv("SI_data_original.csv")
+```
+
+
+# Rename some variables and calculate additional variables
+```{r rename}
+
+#recode participant whose parent wrote "google" instead of number of smart speakers; but wrote down "5 speakers" in the notes
+data_si <- data_si %>%
+  filter(usable == 1 & english_all_or_most_or_first_lang_or_school == 1 & !is.na(diana_prediction_false_belief_location) & age < 9) %>%
+  mutate(number_of_SS_in_home = ifelse(number_of_SS_in_home == "google", 5, number_of_SS_in_home)) %>%
+   rename(
+    pass_attn1 = song1_mem_check, 
+    pass_attn2 = song2_mem_check,
+    num_speakers = number_of_SS_in_home,
+    test = test_q,
+    rachel_false_belief = rachel_prediction_implicit_false_belief,
+    diana_false_belief = diana_prediction_false_belief_location,
+    allie_false_belief = allie_predicition_false_belief_location
+  ) %>%
+
+  mutate(
+    chose_song_1     = ifelse(first_song == test, 1, 0),
+    multiSSexperience = as.integer(num_speakers) > 1,
+    mean_fb         = (rachel_false_belief +
+                          diana_false_belief +
+                          allie_false_belief) / 3.0
+  )
+
+# Recode VUI → AI and set factor levels
+data_si$condition <- recode(data_si$condition, "VUI" = "AI")
+data_si$condition <- factor(data_si$condition, levels = c("Person", "AI"))
+
+```
+
+## Select columns
+```{r}
+data_si <- data_si %>%
+  select(
+    redcap, age, floor_age, gender,
+    condition, counterbalance,
+    pass_attn1, pass_attn2, test, chose_song_1, 
+    rachel_false_belief, diana_false_belief, allie_false_belief, mean_fb,
+    num_speakers, multiSSexperience
+    )
+```
+
+## Export
+```{r}
+write.csv(data_si, "SI_data.csv", row.names = FALSE)
+```

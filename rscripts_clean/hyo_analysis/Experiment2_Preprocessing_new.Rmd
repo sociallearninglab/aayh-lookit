@@ -1,6 +1,6 @@
 ---
 title: "Experiment2_Preprocessing_new"
-output: html_document
+output: pdf_document
 date: "2026-06-13"
 ---
 
