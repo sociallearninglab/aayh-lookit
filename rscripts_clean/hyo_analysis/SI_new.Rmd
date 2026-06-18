@@ -82,6 +82,10 @@ mod_multi <- glm(chose_song_1 ~ age + num_speakers, family = binomial, data = da
 summary(mod_age)
 summary(mod_age_quad)
 summary(mod_multi)
+
+
+peak_age_si <- (-coef(mod_age_quad)["age_c"] / (2 * coef(mod_age_quad)["age_c2"])) + mean(data_si$age)
+cat("Peak age of quadratic trend across conditions", round(peak_age_si, 2), "years\n")
 ```
 
 
@@ -131,7 +135,6 @@ key_plot <- ggplot(binned_data_si, aes(x = as.numeric(factor(age_group)), y = ch
         legend.text = element_text(size = 12),
         legend.title = element_text(face = "bold"))
 
-key_plot
 
 fb_bar_data_si <- binned_data_si %>%
   group_by(age_group, condition) %>%
@@ -164,9 +167,8 @@ fb_plot <- ggplot(binned_data_si, aes(x = as.numeric(factor(age_group)), y = mea
         legend.text = element_text(size = 12),
         legend.title = element_text(face = "bold"))
 
-fb_plot
 
-grid.arrange(key_plot, fb_plot, ncol = 2)
-ggsave("figS1.png", width = 8, height = 5, dpi = 300)
+figs1 <- grid.arrange(key_plot, fb_plot, ncol = 2)
+ggsave("figS1.png", plot = figs1, width = 8, height = 5, dpi = 300)
 
 ```

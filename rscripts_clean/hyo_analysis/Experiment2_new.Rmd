@@ -237,20 +237,21 @@ data_ai_decline %>%
   group_by(heavy_ss_user) %>%
   summarise(n = n(), mean_age = mean(age), sd_age = sd(age))
 
-mod_multi <- glm(chose_song_1 ~ age_c + heavy_ss_user, family = binomial, data = data_ai_decline)
-summary(mod_multi)
+mod_heavy <- glm(chose_song_1 ~ age + heavy_ss_user, family = binomial, data = data_ai_decline)
+summary(mod_heavy)
+nobs(mod_heavy)
 
 # follow-up 1: looking at daily smart speaker usage
-mod_daily <- glm(chose_song_1 ~ age_c + ss_daily, family = binomial, data = data_ai_decline)
+mod_daily <- glm(chose_song_1 ~ age + ss_daily, family = binomial, data = data_ai_decline)
 summary(mod_daily)
+nobs(mod_daily)
 
 # follow-up 2: looking at number of speakers 
-mod_numss <- glm(chose_song_1 ~ age_c + num_speakers, family = binomial, data = data_ai_decline)
+mod_numss <- glm(chose_song_1 ~ age + num_speakers, family = binomial, data = data_ai_decline)
 summary(mod_numss)
-
+nobs(mod_numss)
 ```
 
-# 
 
 ## Heavy Smart Speaker Users by Age Group (AI condition, ages 7+)
 ```{r plot_heavySS}
