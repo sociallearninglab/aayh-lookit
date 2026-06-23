@@ -19,7 +19,9 @@ theme_set(theme_classic())
 
 # Read Data
 ```{r read_data}
+
 data_e2 <- read_csv("Experiment2_data.csv")
+
 ```
 
 ## Compute derived variables
@@ -224,40 +226,48 @@ ggsave("fig3.png", plot = fig3, width = 10, height = 5, dpi = 300)
 
 ## Effect of Smart Speaker Experience in AI Condition (age > peak of inv-U curve to focus on the declining trend)
 ```{r ss_experience}
-data_ai_decline <- data_ai %>%
-  filter(age > peak_age) 
 
 # main analysis: looking at heavy smart speaker users vs non-heavy users: children who have 2+ smart speakers at home AND use them daily
-data_ai_decline <- data_ai_decline %>%
+
+heavySS <- data_e2 %>%
+  filter(condition == "AI" & age >= peak_age) %>%  
   mutate(heavy_ss_user = (num_speakers >= 2) & (ss_daily == TRUE)) %>%
   filter(!is.na(heavy_ss_user))
 
-
-data_ai_decline %>%
+heavySS %>%
   group_by(heavy_ss_user) %>%
   summarise(n = n(), mean_age = mean(age), sd_age = sd(age))
 
-mod_heavy <- glm(chose_song_1 ~ age + heavy_ss_user, family = binomial, data = data_ai_decline)
-summary(mod_heavy)
-nobs(mod_heavy)
+mod_heavySS <- glm(chose_song_1 ~ age + heavy_ss_user, family = binomial, data = heavySS)
+summary(mod_heavySS)
+nobs(mod_heavySS)
+
+```
+
+
+```{r ss_followup analyses}
 
 # follow-up 1: looking at daily smart speaker usage
-mod_daily <- glm(chose_song_1 ~ age + ss_daily, family = binomial, data = data_ai_decline)
+mod_daily <- glm(chose_song_1 ~ age + ss_daily, family = binomial, data = heavySS)
 summary(mod_daily)
 nobs(mod_daily)
 
+
 # follow-up 2: looking at number of speakers 
-mod_numss <- glm(chose_song_1 ~ age + num_speakers, family = binomial, data = data_ai_decline)
+mod_numss <- glm(chose_song_1 ~ age + num_speakers, family = binomial, data = heavySS)
 summary(mod_numss)
 nobs(mod_numss)
 ```
 
 
 ## Heavy Smart Speaker Users by Age Group (AI condition, ages 7+)
-```{r plot_heavySS}
-# heavy_ss_user: owns 2+ smart speakers AND uses daily
-# age bins: 7-8, 9-10, 11-12, 13+
-heavySS_data <- data_e2 %>%
+```{r plot_SS}
+# heavy_ss_user: owns 2+ smart speakers AND uses daily (same as the above analysis)
+# age bins: 7-8, 9-10, 11-12, 13+ (instead of plotting from peak_age, use binned age groups, starting from 7 yr olds)
+
+
+
+heavySS_over7 <- data_e2 %>%
   filter(condition == "AI" & age >= 7 & !is.na(num_speakers) & !is.na(ss_daily)) %>%
   mutate(
     heavy_ss_user = (num_speakers >= 2) & (ss_daily == TRUE),
@@ -272,11 +282,11 @@ heavySS_data <- data_e2 %>%
   )
 
 
-heavySS_bar_data <- heavySS_data %>%
+heavySS_bar_over7 <- heavySS_over7 %>%
   group_by(age_bin, heavy_ss_user) %>%
   summarise(percent_song_1 = mean(chose_song_1), n = n(), .groups = "drop")
 
-ggplot(heavySS_bar_data, aes(x = age_bin, y = percent_song_1, fill = heavy_ss_user)) +
+ggplot(heavySS_bar_over7, aes(x = age_bin, y = percent_song_1, fill = heavy_ss_user)) +
   geom_col(position = "dodge") +
   geom_text(aes(label = paste0("n=", n)),
             position = position_dodge(width = 0.9),
