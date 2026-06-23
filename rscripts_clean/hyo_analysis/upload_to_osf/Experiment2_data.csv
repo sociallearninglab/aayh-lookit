@@ -1,0 +1,418 @@
+"child__hashed_id","age_days","child_gender","condition","counterbalance","attn1","attn2","pass_attn1","pass_attn2","test","chose_song_1","carrie_diverse_desire","rachel_false_belief","diana_false_belief","allie_false_belief","num_speakers","smart_speaker_frequency"
+"223QZT",1594,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Several times a day"
+"226DPJ",3878,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,NA
+"27NPYH",4877,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,NA
+"2CKBJK",4059,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"About once a day"
+"2D2Pd2",5202,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"2MNUcZ",5451,"f","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,6,"Several times a day"
+"2N2GAd",3062,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"2RT5YX",3736,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,5,"Several times a day"
+"2SXZZA",2385,"f","AI",1,"spider","wheels",1,1,"wheels",0,1,0,0,0,3,"Less than once a week"
+"2UMdLC",4166,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a day"
+"2ZBH3d",4034,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Less than once a week"
+"2ZPdLJ",1494,"f","Person",3,"spider","wheels",1,1,"wheels",0,1,0,0,0,0,"Never"
+"2cLdd2",2960,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"About once a week"
+"33NPWV",1390,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,0,1,0,0,"Never"
+"347dJH",1809,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,0,"Never"
+"36TYFV",4825,"f","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,2,"About once a week"
+"3ADQJK",1164,"m","Person",3,"spider","wheels",1,1,"spider",1,1,0,0,0,0,"Never"
+"3BCE74",3745,"f","AI",3,"wheels","spider",0,0,"spider",1,0,0,0,0,NA,"Several times a day"
+"3BJL75",1326,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,0,0,0,0,"Never"
+"3BMEHF",2135,"m","Person",3,"spider","wheels",1,1,"spider",1,1,0,0,0,3,"About once a week"
+"3G522Y",2462,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"3MGZ2D",1615,"f","AI",3,"twinkle","twinkle",0,0,"wheels",0,1,1,1,0,1,"Less than once a week"
+"3NJBME",3351,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"3NRZDA",1123,"f","Person",4,"wheels","spider",1,1,"wheels",1,0,0,0,1,0,"Never"
+"3STC7T",1485,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,2,"Never"
+"3XcSJ2",3811,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,0,NA
+"44WWDL",1880,"f","AI",1,"spider","wheels",1,1,"wheels",0,0,0,1,0,NA,NA
+"46GXRG",4876,"m","AI",4,"wheels","spider",1,1,"spider",0,1,0,0,0,6,"About once a day"
+"4ABCC4",1308,"f","AI",3,"wheels","twinkle",0,0,"spider",1,1,0,0,1,0,NA
+"4BAHDN",3765,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a day"
+"4HBDTF",3831,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,7,"Several times a day"
+"4JccdB",2816,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"4Lc7HB",1098,"m","AI",1,"spider","wheels",1,1,"spider",1,1,0,0,0,1,"About once a day"
+"4NJCTY",1579,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,0,0,NA,"Several times a day"
+"4P2QUV",1868,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"4QcY5E",2058,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,0,0,0,"Never"
+"4SGNPS",3769,"m","AI",4,"wheels","twinkle",1,0,"wheels",1,1,1,1,1,0,"Less than once a week"
+"4URBHK",5072,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Less than once a week"
+"4UTJ5C",4646,"f","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,0,"Less than once a week"
+"4VCRcA",2535,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,0,2,"Never"
+"4VHdUK",5030,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"4XE3KX",3592,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"Several times a day"
+"4d2CPG",3000,"m","AI",1,"spider","wheels",1,1,"wheels",0,1,1,1,1,0,"Never"
+"4dR3DM",1520,"f","Person",4,"wheels","spider",1,1,"spider",0,1,0,0,0,1,"Several times a day"
+"543XTU",5265,"m","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,3,"About once a day"
+"5A2Y2B",1167,"f","Person",4,"wheels","twinkle",1,0,"spider",0,1,1,1,1,1,"Less than once a week"
+"5C4cLF",4272,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"5CZXYC",3241,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a week"
+"5EPF77",2415,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"Never"
+"5HHGcY",2631,"m","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,0,"Never"
+"5Hd5XN",3706,"m","Person",1,"spider","wheels",1,1,"spider",1,0,0,0,1,0,"Never"
+"5MGCBZ",4056,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,NA
+"5Q24K5",1283,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,0,0,1,0,"Never"
+"5TDN53",1344,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"5WHcX5",3749,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"5WcVK4",5161,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,4,"Several times a day"
+"5c3F4C",3514,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,0,3,"Several times a day"
+"5c5BKL",2414,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,0,NA
+"5d3X5S",1630,"f","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,0,"Never"
+"65LC6N",1189,"m","Person",1,"spider","twinkle",1,0,"spider",1,0,0,0,1,3,"About once a day"
+"6FL4TM",2536,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"Several times a day"
+"6LXAJD",4342,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Less than once a week"
+"6P4c2V",3540,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"6RDT55",4924,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,3,"Several times a day"
+"6RYcKQ",1250,"f","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,0,0,NA
+"6S42XL",3479,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"Several times a day"
+"6VQ5NV",3335,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"Less than once a week"
+"6WDXTc",2157,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"6c4MZT",2838,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"735EB3",5248,"f","AI",1,"spider","wheels",1,1,"wheels",0,1,0,1,1,1,"About once a day"
+"747d4U",2033,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,0,"Never"
+"75ZW26",1615,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,NA,NA
+"775VNH",4878,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"77P6BR",3293,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"7EBDYc",3278,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"7GKV4Y",5662,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,0,1,1,3,NA
+"7JUJPC",2803,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"About once a day"
+"7R4XY2",1361,"f","Person",3,"spider","wheels",1,1,"spider",1,0,1,1,0,0,"Never"
+"7UQ674",1196,"f","AI",1,"wheels","twinkle",0,0,"wheels",0,0,0,1,1,2,"About once a week"
+"7W2BAS",2988,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Less than once a week"
+"7YdT45",2551,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,NA
+"A5ZcC2",1121,"m","Person",3,"spider","wheels",1,1,"wheels",0,0,0,0,0,4,"About once a day"
+"AEL3EQ",1215,"m","Person",3,"spider","wheels",1,1,"spider",1,1,0,1,0,0,NA
+"AEVA5R",2610,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,2,"About once a week"
+"AF6JVZ",2491,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"ALGACP",3639,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Less than once a week"
+"ARMW2Y",3900,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"AS4P67",2034,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,2,"Never"
+"AVEH25",5078,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"About once a day"
+"AWZXWB",1301,"f","Person",1,"spider","wheels",1,1,"wheels",0,0,0,0,0,NA,NA
+"AZQZZJ",3476,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"B47FdD",3977,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a day"
+"B5SScH",2523,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Several times a day"
+"B7TKT6",5042,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"BAA7SE",2305,"f","Person",4,"wheels","spider",1,1,"spider",0,0,1,1,0,2,NA
+"BC76CA",3776,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"BDKZEN",4059,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"BJZGD2",3256,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"BLMEUH",1548,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"BNXB5D",2628,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"BVA42Y",1954,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,1,"About once a week"
+"BZVQUN",3852,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,6,"Several times a day"
+"BdHTN4",3408,"m","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,1,0,NA
+"C2J3Kd",1357,"f","AI",2,"wheels","spider",1,1,"spider",0,1,0,0,0,0,"Never"
+"C2PTE3",1372,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,NA,NA
+"C5HA27",4608,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,1,1,"Several times a day"
+"CACCCP",2895,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,NA
+"CAECUF",3871,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,NA
+"CFGJVV",1134,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,0,0,1,2,"Several times a day"
+"CFZAdK",1232,"m","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,1,"About once a week"
+"CPcQFY",4478,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Several times a day"
+"CQKHMP",4993,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a day"
+"CR3XRZ",3757,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,0,0,3,"Several times a day"
+"CT6TE2",2281,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Several times a day"
+"CTDG73",2492,"m","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,0,"Never"
+"CTJFJ4",4937,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"Several times a day"
+"CUCSW3",2875,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a day"
+"CXMSKS",2735,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,5,"About once a day"
+"CYHPFL",4940,"m","AI",1,"spider","wheels",1,1,"wheels",0,1,1,1,1,7,"Several times a day"
+"CcXK5V",3622,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,4,"Several times a day"
+"DBFU24",4277,"f","Person",3,"spider","wheels",1,1,"spider",1,1,0,0,1,2,"Never"
+"DEH3SW",1225,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,0,0,1,2,"About once a day"
+"DHZ3NG",3612,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,5,"Several times a day"
+"DJKFNX",3609,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"DKUY4F",1297,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,0,1,"About once a day"
+"DMX5NS",2618,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a week"
+"DRTVFR",2200,"f","Person",1,"spider","wheels",1,1,"spider",1,0,1,1,1,NA,"Several times a day"
+"DTXJAD",2410,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,0,0,1,1,"Never"
+"DUJVEL",3157,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"DY7SUJ",3862,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,1,"Never"
+"DZEEEQ",1152,"m","Person",1,"spider","wheels",1,1,"spider",1,0,0,1,0,0,"Never"
+"Ddd43L",4488,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"E5EL7R",5522,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"About once a week"
+"E5VGcY",4308,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"ECZKcH",3092,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"EFYJWW",2024,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,2,"About once a day"
+"EFdd5c",3448,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a day"
+"EG4DM2",1675,"m","AI",4,"wheels","spider",1,1,"spider",0,0,1,1,1,0,"Never"
+"EHPQXP",2681,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,3,"About once a day"
+"EKACME",4748,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"EM566H",3486,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"About once a day"
+"ERC7YR",3875,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"EZ6FZQ",1659,"m","AI",4,"wheels","spider",1,1,"wheels",1,0,0,0,0,2,"About once a day"
+"EcQK3N",5137,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,0,1,"Several times a day"
+"F5QMEJ",1332,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,0,NA,"Less than once a week"
+"F7J6RM",4631,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"FEYCW6",4408,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,8,"Several times a day"
+"FG2KCN",1442,"f","AI",1,"spider","wheels",1,1,"wheels",0,0,1,1,1,0,"Never"
+"FG3c3c",1593,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"Never"
+"FG5XVM",2561,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"FJZ4BR",4532,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,6,"Several times a day"
+"FQNNUZ",5144,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,4,"Several times a day"
+"FVTKHG",2796,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"FW72XL",3143,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,NA
+"FXKXTL",4283,"f","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,1,"Less than once a week"
+"Fc7UHG",3259,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Less than once a week"
+"FdK67M",1199,"f","AI",1,"spider","twinkle",1,0,"wheels",0,1,0,0,1,NA,NA
+"G36QUX",3838,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Several times a day"
+"G3BWNN",4427,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"G5dAEK",4233,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a week"
+"G64NX2",3299,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a day"
+"GCCDGU",1188,"f","Person",2,"twinkle","twinkle",0,0,"wheels",1,1,0,0,1,0,"Never"
+"GE4NBT",5628,"m","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,NA,"Never"
+"GFRFTR",1915,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Less than once a week"
+"GLQULU",2655,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"Never"
+"GQYEcF",2339,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"GRLVFF",1219,"m","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,1,3,"Less than once a week"
+"GXJBPE",1178,"m","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,1,3,"Less than once a week"
+"GYU46J",4148,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"H3HBTJ",1389,"f","AI",2,"wheels","spider",1,1,"wheels",1,0,1,1,1,3,"Never"
+"H5HUVK",5244,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"About once a week"
+"H7RFHM",3039,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Several times a day"
+"HBWDcR",3210,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,4,"Less than once a week"
+"HX2GJ6",3542,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a day"
+"J33Q67",1454,"m","AI",3,"spider","wheels",1,1,"wheels",0,1,0,0,0,NA,NA
+"J3RPUM",3936,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"Several times a day"
+"J6DT2K",4570,"m","Person",4,"twinkle","spider",0,1,"wheels",1,1,1,1,1,NA,"Several times a day"
+"J6GS2X",5636,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,5,"Several times a day"
+"J7d7Ed",4560,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Never"
+"JFd4LQ",3133,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Less than once a week"
+"JKQG2U",4731,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"K6FCZV",3526,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"K6SSNX",1106,"f","Person",3,"twinkle","twinkle",0,0,"wheels",0,0,0,0,0,2,"Less than once a week"
+"K73D3S",1861,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,0,0,6,"About once a day"
+"K7GP2d",5337,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,NA
+"K7R7CV",2564,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,0,0,2,NA
+"K7YdLP",5632,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"KBQDD5",2703,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"KE3Z6Z",3811,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"KE6McV",4019,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,5,"About once a day"
+"KHRJM7",3818,"m","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,4,"Several times a day"
+"KLdCX3",4261,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"KMUTBA",2795,"f","Person",1,"spider","wheels",1,1,"wheels",0,1,1,1,1,0,NA
+"KN4QXT",1879,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"About once a week"
+"KPRDT6",3483,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"KRLDTE",4334,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Never"
+"KTLJTX",1135,"f","AI",2,"wheels","spider",1,1,"spider",0,0,1,0,0,1,"Less than once a week"
+"KU6RG5",2472,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"KYNWJ7",3410,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,NA,NA
+"Kc6RMY",3342,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"KdTKRC",5738,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Less than once a week"
+"L6BNGd",1436,"m","Person",2,"wheels","spider",1,1,"spider",0,0,1,1,1,4,"Several times a day"
+"LA3QLT",4773,"f","AI",1,"spider","wheels",1,1,"wheels",0,1,1,1,1,4,"Several times a day"
+"LCDQES",1518,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Less than once a week"
+"LFC354",1109,"f","Person",4,"wheels","spider",1,1,"wheels",1,0,0,0,1,4,"Less than once a week"
+"LKJRX3",2959,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"LKKFPd",2390,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"LN6TPF",4340,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"LRAUYL",2024,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"About once a day"
+"LRCNHV",5426,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Never"
+"LUQK5d",1350,"f","AI",1,"spider","wheels",1,1,"wheels",0,1,1,0,0,0,NA
+"LZWTJC",4140,"m","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,1,"About once a day"
+"LdNK4E",3091,"m","AI",1,"spider","twinkle",1,0,"spider",1,1,1,1,1,0,"Never"
+"M2VDRX",3390,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"M6LdNB",4611,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Less than once a week"
+"MATGdB",3160,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"MBCA5E",2739,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,0,1,1,3,"Several times a day"
+"MBSYFS",1739,"m","Person",3,"spider","wheels",1,1,"spider",1,1,0,0,0,2,"About once a week"
+"MM7MHD",2903,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"MNMX4S",5375,"m","AI",1,"spider","wheels",1,1,"wheels",0,1,1,1,1,0,"Never"
+"MQ5dCM",4267,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,3,"Several times a day"
+"MR5MAH",2695,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"N2ZVC6",5287,"m","Person",3,"spider","wheels",1,1,"wheels",0,0,1,1,1,1,"About once a day"
+"N4N6Q2",1886,"m","AI",1,"spider","wheels",1,1,"spider",1,1,0,1,0,0,NA
+"N54WCV",5748,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"NA75A3",1330,"f","AI",2,"wheels","spider",1,1,"spider",0,0,0,1,1,2,"Several times a day"
+"NBR2LE",3651,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Less than once a week"
+"NBXP7N",3390,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a week"
+"NDM42C",2231,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Never"
+"NEQP2Q",1850,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Less than once a week"
+"NMW7J7",1487,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"NN3UDW",4455,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Several times a day"
+"NPVQNQ",1753,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,1,"About once a week"
+"NSQ3X6",3411,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"NSYUD6",3934,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Several times a day"
+"NX5FLF",1112,"f","AI",1,"spider","wheels",1,1,"spider",1,0,0,1,1,4,"Less than once a week"
+"NY2cZA",3518,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"NZKdcH",1543,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"Never"
+"NZcKZR",2476,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"NcPKdR",4751,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a week"
+"P2JCDF",1739,"m","Person",1,"spider","wheels",1,1,"spider",1,1,0,1,1,NA,NA
+"P3MYF5",3313,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,0,0,NA
+"P7Md7Y",4205,"f","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,1,"About once a day"
+"PB3S3Y",3361,"m","AI",2,"spider","wheels",0,0,"spider",0,1,1,0,0,2,"Several times a day"
+"PBLZWN",5197,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"Several times a day"
+"PCWHCD",4080,"m","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,3,"About once a day"
+"PF76LW",5091,"m","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,2,"Several times a day"
+"PHK3XR",2609,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"PKXKVJ",3179,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"Several times a day"
+"PRPWZF",2231,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a day"
+"PU2VcV",4608,"o","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"PWRD2W",3252,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"PXBcNU",1495,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,0,0,NA,NA
+"PXXPWV",2010,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"PZ5DPJ",1178,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,4,"About once a day"
+"PcR4BM",1982,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,3,NA
+"Q4EEd6",2445,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"Q4cDH5",2301,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Less than once a week"
+"QARBCD",3703,"m","AI",2,"wheels","spider",1,1,"wheels",1,0,0,0,0,2,"Never"
+"QDLBWP",4485,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Less than once a week"
+"QE3QBc",3284,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Several times a day"
+"QMLL2R",1524,"m","Person",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,2,"Less than once a week"
+"QRZ4QE",1530,"f","Person",2,"wheels","spider",1,1,"spider",0,1,1,1,1,1,"Never"
+"QTNWUY",2963,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"Less than once a week"
+"QVDCEG",2768,"f","AI",3,"spider","wheels",1,1,"spider",1,1,0,0,0,3,"Several times a day"
+"QVSRQC",1981,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,NA,NA
+"QZ77BB",1515,"m","Person",1,"spider","wheels",1,1,"wheels",0,1,1,1,0,0,"Never"
+"QdRUdL",4168,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Less than once a week"
+"R27BW6",5122,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"RBWAXG",2368,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a day"
+"RC5T3R",3480,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"RCAU4S",1993,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Several times a day"
+"RF7BV6",3028,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,0,1,0,5,"Several times a day"
+"RHTVQE",5013,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Less than once a week"
+"RJ5WYZ",1288,"f","Person",2,"wheels","spider",1,1,"spider",0,1,1,1,1,0,"Never"
+"RKKSJM",3019,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"About once a week"
+"RL56d4",3054,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Never"
+"RL5F7C",1578,"m","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,4,"About once a day"
+"RPWSSB",2965,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,0,2,NA
+"RTVEE7",1572,"m","Person",3,"spider","wheels",1,1,"wheels",0,1,0,0,0,0,NA
+"RV46G2",4246,"m","Person",3,"spider","spider",1,0,"spider",1,1,1,0,1,3,"About once a day"
+"Rc27L6",5257,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,2,"About once a day"
+"S7FVQH",2064,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"SCMMCA",3147,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a day"
+"SDF2YR",2482,"m","AI",4,"wheels","twinkle",1,0,"spider",0,1,0,0,0,2,"Several times a day"
+"SEAHSd",2102,"m","Person",3,"spider","wheels",1,1,"wheels",0,0,0,1,0,NA,NA
+"SHWDdD",5302,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"SL5H56",4245,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"SQPHC7",2303,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"T7C2LP",4943,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a day"
+"TDSRAc",4766,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"THHUXY",2778,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,0,1,1,"About once a week"
+"TJAT32",1258,"m","Person",4,"wheels","spider",1,1,"spider",0,0,0,0,1,3,"Never"
+"TRMZMN",2391,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,0,0,0,0,"Never"
+"U2YQXC",3873,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"U32dEc",4954,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"Several times a day"
+"UAPd65",3070,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,0,1,1,6,"Several times a day"
+"UEXRGR",3289,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,0,0,0,NA,NA
+"UFEZMT",3861,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"UGcYTS",2970,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Several times a day"
+"UK5MMG",3720,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,0,3,"Several times a day"
+"UKBcFN",4425,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a day"
+"UNVGH4",3398,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"UPTL7Y",3706,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Several times a day"
+"UPcFPQ",1167,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,0,1,0,1,"Less than once a week"
+"UQYP3K",2164,"f","Person",2,"wheels","spider",1,1,"spider",0,1,1,1,1,0,"Never"
+"USPAM2",4918,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a day"
+"UYRcFH",4640,"f","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,NA,"Less than once a week"
+"UZG2dX",2943,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Never"
+"V3dN5D",4881,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"V5REVB",1489,"m","Person",4,"wheels","spider",1,1,"spider",0,1,0,0,0,0,"Never"
+"V6JVMB",2692,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Less than once a week"
+"V6MN6V",3467,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,NA,NA
+"VAKJdV",2928,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Less than once a week"
+"VB2XLF",4100,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"VDGZL2",1673,"m","AI",2,"wheels","spider",1,1,"wheels",1,0,1,1,0,1,"Less than once a week"
+"VEYGC2",3825,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,NA
+"VGGS3V",3473,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,NA
+"VGYA6F",3242,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,0,3,"Several times a day"
+"VHTSRV",3378,"m","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,4,"About once a day"
+"VR4LYE",4510,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"Never"
+"VRRTXM",3545,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"VVcSLZ",1157,"m","AI",3,"spider","twinkle",1,0,"spider",1,1,0,0,0,2,"About once a day"
+"VX7XXc",5055,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,5,"About once a day"
+"VZ53KA",4123,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"Several times a day"
+"Vc73T7",4112,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,8,"Several times a day"
+"VdA4LW",1289,"f","AI",2,"twinkle","twinkle",0,0,"wheels",1,1,0,1,0,3,"Less than once a week"
+"VdM6UX",2886,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Never"
+"VdRXdD",1359,"f","AI",1,"spider","wheels",1,1,"wheels",0,0,0,0,0,1,"About once a week"
+"W3c3ZK",5583,"m","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,NA,NA
+"W575AK",2793,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"WDETH6",2665,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Several times a day"
+"WDNHcd",3998,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Less than once a week"
+"WDY6c7",2556,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"About once a day"
+"WMJVGR",3001,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,0,2,"Less than once a week"
+"WPK4FZ",2764,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,0,0,1,1,"About once a day"
+"WQGT5Y",1200,"m","AI",1,"spider","wheels",1,1,"wheels",0,1,0,0,0,0,"Never"
+"WQU6QW",5181,"f","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,6,"About once a day"
+"WUBBEK",2652,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,0,1,3,"Never"
+"WUCdQ6",4825,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,12,"Several times a day"
+"WYSHT3",4971,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a week"
+"X3U2KL",3302,"m","AI",4,"wheels","spider",1,1,"spider",0,1,1,1,1,2,"About once a day"
+"XAVQXc",2106,"f","Person",1,"spider","wheels",1,1,"wheels",0,1,0,0,1,1,"Never"
+"XC7SMU",4044,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,4,"About once a day"
+"XEKPSB",1981,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"XFMJ2D",2403,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"XKdc35",4178,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,0,0,"Less than once a week"
+"XNAGCD",2297,"f","Person",3,"spider","wheels",1,1,"spider",1,1,0,0,0,2,"Less than once a week"
+"XQJNFQ",3503,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a week"
+"XQS345",1153,"f","Person",2,"wheels","spider",1,1,"spider",0,1,0,1,0,0,"Never"
+"XQc656",2491,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Never"
+"XS57KJ",2181,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a week"
+"XUUFNU",2469,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"XUYCHN",1176,"f","AI",2,"wheels","twinkle",1,0,"wheels",1,1,1,0,0,2,"Never"
+"XYX3RT",4679,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Less than once a week"
+"Xd7JWC",2006,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a week"
+"XdAMGC",2537,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a day"
+"Y2M3FQ",4226,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,"About once a day"
+"Y324M2",4710,"m","Person",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,NA,NA
+"Y4MHXV",2164,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"Y5C3MY",2874,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,6,"About once a day"
+"YAEUF5",5681,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"Never"
+"YFE323",2052,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,4,"About once a week"
+"YFLMKE",2486,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a day"
+"YHGER6",3660,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"YKUEcM",4177,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"YKVL6Y",4027,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,"About once a week"
+"YLAdC4",1838,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"Never"
+"YLJTKQ",1954,"f","AI",2,"wheels","spider",1,1,"wheels",1,0,1,1,1,0,"Never"
+"YM2G5C",1370,"f","Person",2,"wheels","spider",1,1,"spider",0,1,0,0,0,1,NA
+"YMH4W3",1638,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,NA,NA
+"YPMRcS",1715,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,0,0,0,"Never"
+"YPNJKP",1734,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a week"
+"YQXHAZ",1266,"m","Person",2,"wheels","spider",1,1,"wheels",1,1,0,0,1,0,NA
+"YSMZLG",4521,"m","Person",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,NA,NA
+"Z46DHN",4138,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,5,"Several times a day"
+"Z6D7dB",2228,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,0,NA
+"Z6JWFD",2986,"m","AI",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,NA,NA
+"ZADALH",3630,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,"About once a day"
+"ZEYSWL",1555,"f","AI",1,"spider","wheels",1,1,"spider",1,1,0,0,0,0,"Never"
+"ZFASAN",1259,"m","AI",3,"spider","wheels",1,1,"wheels",0,0,1,0,0,2,"About once a week"
+"ZP3B3N",1100,"f","Person",1,"spider","wheels",1,1,"spider",1,1,0,0,1,NA,"Less than once a week"
+"ZPAG2A",2397,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,2,"About once a week"
+"ZPHDLT",3055,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,0,NA,"About once a week"
+"ZQ3TTU",4721,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"ZU2PLS",3284,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,NA
+"ZYPLRK",3658,"f","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,0,3,"Several times a day"
+"ZdWJU6",1209,"f","Person",4,"wheels","spider",1,1,"wheels",1,1,0,0,0,4,"Several times a day"
+"c2DEY3",1199,"m","AI",1,"spider","wheels",1,1,"wheels",0,1,0,0,0,0,NA
+"c3dQ5P",3713,"m","AI",1,"spider","wheels",1,1,"spider",1,1,1,1,1,5,"Several times a day"
+"c53NTX",3866,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,5,"Several times a day"
+"c6dNFC",1508,"f","Person",3,"spider","wheels",1,1,"spider",1,0,1,1,0,3,"About once a day"
+"cE3WXc",1529,"m","Person",3,"wheels","twinkle",0,0,"spider",1,1,1,1,0,1,NA
+"cFCZPK",4964,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,0,"Never"
+"cFJCJK",2499,"f","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,5,"Several times a day"
+"cKNVRc",1773,"f","AI",3,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a week"
+"cLWD7X",1265,"m","Person",4,"wheels","spider",1,1,"spider",0,0,1,1,1,0,"Never"
+"cMD6FQ",4913,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a day"
+"cX2D7c",4420,"f","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,7,"Several times a day"
+"cYGACQ",1881,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Less than once a week"
+"cYHPQ5",4152,"m","AI",3,"spider","wheels",1,1,"wheels",0,1,1,1,1,1,"About once a day"
+"cZVLcN",2975,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"d3R2U4",3075,"f","Person",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,"Never"
+"d44R4W",4110,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,3,NA
+"d5Ud2c",1908,"f","Person",2,"wheels","spider",1,1,"spider",0,1,1,1,1,2,"Less than once a week"
+"d6RFVM",4109,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,NA,"Never"
+"dADL67",1893,"f","AI",4,"wheels","spider",1,1,"wheels",1,1,1,1,1,0,NA
+"dB3YRD",4294,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,1,NA
+"dJPCR7",2596,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"Several times a day"
+"dJUH64",2620,"m","AI",2,"wheels","spider",1,1,"wheels",1,1,1,1,1,2,"About once a week"
+"dJZ5QE",2836,"f","Person",2,"wheels","spider",1,1,"spider",0,1,1,1,1,3,"About once a day"
+"dMcX57",1664,"m","Person",1,"spider","wheels",1,1,"wheels",0,0,1,1,1,1,"Several times a day"
+"dR3ZQW",3234,"m","Person",3,"spider","wheels",1,1,"spider",1,1,1,1,1,1,"About once a day"
+"dVMXCc",1758,"f","AI",2,"wheels","spider",1,1,"spider",0,1,1,1,1,2,"Never"
+"dXAQG4",2760,"m","Person",1,"spider","wheels",1,1,"spider",1,1,1,1,1,3,"About once a week"
+"dZUWST",2354,"f","AI",2,"wheels","spider",1,1,"wheels",1,1,1,0,1,1,"Less than once a week"
+"dcddCF",1777,"f","Person",1,"spider","wheels",1,1,"wheels",0,1,1,1,1,NA,"About once a day"
