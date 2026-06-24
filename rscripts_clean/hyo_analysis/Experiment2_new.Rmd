@@ -108,11 +108,19 @@ data_ai <- data_e2 %>%
   mutate(age_c  = age - mean(age),
          age_c2 = age_c^2)
 
-mod_h2 <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_ai)
-summary(mod_h2)
+# predicting song choice using age (linear) vs. age (linear)  & age (quadratic)
+mod_ai_lin <- glm(chose_song_1 ~ age_c, family = binomial, data_ai)
+mod_ai_quad <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_ai)
 
-peak_age <- (-coef(mod_h2)["age_c"] / (2 * coef(mod_h2)["age_c2"])) + mean(data_ai$age)
+summary(mod_ai_lin)
+summary(mod_ai_quad)
+
+peak_age <- (-coef(mod_ai_quad)["age_c"] / (2 * coef(mod_ai_quad)["age_c2"])) + mean(data_ai$age)
 cat("Peak age of quadratic trend in AI condition:", round(peak_age, 2), "years\n")
+
+#Likelihood ratio test to see if the model fit improves substantially with the quadratic term
+anova(mod_ai_lin, mod_ai_quad, test = "LRT")
+
 ```
 
 # Exploratory Analyses
@@ -124,19 +132,18 @@ data_person <- data_e2 %>%
   mutate(age_c  = age - mean(age),
          age_c2 = age_c^2)
 
-mod_quadratic_person <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_person)
-summary(mod_quadratic_person)
-```
+# predicting song choice using age (linear) vs. age (linear)  & age (quadratic)
+mod_person_lin <- glm(chose_song_1 ~ age_c, family = binomial, data_person)
+mod_person_quad <- glm(chose_song_1 ~ age_c + age_c2, family = binomial, data_person)
 
-## Full Model: Interaction of Quadratic Age and Condition
-```{r full_model}
-# Center age on the overall mean for the full model
-data_e2 <- data_e2 %>%
-  mutate(age_c  = age - mean(age),
-         age_c2 = age_c^2)
+summary(mod_person_lin)
+summary(mod_person_quad)
 
-mod_full <- glm(chose_song_1 ~ condition * (age_c + age_c2), family = binomial, data_e2)
-summary(mod_full)
+peak_age <- (-coef(mod_person_quad)["age_c"] / (2 * coef(mod_person_quad)["age_c2"])) + mean(data_person$age)
+cat("Peak age of quadratic trend in AI condition:", round(peak_age, 2), "years\n")
+
+#Likelihood ratio test to see if the model fit improves substantially with the quadratic term
+anova(mod_person_lin, mod_person_quad, test = "LRT")
 
 ```
 
@@ -161,7 +168,8 @@ key_plot <- ggplot(binned_data, aes(x = as.numeric(factor(age_group)), y = chose
            position = "dodge", alpha = 0.3) +
   geom_smooth(method = "glm", method.args = list(family = "binomial"),
               formula = y ~ x + I(x^2), aes(color = condition)) +
-  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1),
+                     labels = scales::label_percent(accuracy = 1)) +
   scale_fill_manual(values = c("#999999", "#3D2785")) +
   scale_color_manual(values = c("#999999", "#3D2785")) +
   labs(title = "Main Task",
@@ -170,7 +178,7 @@ key_plot <- ggplot(binned_data, aes(x = as.numeric(factor(age_group)), y = chose
        color = "Condition") +
   guides(color = guide_legend(order = 1),
          fill = "none") +
-  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+  theme(plot.title = element_text(size = 16, color = "#595959", family = "Avenir Heavy"),
         text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
         axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
         axis.ticks = element_line(color = "#595959"),
@@ -187,7 +195,8 @@ fb_plot <- ggplot(binned_data, aes(x = as.numeric(factor(age_group)), y = mean_f
            position = "dodge", alpha = 0.3) +
   geom_smooth(method = "glm", method.args = list(family = "quasibinomial"),
               formula = y ~ x + I(x^2), aes(color = condition)) +
-  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1),
+                     labels = scales::label_percent(accuracy = 1)) +
   scale_fill_manual(values = c("#999999", "#3D2785")) +
   scale_color_manual(values = c("#999999", "#3D2785")) +
   labs(title = "Standard False Belief Task",
@@ -196,7 +205,7 @@ fb_plot <- ggplot(binned_data, aes(x = as.numeric(factor(age_group)), y = mean_f
        color = "Condition") +
   guides(color = guide_legend(order = 1),
          fill = "none") +
-  theme(plot.title = element_text(size = 18, color = "#595959", family = "Avenir Heavy"),
+  theme(plot.title = element_text(size = 16, color = "#595959", family = "Avenir Heavy"),
         text = element_text(size = 14, color = "#595959", family = "Avenir Medium"),
         axis.text = element_text(size = 12, color = "#595959", family = "Avenir Medium"),
         axis.ticks = element_line(color = "#595959"),
@@ -220,7 +229,7 @@ fig3 <- grid.arrange(
 )
 
 # Export
-ggsave("fig3.png", plot = fig3, width = 10, height = 5, dpi = 300)
+ggsave("fig3.png", plot = fig3, width = 12, height = 5, dpi = 300)
 ```
 
 
@@ -290,8 +299,9 @@ ggplot(heavySS_bar_over7, aes(x = age_bin, y = percent_song_1, fill = heavy_ss_u
   geom_col(position = "dodge") +
   geom_text(aes(label = paste0("n=", n)),
             position = position_dodge(width = 0.9),
-            vjust = -0.5, size = 3, color = "#595959") +
-  scale_y_continuous(limits = c(0, 1.15), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
+            vjust = -0.5, size = 3.5, color = "#595959") +
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1),
+                     labels = scales::label_percent(accuracy = 1)) +
   scale_fill_manual(values = c("Heavy SS user" = "#3D2785", "Not heavy SS user" = "#B6A6E9")) +
   labs(title = "Impact of Heavy Smart Speaker Use",
        x = "Age",
