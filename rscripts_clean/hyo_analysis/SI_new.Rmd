@@ -112,8 +112,6 @@ bar_data_si <- binned_data_si %>%
 key_plot <- ggplot(binned_data_si, aes(x = as.numeric(factor(age_group)), y = chose_song_1)) +
   geom_col(data = bar_data_si, aes(x = age_group, y = percent_song_1, fill = condition),
            position = "dodge", alpha = 0.3) +
-  #geom_smooth(method = "glm", method.args = list(family = "binomial"),
-  #            formula = y ~ x + I(x^2), aes(color = condition)) +
   scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
   scale_fill_manual(values = c("#999999", "#3D2785")) +
   scale_color_manual(values = c("#999999", "#3D2785")) +
@@ -144,8 +142,6 @@ fb_bar_data_si <- binned_data_si %>%
 fb_plot <- ggplot(binned_data_si, aes(x = as.numeric(factor(age_group)), y = mean_fb)) +
   geom_col(data = fb_bar_data_si, aes(x = age_group, y = percent_fb, fill = condition),
            position = "dodge", alpha = 0.3) +
-  geom_smooth(method = "glm", method.args = list(family = "quasibinomial"),
-              formula = y ~ x, aes(color = condition)) +
   scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1)) +
   scale_fill_manual(values = c("#999999", "#3D2785")) +
   scale_color_manual(values = c("#999999", "#3D2785")) +
