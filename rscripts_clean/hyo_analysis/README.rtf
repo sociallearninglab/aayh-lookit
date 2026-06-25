@@ -1,0 +1,197 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Roman;
+\f3\fmodern\fcharset0 Courier;\f4\fmodern\fcharset0 Courier-Bold;\f5\froman\fcharset0 TimesNewRomanPS-BoldMT;
+\f6\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\margl1440\margr1440\vieww25020\viewh11560\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Hyo notes (6/25/2026)\
+\
+the files in this folder contains the latest analysis scripts used for the initial Nature submission (made 6/25/2026).\
+The files are named [Experiment1, Experiment2, SI]_new.Rmd, but _new was removed from the filenames and copied over to the subfolder ~/upload_to_osf/\
+These are the files uploaded to the OSF repo https://osf.io/3s7m6/overview (paper has the anonymized link)\
+\
+Additionally, there are \'93raw\'94 data files and preprocessing scripts to clean them up, as explained below.\
+\
+\
+Hyo notes (6/12/2026)\
+\
+\
+- Experiment2_data.csv: datafile that includes 416 children included in the study.\
+\
+Key file:\
+- Experiment2_all_data_recovered_from_git.csv: the file recovered from Github history, which I believe is the file that Griffin had before removing participants who were excluded from the study. But this file also contains some duplicate IDs (e.g., incomplete sessions, double takers, etc) and is missing gender, age, and testing date info which need to be pulled from the Guess-What file below:\
+\
+Database:\
+- Guess-What-Happens-Next_all-responses-identifiable.csv: downloaded from CHS (all responses). This also contains duplicates. \
+\
+Now I need to mach the key file entries to the database. 414 rows have a unique exact match based on the child_hashed_id.  an additional 70 can be matched using response_complete  (FALSE results in empty cells and NANs in the git file) as well as condition and counterbalancing information (which can be recovered from the video2 and video4 columns in the Guess-What Database file). \
+\
+The remaining 11: \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b \cf0 \expnd0\expndtw0\kerning0
+70 more rows matched
+\f2\b0 , bringing the total to 
+\f1\b 484 matched
+\f2\b0  (414 + 70), with 
+\f1\b 11 rows remaining
+\f2\b0  across 5 IDs:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+YM2G5C
+\f2\fs24  (3 rows) \'97 completed row matched, but 2 ghost rows can't be distinguished (2 incomplete sessions in additional file) -> matched the remaining ghost sessions in the order of appearance in the database file. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+cMD6FQ
+\f2\fs24  (2 rows) \'97 1 matched (person CB1), 1 unresolved (AI CB2 appears twice in additional file) -> resolved cases will be dropped anyway, so matched in the order of appearance. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+J6GS2X
+\f2\fs24  (2 rows) \'97 both person CB4, both complete in additional file -> matched in the order of appearance. responses in the git files were the same, and the two sessions were about 6 months apart. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f3\fs26 \expnd0\expndtw0\kerning0
+K7GP2d
+\f2\fs24  (2 rows) \'97 both AI CB2, both complete in additional file -> matched in the order of appearance. \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f3\fs26 \expnd0\expndtw0\kerning0
+2cLdd2
+\f2\fs24  (2 rows) \'97 both person CB3, both complete in additional file -> unsure and should be dropped but will match in the reverse order. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+U2YQXC came up as an issue, 2 rows in each file (show up as two complete sessions in the key file, but two (back-to-back on the same day) one complete + one incomplete sessions in the Database file. The responses in the key files are the same, so I\'92ll map the complete info for both. \
+\
+**** below is what Claude generated as the mapping logic, which matches what I wrote above *** \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b \cf0 Mapping: 
+\f4\fs26 Experiment2_all_data_recovered_from_git.csv
+\f1\fs24  
+\f5 \uc0\u8594 
+\f1  
+\f4\fs26 Guess-What-Happens-Next_all-responses-identifiable.csv
+\f2\b0\fs24 \
+
+\f1\b Total: 495 git rows mapped to rows in the additional file.
+\f2\b0 \
+Condition and counterbalance information was extracted from 
+\f3\fs26 response__conditions.0.parameterSet.VIDEO2
+\f2\fs24  in the additional file (e.g. 
+\f3\fs26 person-CB3-1
+\f2\fs24  
+\f6 \uc0\u8594 
+\f2  condition=
+\f3\fs26 person
+\f2\fs24 , CB=
+\f3\fs26 3
+\f2\fs24 ), cross-verified against 
+\f3\fs26 VIDEO4
+\f2\fs24  which gave identical results across all 571 rows.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b \cf0 Group 1 \'97 414 rows
+\f2\b0 : ID appears exactly once in both files, condition and CB match perfectly. Straightforward 1-to-1 lookup.\
+
+\f1\b Group 2 \'97 70 rows
+\f2\b0  (across 40 IDs): IDs appear more than once in at least one file. Matched using a combination of:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Condition + CB to identify the correct row\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+response__completed = False
+\f2\fs24  in the additional file to identify ghost/incomplete sessions when git row has NaN condition and CB=0\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Where condition+CB had multiple matches, 
+\f3\fs26 response__completed = True
+\f2\fs24  used as tiebreaker\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b \cf0 Group 3 \'97 11 rows
+\f2\b0  (across 5 IDs) with special rules:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+YM2G5C
+\f2\fs24  (3 rows): completed row matched by condition+CB; 2 ghost rows matched to 2 incomplete rows in additional file by order of appearance\
+\ls5\ilvl0
+\f3\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+cMD6FQ
+\f2\fs24  (2 rows): person CB1 matched uniquely by condition+CB; AI CB2 row matched by order of appearance to remaining AI rows in additional file\
+\ls5\ilvl0
+\f3\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+J6GS2X
+\f2\fs24  (2 rows): both person CB4, matched by order of appearance\
+\ls5\ilvl0
+\f3\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+K7GP2d
+\f2\fs24  (2 rows): both AI CB2, matched by order of appearance\
+\ls5\ilvl0
+\f3\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+2cLdd2
+\f2\fs24  (2 rows): both person CB3, matched in 
+\f1\b reverse
+\f2\b0  order of appearance in additional file\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b \cf0 Special case \'97 
+\f4\fs26 U2YQXC
+\f2\b0\fs24  (2 git rows): both rows have person CB2; both mapped to the single complete session in the additional file (the incomplete session was disregarded).\
+\pard\pardeftab720\partightenfactor0
+\cf0 **************\
+\
+once mapping is done, I pulled the following columns 
+\f3\fs26 from
+\f2\fs24  the database file (
+\f3\fs26 Guess-What-Happens-Next_all-responses-identifiable.csv) 
+\f2\fs24 into the keyfile (
+\f3\fs26 Experiment2_all_data_recovered_from_git.csv)
+\f2\fs24  
+\f6  and saved it as Experiment2_all_data_061326.csv.
+\f2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 response__id	response__uuid	response__date_created	response__completed	response__withdrawn	response__eligibility	response__parent_feedback	response__birthdate_difference	response__video_privacy	response__databrary	response__is_preview	consent__ruling	consent__arbiter	consent__time	consent__comment	study__uuid	participant__hashed_id	child__global_id	child__hashed_id	child__age_in_days		child__gender	child__language_list	child__condition_list	child__additional_information\kerning1\expnd0\expndtw0 \
+\
+I also added two columns to both files: MatchNum (1 through 495 in key file, for cross-referencing the matched rows in the database file) and RowSeq (1 through 495 for matched rows in the database file, for cross-referencing the matched rows in the key file). Basically the key file includes all data collected from 11/22/2023 to 8/16/2024.  This file, then, will need to be cleaned up to remove duplicate participants. \
+\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+Then, the final clean data file keeps just these columns:\
+child__hashed_id child__age_in_days child__gender  \
+condition counterbalance  \
+attn1 attn2 pass_attn1 pass_attn2 test chose_song_1 \
+rachel_false_belief diana_false_belief allie_false_belief \
+num_speakers  smart_speaker_frequency \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+\
+}
